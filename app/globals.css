@@ -4,36 +4,43 @@
 
 /* Custom utilities to handle all gradient classes used in the codebase */
 @layer utilities {
+  /* Gradient direction utilities that honor Tailwind's gradient color stops */
   .bg-linear-to-t {
-    background-image: linear-gradient(to top);
+    background-image: linear-gradient(to top, var(--tw-gradient-stops));
   }
-  
+
   .bg-linear-to-br {
-    background-image: linear-gradient(to bottom right);
+    background-image: linear-gradient(
+      to bottom right,
+      var(--tw-gradient-stops)
+    );
   }
-  
+
   .bg-linear-to-r {
-    background-image: linear-gradient(to right);
+    background-image: linear-gradient(to right, var(--tw-gradient-stops));
   }
-  
+
   .bg-linear-to-tr {
-    background-image: linear-gradient(to top right);
+    background-image: linear-gradient(to top right, var(--tw-gradient-stops));
   }
-  
-  /* Map the old class names to the new ones */
+
+  /* Backwards-compatible names (Tailwind uses bg-gradient-to-*) */
   .bg-gradient-to-t {
-    background-image: linear-gradient(to top);
+    background-image: linear-gradient(to top, var(--tw-gradient-stops));
   }
-  
+
   .bg-gradient-to-br {
-    background-image: linear-gradient(to bottom right);
+    background-image: linear-gradient(
+      to bottom right,
+      var(--tw-gradient-stops)
+    );
   }
-  
+
   .bg-gradient-to-r {
-    background-image: linear-gradient(to right);
+    background-image: linear-gradient(to right, var(--tw-gradient-stops));
   }
-  
+
   .bg-gradient-to-tr {
-    background-image: linear-gradient(to top right);
+    background-image: linear-gradient(to top right, var(--tw-gradient-stops));
   }
 }

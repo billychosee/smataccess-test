@@ -1,9 +1,10 @@
 /* eslint-disable max-len */
-'use client';
+"use client";
 
-import Navbar from '../../components/Navbar';
-import Footer from '../../components/Footer';
-import Image from 'next/image';
+import Navbar from "../../components/Navbar";
+import Footer from "../../components/Footer";
+import Image from "next/image";
+import Link from "next/link";
 import {
   ArrowRightIcon,
   CheckIcon,
@@ -12,22 +13,25 @@ import {
   ShieldCheckIcon,
   PhoneIcon,
   LightBulbIcon,
-} from '@heroicons/react/24/outline';
-import { useState } from 'react';
+} from "@heroicons/react/24/outline";
+import { useState } from "react";
 
 export default function Pricing() {
-  const [propertyType, setPropertyType] = useState('');
+  const [propertyType, setPropertyType] = useState("");
   const [userCount, setUserCount] = useState(100);
   const [vatRequired, setVatRequired] = useState(false);
   const [addOns, setAddOns] = useState({
     whatsapp: false,
     maintenance: false,
-    analytics: false
+    analytics: false,
   });
 
   const basePrice = userCount > 100 ? 5 : 3;
   const totalBase = userCount * basePrice;
-  const addOnCost = (addOns.whatsapp ? 1 : 0) + (addOns.maintenance ? 1 : 0) + (addOns.analytics ? 2 : 0);
+  const addOnCost =
+    (addOns.whatsapp ? 1 : 0) +
+    (addOns.maintenance ? 1 : 0) +
+    (addOns.analytics ? 2 : 0);
   const totalAddOns = userCount * addOnCost;
   const subtotal = totalBase + totalAddOns;
   const vat = vatRequired ? subtotal * 0.15 : 0;
@@ -65,10 +69,15 @@ export default function Pricing() {
               Simple, Scalable Pricing
             </h1>
             <p className="max-w-2xl mx-auto mb-10 text-xl leading-relaxed md:text-2xl text-white/90">
-              Choose the plan that fits your needs. No hidden fees, no surprises.
+              Choose the plan that fits your needs. No hidden fees, no
+              surprises.
             </p>
             <button
-              onClick={() => document.getElementById('calculator')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={() =>
+                document
+                  .getElementById("calculator")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
               className="cursor-pointer bg-white text-[#2090C4] px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center mx-auto"
             >
               Try Our Calculator
@@ -94,12 +103,18 @@ export default function Pricing() {
             {/* Starter Plan */}
             <div className="relative flex flex-col p-8 rounded-3xl shadow-lg transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl group bg-white border border-gray-200 hover:border-[#2090C4]/50">
               <div className="mb-8 text-center">
-                <h3 className="mb-2 text-2xl font-bold text-gray-900">Starter</h3>
-                <p className="mb-6 text-gray-600">Perfect for small businesses and single locations</p>
+                <h3 className="mb-2 text-2xl font-bold text-gray-900">
+                  Starter
+                </h3>
+                <p className="mb-6 text-gray-600">
+                  Perfect for small businesses and single locations
+                </p>
 
                 <div className="flex items-center justify-center mb-6">
                   <CurrencyDollarIcon className="w-8 h-8 text-[#2090C4] mr-1" />
-                  <span className="text-5xl font-extrabold text-gray-900">3</span>
+                  <span className="text-5xl font-extrabold text-gray-900">
+                    3
+                  </span>
                   <span className="ml-1 text-gray-600">/user/year</span>
                 </div>
               </div>
@@ -123,11 +138,15 @@ export default function Pricing() {
                 </li>
                 <li className="flex items-start">
                   <XMarkIcon className="w-6 h-6 text-red-400 shrink-0 mr-3 mt-0.5" />
-                  <span className="text-gray-400 line-through">Multi-site control</span>
+                  <span className="text-gray-400 line-through">
+                    Multi-site control
+                  </span>
                 </li>
                 <li className="flex items-start">
                   <XMarkIcon className="w-6 h-6 text-red-400 shrink-0 mr-3 mt-0.5" />
-                  <span className="text-gray-400 line-through">WhatsApp integration</span>
+                  <span className="text-gray-400 line-through">
+                    WhatsApp integration
+                  </span>
                 </li>
               </ul>
 
@@ -145,7 +164,9 @@ export default function Pricing() {
 
               <div className="mb-8 text-center">
                 <h3 className="mb-2 text-2xl font-bold">Business</h3>
-                <p className="mb-6 text-blue-100">Ideal for growing businesses and single buildings</p>
+                <p className="mb-6 text-blue-100">
+                  Ideal for growing businesses and single buildings
+                </p>
 
                 <div className="flex items-center justify-center mb-6">
                   <CurrencyDollarIcon className="w-8 h-8 mr-1 text-white" />
@@ -161,7 +182,9 @@ export default function Pricing() {
                 </li>
                 <li className="flex items-start">
                   <CheckIcon className="w-6 h-6 text-white shrink-0 mr-3 mt-0.5" />
-                  <span className="text-blue-100">Time & attendance tracking</span>
+                  <span className="text-blue-100">
+                    Time & attendance tracking
+                  </span>
                 </li>
                 <li className="flex items-start">
                   <CheckIcon className="w-6 h-6 text-white shrink-0 mr-3 mt-0.5" />
@@ -177,23 +200,34 @@ export default function Pricing() {
                 </li>
                 <li className="flex items-start">
                   <XMarkIcon className="w-6 h-6 text-blue-200 shrink-0 mr-3 mt-0.5" />
-                  <span className="text-blue-200 line-through">Dedicated account manager</span>
+                  <span className="text-blue-200 line-through">
+                    Dedicated account manager
+                  </span>
                 </li>
               </ul>
 
-              <button className="cursor-pointer w-full py-3 rounded-full font-semibold text-lg transition-all duration-300 transform group-hover:scale-105 bg-white text-[#2090C4] hover:bg-gray-100 shadow-md">
+              <Link
+                href="/contact"
+                className="cursor-pointer w-full py-3 rounded-full font-semibold text-lg transition-all duration-300 transform group-hover:scale-105 bg-white text-[#2090C4] hover:bg-gray-100 shadow-md"
+              >
                 Request Quote
-              </button>
+              </Link>
             </div>
 
             {/* Enterprise Plan */}
             <div className="relative flex flex-col p-8 rounded-3xl shadow-lg transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl group bg-white border border-gray-200 hover:border-[#2090C4]/50">
               <div className="mb-8 text-center">
-                <h3 className="mb-2 text-2xl font-bold text-gray-900">Enterprise</h3>
-                <p className="mb-6 text-gray-600">Tailored solutions for large-scale operations</p>
+                <h3 className="mb-2 text-2xl font-bold text-gray-900">
+                  Enterprise
+                </h3>
+                <p className="mb-6 text-gray-600">
+                  Tailored solutions for large-scale operations
+                </p>
 
                 <div className="flex items-center justify-center mb-6">
-                  <span className="text-5xl font-extrabold text-gray-900">Custom</span>
+                  <span className="text-5xl font-extrabold text-gray-900">
+                    Custom
+                  </span>
                 </div>
               </div>
 
@@ -208,15 +242,21 @@ export default function Pricing() {
                 </li>
                 <li className="flex items-start">
                   <CheckIcon className="w-6 h-6 text-green-500 shrink-0 mr-3 mt-0.5" />
-                  <span className="text-gray-700">Dedicated account manager</span>
+                  <span className="text-gray-700">
+                    Dedicated account manager
+                  </span>
                 </li>
                 <li className="flex items-start">
                   <CheckIcon className="w-6 h-6 text-green-500 shrink-0 mr-3 mt-0.5" />
-                  <span className="text-gray-700">Custom integrations (API)</span>
+                  <span className="text-gray-700">
+                    Custom integrations (API)
+                  </span>
                 </li>
                 <li className="flex items-start">
                   <CheckIcon className="w-6 h-6 text-green-500 shrink-0 mr-3 mt-0.5" />
-                  <span className="text-gray-700">On-premise deployment option</span>
+                  <span className="text-gray-700">
+                    On-premise deployment option
+                  </span>
                 </li>
                 <li className="flex items-start">
                   <CheckIcon className="w-6 h-6 text-green-500 shrink-0 mr-3 mt-0.5" />
@@ -224,16 +264,22 @@ export default function Pricing() {
                 </li>
               </ul>
 
-              <button className="cursor-pointer w-full py-3 rounded-full font-semibold text-lg transition-all duration-300 transform group-hover:scale-105 bg-[#2090C4] text-white hover:bg-[#1a7bb7] shadow-md">
+              <Link
+                href="/contact"
+                className="cursor-pointer w-full py-3 rounded-full font-semibold text-lg transition-all duration-300 transform group-hover:scale-105 bg-[#2090C4] text-white hover:bg-[#1a7bb7] shadow-md"
+              >
                 Contact Sales
-              </button>
+              </Link>
             </div>
           </div>
         </div>
       </section>
 
       {/* INTERACTIVE CALCULATOR */}
-      <section id="calculator" className="relative py-20 overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100">
+      <section
+        id="calculator"
+        className="relative py-20 overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100"
+      >
         <div className="absolute top-0 left-0 w-full h-full opacity-5">
           <div className="absolute top-20 right-20 w-64 h-64 bg-[#2090C4] rounded-full filter blur-3xl"></div>
           <div className="absolute bg-blue-500 rounded-full bottom-20 left-20 w-96 h-96 filter blur-3xl"></div>
@@ -282,7 +328,9 @@ export default function Pricing() {
                   onChange={(e) => setUserCount(Number(e.target.value))}
                   className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer slider"
                 />
-                <div className="mt-2 text-center text-gray-600">{userCount} users</div>
+                <div className="mt-2 text-center text-gray-600">
+                  {userCount} users
+                </div>
               </div>
             </div>
 
@@ -295,7 +343,9 @@ export default function Pricing() {
                   <input
                     type="checkbox"
                     checked={addOns.whatsapp}
-                    onChange={(e) => setAddOns({...addOns, whatsapp: e.target.checked})}
+                    onChange={(e) =>
+                      setAddOns({ ...addOns, whatsapp: e.target.checked })
+                    }
                     className="mr-3 w-5 h-5 text-[#2090C4] border-gray-300 rounded focus:ring-[#2090C4]"
                   />
                   <div className="flex items-center">
@@ -307,7 +357,9 @@ export default function Pricing() {
                   <input
                     type="checkbox"
                     checked={addOns.maintenance}
-                    onChange={(e) => setAddOns({...addOns, maintenance: e.target.checked})}
+                    onChange={(e) =>
+                      setAddOns({ ...addOns, maintenance: e.target.checked })
+                    }
                     className="mr-3 w-5 h-5 text-[#2090C4] border-gray-300 rounded focus:ring-[#2090C4]"
                   />
                   <div className="flex items-center">
@@ -319,7 +371,9 @@ export default function Pricing() {
                   <input
                     type="checkbox"
                     checked={addOns.analytics}
-                    onChange={(e) => setAddOns({...addOns, analytics: e.target.checked})}
+                    onChange={(e) =>
+                      setAddOns({ ...addOns, analytics: e.target.checked })
+                    }
                     className="mr-3 w-5 h-5 text-[#2090C4] border-gray-300 rounded focus:ring-[#2090C4]"
                   />
                   <div className="flex items-center">
@@ -347,20 +401,31 @@ export default function Pricing() {
                 Estimated Annual Total: ${total.toFixed(2)}
               </h3>
               {vatRequired && (
-                <p className="text-sm text-center text-gray-600">(VAT Included)</p>
+                <p className="text-sm text-center text-gray-600">
+                  (VAT Included)
+                </p>
               )}
             </div>
 
             <div className="flex flex-col gap-4 sm:flex-row">
-              <button className="cursor-pointer flex-1 bg-[#2090C4] text-white px-6 py-3 rounded-full font-semibold hover:bg-[#1a7bb7] transition-colors">
+              <Link
+                href="/contact"
+                className="cursor-pointer flex-1 bg-[#2090C4] text-white px-6 py-3 rounded-full font-semibold hover:bg-[#1a7bb7] transition-colors"
+              >
                 Request Formal Quote
-              </button>
-              <button className="cursor-pointer flex-1 border-2 border-[#2090C4] text-[#2090C4] px-6 py-3 rounded-full font-semibold hover:bg-[#2090C4] hover:text-white transition-colors">
+              </Link>
+              <Link
+                href="/contact"
+                className="cursor-pointer flex-1 border-2 border-[#2090C4] text-[#2090C4] px-6 py-3 rounded-full font-semibold hover:bg-[#2090C4] hover:text-white transition-colors"
+              >
                 Book a Demo
-              </button>
-              <button className="flex-1 px-6 py-3 font-semibold text-gray-600 transition-colors border-2 border-gray-600 rounded-full cursor-pointer hover:bg-gray-700 hover:text-white">
+              </Link>
+              <Link
+                href="/contact"
+                className="flex-1 px-6 py-3 font-semibold text-gray-600 transition-colors border-2 border-gray-600 rounded-full cursor-pointer hover:bg-gray-700 hover:text-white"
+              >
                 Talk to Sales
-              </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -384,7 +449,9 @@ export default function Pricing() {
                 Can I change my plan at any time?
               </h3>
               <p className="text-gray-600">
-                Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately, and we&apos;ll prorate any billing differences.
+                Yes, you can upgrade or downgrade your plan at any time. Changes
+                take effect immediately, and we&apos;ll prorate any billing
+                differences.
               </p>
             </div>
 
@@ -393,7 +460,8 @@ export default function Pricing() {
                 Do you offer annual discounts?
               </h3>
               <p className="text-gray-600">
-                Yes, we offer 20% discount on all annual plans. This is automatically applied when you choose annual billing.
+                Yes, we offer 20% discount on all annual plans. This is
+                automatically applied when you choose annual billing.
               </p>
             </div>
 
@@ -402,7 +470,9 @@ export default function Pricing() {
                 What&apos;s included in support?
               </h3>
               <p className="text-gray-600">
-                All plans include email support. Business plans add phone support, and Enterprise plans include a dedicated account manager and priority support.
+                All plans include email support. Business plans add phone
+                support, and Enterprise plans include a dedicated account
+                manager and priority support.
               </p>
             </div>
           </div>
@@ -414,7 +484,10 @@ export default function Pricing() {
         <div className="absolute inset-0">
           <div className="absolute top-0 left-0 w-full h-full opacity-10">
             <div className="absolute w-64 h-64 bg-white rounded-full top-20 left-20 filter blur-3xl animate-pulse"></div>
-            <div className="absolute bg-white rounded-full bottom-20 right-20 w-96 h-96 filter blur-3xl animate-pulse" style={{ animationDelay: "1s" }}></div>
+            <div
+              className="absolute bg-white rounded-full bottom-20 right-20 w-96 h-96 filter blur-3xl animate-pulse"
+              style={{ animationDelay: "1s" }}
+            ></div>
           </div>
         </div>
 
@@ -423,17 +496,21 @@ export default function Pricing() {
             Ready to Get Started?
           </h2>
           <p className="max-w-2xl mx-auto mb-10 text-lg md:text-xl text-white/90">
-            Join hundreds of satisfied customers who trust SmatAccess for their security needs.
+            Join hundreds of satisfied customers who trust SmatAccess for their
+            security needs.
           </p>
 
           <div className="flex flex-col justify-center gap-4 sm:flex-row">
             <button className="cursor-pointer bg-white text-[#2090C4] px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-xl">
               Start Free Trial
             </button>
-            <button className="cursor-pointer border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-[#2090C4] transition-all duration-300 flex items-center justify-center">
+            <Link
+              href="/contact"
+              className="cursor-pointer border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-[#2090C4] transition-all duration-300 flex items-center justify-center"
+            >
               <PhoneIcon className="w-5 h-5 mr-2" />
               Contact Sales
-            </button>
+            </Link>
           </div>
         </div>
       </section>
@@ -446,7 +523,7 @@ export default function Pricing() {
           height: 20px;
           width: 20px;
           border-radius: 50%;
-          background: #2090C4;
+          background: #2090c4;
           cursor: pointer;
         }
 
@@ -454,7 +531,7 @@ export default function Pricing() {
           height: 20px;
           width: 20px;
           border-radius: 50%;
-          background: #2090C4;
+          background: #2090c4;
           cursor: pointer;
           border: none;
         }
