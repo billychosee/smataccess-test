@@ -4,6 +4,8 @@ import Footer from "../../components/Footer";
 import Image from "next/image"; // Required for the new hero section
 import Link from "next/link";
 import type { Metadata } from "next";
+import ScrollToFeaturesButton from "../../components/ScrollToFeaturesButton";
+import ScrollToFeatureButton from "../../components/ScrollToFeatureButton";
 import {
   UserPlusIcon,
   FingerPrintIcon,
@@ -67,7 +69,7 @@ export default function Services() {
       <Navbar />
 
       {/* HERO SECTION - REPLICATING ABOUT.TSX UI */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-0 py-8 sm:py-12 bg-gray-50">
+      <div className="px-4 py-8 mx-auto max-w-7xl sm:px-6 lg:px-0 sm:py-12 bg-gray-50">
         <section
           className="relative flex items-center justify-center text-white overflow-hidden rounded-[44px] shadow-2xl"
           style={{ height: "calc(100vh - 8rem)" }}
@@ -82,53 +84,54 @@ export default function Services() {
               objectFit="cover"
               className="z-0"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent z-10"></div>
+            <div className="absolute inset-0 z-10 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
           </div>
 
           {/* Content Container */}
-          <div className="relative z-20 px-5 md:px-20 text-center max-w-4xl">
+          <div className="relative z-20 max-w-4xl px-5 text-center md:px-20">
             <div className="mb-4">
-              <span className="inline-block px-6 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-medium tracking-wider uppercase">
+              <span className="inline-block px-6 py-2 text-sm font-medium tracking-wider uppercase rounded-full bg-white/20 backdrop-blur-sm">
                 Intelligent Access Control
               </span>
             </div>
-            <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-6 tracking-tight">
+            <h1 className="mb-6 text-5xl font-bold leading-tight tracking-tight md:text-7xl">
               Control Access. Empower Security.
             </h1>
-            <p className="text-xl md:text-2xl text-white/90 max-w-2xl mx-auto mb-10 leading-relaxed">
+            <p className="max-w-2xl mx-auto mb-10 text-xl leading-relaxed md:text-2xl text-white/90">
               Everything you need to secure your premises. Explore the powerful
               features designed to protect your people, property, and processes.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <button className="cursor-pointer bg-white text-[#2090C4] px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center">
-                View All Features
-                <ArrowRightIcon className="w-5 h-5 ml-2" />
-              </button>
-              <button className="cursor-pointer border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-[#2090C4] transition-all duration-300 flex items-center">
+            <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
+              <ScrollToFeaturesButton />
+              <Link
+                href="/contact"
+                className="cursor-pointer border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-[#2090C4] transition-all duration-300 flex items-center"
+              >
                 <PhoneIcon className="w-5 h-5 mr-2" />
                 Request a Demo
-              </button>
+              </Link>
             </div>
           </div>
         </section>
       </div>
 
       {/* FEATURE BLOCKS - Modernized UI (Starts immediately after hero) */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+      <section id="features-section" className="py-20 bg-gray-50">
+        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+          <div className="mb-12 text-center">
+            <h2 className="mb-4 text-4xl font-bold text-gray-900">
               Core Capabilities
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="max-w-3xl mx-auto text-xl text-gray-600">
               Choose the right tools for your specific security challenges.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+          <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
             {features.map((feature, index) => (
               <div
+                id={`feature-${index}`}
                 key={index}
-                className="group relative bg-white p-8 rounded-3xl shadow-xl transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 border border-gray-100"
+                className="relative p-8 transition-all duration-500 bg-white border border-gray-100 shadow-xl group rounded-3xl hover:shadow-2xl hover:-translate-y-2"
               >
                 {/* Decorative Accent */}
                 <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[#2090C4]/10 to-transparent rounded-full transform translate-x-16 -translate-y-16 z-0"></div>
@@ -138,27 +141,27 @@ export default function Services() {
                   <feature.icon className="w-8 h-8 text-[#2090C4]" />
                 </div>
 
-                <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                <h3 className="mb-3 text-2xl font-bold text-gray-900">
                   {feature.name}
                 </h3>
-                <p className="text-gray-600 mb-6 leading-relaxed">
+                <p className="mb-6 leading-relaxed text-gray-600">
                   {feature.description}
                 </p>
-                <button className="cursor-pointer text-[#2090C4] hover:text-blue-800 font-semibold flex items-center">
-                  See Details
-                  <ArrowRightIcon className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
-                </button>
+                <ScrollToFeatureButton
+                  featureId={`feature-${index}`}
+                  label="See Details"
+                />
               </div>
             ))}
           </div>
 
-          <div className="text-center mt-16">
+          <div className="mt-16 text-center">
             <Link
               href="/hardware"
               className="inline-flex items-center justify-center gap-2 bg-[#2090C4] text-white px-10 py-4 rounded-full font-semibold hover:bg-[#1a7bb7] transition-colors text-lg shadow-lg hover:shadow-xl transform hover:scale-105 duration-300"
             >
               Explore Our Hardware Solutions
-              <ArrowRightIcon className="w-5 h-5 ml-2 inline-block" />
+              <ArrowRightIcon className="inline-block w-5 h-5 ml-2" />
             </Link>
           </div>
         </div>

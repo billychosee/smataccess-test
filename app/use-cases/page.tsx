@@ -2,8 +2,9 @@
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import Image from "next/image";
+import Link from "next/link";
 import ScrollToGridButton from "../../components/ScrollToGridButton";
-import { PlayIcon } from '@heroicons/react/24/outline';
+import { PlayIcon } from "@heroicons/react/24/outline";
 
 import type { Metadata } from "next";
 
@@ -85,6 +86,7 @@ export default function UseCases() {
               },
             ].map((useCase, index) => (
               <article
+                id={`usecase-${index}`}
                 key={index}
                 className="p-6 transition-shadow duration-300 bg-white shadow-md rounded-3xl hover:shadow-xl"
               >
@@ -103,25 +105,32 @@ export default function UseCases() {
                 </div>
 
                 <div className="flex items-center justify-between">
-                  <a
-                    href="/services"
+                  <button
+                    onClick={() => {
+                      const card = document.getElementById(`usecase-${index}`);
+                      if (card) {
+                        card.scrollIntoView({ behavior: "smooth" });
+                      }
+                    }}
                     className="text-[#2090C4] hover:text-[#1a7bb7] font-semibold"
                     aria-label={`Learn more about ${useCase.name}`}
                   >
                     Learn More →
-                  </a>
+                  </button>
 
-                  <a
-                    href="/services"
+                  <button
+                    onClick={() => {
+                      // Keep video button in place for now
+                      // Will be connected to video modal later
+                    }}
                     className="inline-flex items-center gap-2 bg-[#2090C4] text-white px-4 py-2 rounded-full text-sm font-semibold shadow hover:bg-[#1a7bb7]"
                   >
                     Watch
-                  </a>
+                  </button>
                 </div>
               </article>
             ))}
           </div>
-
         </div>
       </section>
 
@@ -133,13 +142,21 @@ export default function UseCases() {
         </div>
 
         <div className="relative z-10 px-4 mx-auto text-center max-w-7xl sm:px-6 lg:px-8">
-          <h2 className="mb-4 text-3xl font-bold text-gray-900">See SmatAccess in Action</h2>
-          <p className="max-w-2xl mx-auto mb-6 text-lg text-gray-600">Watch a short walkthrough to see how SmatAccess secures people, places and processes.</p>
+          <h2 className="mb-4 text-3xl font-bold text-gray-900">
+            See SmatAccess in Action
+          </h2>
+          <p className="max-w-2xl mx-auto mb-6 text-lg text-gray-600">
+            Watch a short walkthrough to see how SmatAccess secures people,
+            places and processes.
+          </p>
           <div className="text-center">
-            <button className="cursor-pointer bg-[#2090C4] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#2090C4]/80 transition-colors flex items-center justify-center mx-auto w-fit">
+            <Link
+              href="/contact"
+              className="cursor-pointer bg-[#2090C4] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#2090C4]/80 transition-colors flex items-center justify-center mx-auto w-fit"
+            >
               Watch the Walkthrough Video
               <PlayIcon className="w-5 h-5 ml-2" />
-            </button>
+            </Link>
           </div>
         </div>
       </section>
