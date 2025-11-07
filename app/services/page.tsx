@@ -2,7 +2,7 @@
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import Image from "next/image"; // Required for the new hero section
-import Link from 'next/link';
+import Link from "next/link";
 import type { Metadata } from "next";
 import {
   UserPlusIcon,
@@ -96,9 +96,8 @@ export default function Services() {
               Control Access. Empower Security.
             </h1>
             <p className="text-xl md:text-2xl text-white/90 max-w-2xl mx-auto mb-10 leading-relaxed">
-              Everything you need to secure your premises. Explore the
-              powerful features designed to protect your people, property, and
-              processes.
+              Everything you need to secure your premises. Explore the powerful
+              features designed to protect your people, property, and processes.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <button className="cursor-pointer bg-white text-[#2090C4] px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center">
@@ -154,7 +153,10 @@ export default function Services() {
           </div>
 
           <div className="text-center mt-16">
-            <Link href="/hardware" className="inline-flex items-center justify-center gap-2 bg-[#2090C4] text-white px-10 py-4 rounded-full font-semibold hover:bg-[#1a7bb7] transition-colors text-lg shadow-lg hover:shadow-xl transform hover:scale-105 duration-300">
+            <Link
+              href="/hardware"
+              className="inline-flex items-center justify-center gap-2 bg-[#2090C4] text-white px-10 py-4 rounded-full font-semibold hover:bg-[#1a7bb7] transition-colors text-lg shadow-lg hover:shadow-xl transform hover:scale-105 duration-300"
+            >
               Explore Our Hardware Solutions
               <ArrowRightIcon className="w-5 h-5 ml-2 inline-block" />
             </Link>

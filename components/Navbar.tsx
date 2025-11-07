@@ -43,10 +43,10 @@ const Navbar = () => {
           <div className="flex items-center">
             <Link href="/" className="flex items-center">
               <Image
-                src="/smatacces_logo.png"
+                src="/smat-access-logo.png"
                 alt="SmatAccess Logo"
-                width={60}
-                height={60}
+                width={80}
+                height={80}
               />
             </Link>
           </div>
@@ -54,16 +54,22 @@ const Navbar = () => {
           {/* Navigation Links */}
           <div className="items-center hidden space-x-6 md:flex">
             <Link
-              href="/industries"
+              href="/about"
               className="text-gray-700 hover:text-[#2090C4] transition-colors font-medium"
             >
-              Industries
+              About
             </Link>
             <Link
               href="/services"
               className="text-gray-700 hover:text-[#2090C4] transition-colors font-medium"
             >
               Services
+            </Link>
+            <Link
+              href="/industries"
+              className="text-gray-700 hover:text-[#2090C4] transition-colors font-medium"
+            >
+              Industries
             </Link>
             <Link
               href="/use-cases"
@@ -82,12 +88,6 @@ const Navbar = () => {
               className="text-gray-700 hover:text-[#2090C4] transition-colors font-medium"
             >
               Pricing
-            </Link>
-            <Link
-              href="/about"
-              className="text-gray-700 hover:text-[#2090C4] transition-colors font-medium"
-            >
-              About
             </Link>
           </div>
 
