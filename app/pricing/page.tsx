@@ -76,9 +76,13 @@ export default function Pricing() {
               onClick={() =>
                 document
                   .getElementById("calculator")
-                  ?.scrollIntoView({ behavior: "smooth" })
+                  ?.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start",
+                    inline: "nearest",
+                  })
               }
-              className="cursor-pointer bg-white text-[#2090C4] px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center mx-auto"
+              className="cursor-pointer bg-white text-[#2090C4] px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center mx-auto"
             >
               Try Our Calculator
               <ArrowRightIcon className="w-5 h-5 ml-2" />
@@ -208,7 +212,7 @@ export default function Pricing() {
 
               <Link
                 href="/contact"
-                className="cursor-pointer w-full py-3 rounded-full font-semibold text-lg transition-all duration-300 transform group-hover:scale-105 bg-white text-[#2090C4] hover:bg-gray-100 shadow-md"
+                className="cursor-pointer w-full py-3 rounded-full font-semibold text-lg transition-all duration-300 transform group-hover:scale-105 bg-white text-[#2090C4] hover:bg-gray-100 shadow-md flex items-center justify-center"
               >
                 Request Quote
               </Link>
@@ -266,7 +270,7 @@ export default function Pricing() {
 
               <Link
                 href="/contact"
-                className="cursor-pointer w-full py-3 rounded-full font-semibold text-lg transition-all duration-300 transform group-hover:scale-105 bg-[#2090C4] text-white hover:bg-[#1a7bb7] shadow-md"
+                className="cursor-pointer w-full py-3 rounded-full font-semibold text-lg transition-all duration-300 transform group-hover:scale-105 bg-[#2090C4] text-white hover:bg-[#1a7bb7] shadow-md flex items-center justify-center"
               >
                 Contact Sales
               </Link>
