@@ -3,6 +3,7 @@ import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import Image from "next/image";
 import ScrollToGridButton from "../../components/ScrollToGridButton";
+import { PlayIcon } from '@heroicons/react/24/outline';
 
 import type { Metadata } from "next";
 
@@ -55,9 +56,9 @@ export default function UseCases() {
       <section className="py-16 bg-gray-50">
         <div
           id="use-cases-grid"
-          className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+          className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8"
         >
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4">
             {[
               {
                 name: "Cluster Homes",
@@ -85,17 +86,17 @@ export default function UseCases() {
             ].map((useCase, index) => (
               <article
                 key={index}
-                className="bg-white p-6 rounded-3xl shadow-md hover:shadow-xl transition-shadow duration-300"
+                className="p-6 transition-shadow duration-300 bg-white shadow-md rounded-3xl hover:shadow-xl"
               >
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                <h3 className="mb-2 text-xl font-semibold text-gray-900">
                   {useCase.name}
                 </h3>
-                <p className="text-gray-600 mb-4">{useCase.description}</p>
+                <p className="mb-4 text-gray-600">{useCase.description}</p>
 
-                <div className="bg-gray-100 rounded-lg overflow-hidden mb-4">
-                  <div className="w-full h-44 bg-black/5 flex items-center justify-center">
+                <div className="mb-4 overflow-hidden bg-gray-100 rounded-lg">
+                  <div className="flex items-center justify-center w-full h-44 bg-black/5">
                     {/* Placeholder for video thumbnail */}
-                    <p className="text-gray-500 text-sm">
+                    <p className="text-sm text-gray-500">
                       Video: {useCase.videoLabel}
                     </p>
                   </div>
@@ -121,13 +122,24 @@ export default function UseCases() {
             ))}
           </div>
 
-          <div className="text-center mt-12">
-            <a
-              href="/contact"
-              className="cursor-pointer bg-[#2090C4] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#1a7bb7] transition-colors shadow-lg"
-            >
-              Watch Full App Walkthrough
-            </a>
+        </div>
+      </section>
+
+      {/* CTA SECTION - match Home page walkthrough CTA */}
+      <section className="relative py-12 overflow-hidden bg-gradient-to-br from-gray-50 to-blue-100">
+        <div className="absolute top-0 left-0 w-full h-full opacity-5">
+          <div className="absolute top-10 left-10 w-64 h-64 bg-[#2090C4] rounded-full filter blur-3xl"></div>
+          <div className="absolute bg-blue-500 rounded-full bottom-10 right-10 w-96 h-96 filter blur-3xl"></div>
+        </div>
+
+        <div className="relative z-10 px-4 mx-auto text-center max-w-7xl sm:px-6 lg:px-8">
+          <h2 className="mb-4 text-3xl font-bold text-gray-900">See SmatAccess in Action</h2>
+          <p className="max-w-2xl mx-auto mb-6 text-lg text-gray-600">Watch a short walkthrough to see how SmatAccess secures people, places and processes.</p>
+          <div className="text-center">
+            <button className="cursor-pointer bg-[#2090C4] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#2090C4]/80 transition-colors flex items-center justify-center mx-auto w-fit">
+              Watch the Walkthrough Video
+              <PlayIcon className="w-5 h-5 ml-2" />
+            </button>
           </div>
         </div>
       </section>

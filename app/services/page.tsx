@@ -76,8 +76,8 @@ export default function Services() {
           <div className="absolute inset-0 z-0">
             {/* NOTE: You will need a suitable image path here, e.g., for security/access control */}
             <Image
-              src="/services-hero-bg.jpg"
-              alt="SmatAccess Services Hero Background - Integrated Security"
+              src="/hero.png"
+              alt="SmatAccess Hero Background"
               layout="fill"
               objectFit="cover"
               className="z-0"
