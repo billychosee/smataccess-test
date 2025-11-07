@@ -4,6 +4,7 @@ import Footer from "../../components/Footer";
 import Image from "next/image";
 import Link from "next/link";
 import ScrollToGridButton from "../../components/ScrollToGridButton";
+import UseCaseCardButtons from "../../components/UseCaseCardButtons";
 import { PlayIcon } from "@heroicons/react/24/outline";
 
 import type { Metadata } from "next";
@@ -104,30 +105,7 @@ export default function UseCases() {
                   </div>
                 </div>
 
-                <div className="flex items-center justify-between">
-                  <button
-                    onClick={() => {
-                      const card = document.getElementById(`usecase-${index}`);
-                      if (card) {
-                        card.scrollIntoView({ behavior: "smooth" });
-                      }
-                    }}
-                    className="text-[#2090C4] hover:text-[#1a7bb7] font-semibold"
-                    aria-label={`Learn more about ${useCase.name}`}
-                  >
-                    Learn More →
-                  </button>
-
-                  <button
-                    onClick={() => {
-                      // Keep video button in place for now
-                      // Will be connected to video modal later
-                    }}
-                    className="inline-flex items-center gap-2 bg-[#2090C4] text-white px-4 py-2 rounded-full text-sm font-semibold shadow hover:bg-[#1a7bb7]"
-                  >
-                    Watch
-                  </button>
-                </div>
+                <UseCaseCardButtons index={index} useCaseName={useCase.name} />
               </article>
             ))}
           </div>
