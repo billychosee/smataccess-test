@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom utilities to handle all gradient classes used in the codebase */
+@layer utilities {
+  .bg-linear-to-t {
+    background-image: linear-gradient(to top);
+  }
+  
+  .bg-linear-to-br {
+    background-image: linear-gradient(to bottom right);
+  }
+  
+  .bg-linear-to-r {
+    background-image: linear-gradient(to right);
+  }
+  
+  .bg-linear-to-tr {
+    background-image: linear-gradient(to top right);
+  }
+  
+  /* Map the old class names to the new ones */
+  .bg-gradient-to-t {
+    background-image: linear-gradient(to top);
+  }
+  
+  .bg-gradient-to-br {
+    background-image: linear-gradient(to bottom right);
+  }
+  
+  .bg-gradient-to-r {
+    background-image: linear-gradient(to right);
+  }
+  
+  .bg-gradient-to-tr {
+    background-image: linear-gradient(to top right);
+  }
+}
