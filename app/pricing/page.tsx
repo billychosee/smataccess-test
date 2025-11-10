@@ -49,7 +49,7 @@ export default function Pricing() {
         >
           {/* Background Image */}
           <Image
-            src="/hero.png"
+            src="/pricing-hero.png"
             alt="SmatAccess Pricing Hero Background"
             layout="fill"
             objectFit="cover"

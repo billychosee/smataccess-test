@@ -69,7 +69,7 @@ export default function Services() {
       <Navbar />
 
       {/* HERO SECTION - REPLICATING ABOUT.TSX UI */}
-      <div className="px-4 py-8 mx-auto max-w-7xl sm:px-6 lg:px-0 sm:py-12 bg-gray-50">
+      <div className="px-4 py-8 pt-20 mx-auto max-w-7xl sm:px-6 lg:px-0 sm:py-12 md:pt-8 bg-gray-50">
         <section
           className="relative flex items-center justify-center text-white overflow-hidden rounded-[44px] shadow-2xl"
           style={{ height: "calc(100vh - 8rem)" }}
@@ -78,8 +78,8 @@ export default function Services() {
           <div className="absolute inset-0 z-0">
             {/* NOTE: You will need a suitable image path here, e.g., for security/access control */}
             <Image
-              src="/hero.png"
-              alt="SmatAccess Hero Background"
+              src="/services-hero.png"
+              alt="SmatAccess Services Hero Background"
               layout="fill"
               objectFit="cover"
               className="z-0"
@@ -91,7 +91,7 @@ export default function Services() {
           <div className="relative z-20 max-w-4xl px-5 text-center md:px-20">
             <div className="mb-4">
               <span className="inline-block px-6 py-2 text-sm font-medium tracking-wider uppercase rounded-full bg-white/20 backdrop-blur-sm">
-                Intelligent Access Control
+                Services
               </span>
             </div>
             <h1 className="mb-6 text-5xl font-bold leading-tight tracking-tight md:text-7xl">
@@ -133,8 +133,11 @@ export default function Services() {
                 key={index}
                 className="relative p-8 transition-all duration-500 bg-white border border-gray-100 shadow-xl group rounded-3xl hover:shadow-2xl hover:-translate-y-2"
               >
-                {/* Decorative Accent */}
-                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[#2090C4]/10 to-transparent rounded-full transform translate-x-16 -translate-y-16 z-0"></div>
+                {/* Mobile: No decorative element, Medium+: Responsive decorative element */}
+                <div className="absolute top-0 right-0 hidden md:block w-16 h-16 md:w-24 md:h-24 lg:w-32 lg:h-32 bg-gradient-to-br from-[#2090C4]/10 to-transparent rounded-full transform md:translate-x-8 md:-translate-y-8 lg:translate-x-16 lg:-translate-y-16 z-0"></div>
+
+                {/* Mobile alternative: Small subtle element */}
+                <div className="absolute top-2 right-2 w-8 h-8 bg-gradient-to-br from-[#2090C4]/5 to-transparent rounded-full md:hidden z-0"></div>
 
                 {/* Icon Container */}
                 <div className="w-16 h-16 bg-gradient-to-br from-[#2090C4]/20 to-[#2090C4]/5 rounded-xl flex items-center justify-center mb-6 group-hover:scale-105 transition-transform duration-300">

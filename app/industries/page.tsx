@@ -27,13 +27,13 @@ export default function Industries() {
       <Navbar />
 
       {/* HERO SECTION - match other pages style */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-0 py-8 sm:py-12 bg-gray-50">
+      <div className="px-4 py-8 pt-20 mx-auto max-w-7xl sm:px-6 lg:px-0 sm:py-12 md:pt-8 bg-gray-50">
         <section
           className="relative flex items-center justify-center text-white overflow-hidden rounded-[44px] shadow-2xl"
           style={{ height: "calc(100vh - 8rem)" }}
         >
           <Image
-            src="/hero.png"
+            src="/industries-hero.png"
             alt="SmatAccess Industries Hero Background"
             fill
             style={{ objectFit: "cover" }}
@@ -45,7 +45,7 @@ export default function Industries() {
           <div className="relative z-20 max-w-4xl px-5 text-center md:px-20">
             <div className="mb-4">
               <span className="inline-block px-4 py-2 mb-4 text-sm font-medium rounded-full bg-white/20 backdrop-blur-sm">
-                Tailored Security Solutions
+                Industries
               </span>
             </div>
             <h1 className="mb-6 text-5xl font-bold leading-tight tracking-tight md:text-6xl">
@@ -67,79 +67,20 @@ export default function Industries() {
       </div>
 
       {/* INDUSTRY BLOCKS */}
-      {/* <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                name: 'Residential & Cluster Homes',
-                description: 'Gate QR codes, visitor tracking.',
-                video: 'Cluster Homes: Gate entry via QR & WhatsApp.'
-              },
-              {
-                name: 'Corporate Offices',
-                description: 'Facial login, time & attendance logs.',
-                video: 'Corporate Offices: Facial & fingerprint entry, digital logs.'
-              },
-              {
-                name: 'Educational Institutions',
-                description: 'Student & staff access control.',
-                video: 'Educational Institutions: Student & staff access control.'
-              },
-              {
-                name: 'Healthcare Facilities',
-                description: 'Restricted zone access.',
-                video: 'Healthcare Facilities: Restricted zone access.'
-              },
-              {
-                name: 'Industrial & Mining Sites',
-                description: 'Heavy-vehicle monitoring.',
-                video: 'Industrial Sites: Rugged devices, truck entry scanning.'
-              },
-              {
-                name: 'Government & Public Buildings',
-                description: 'Multi-level clearance control.',
-                video: 'Government & Public Buildings: Multi-level clearance control.'
-              },
-              {
-                name: 'Retail & Commercial',
-                description: 'POS area protection, staff movement logs.',
-                video: 'Retail & Commercial: POS area protection, staff movement logs.'
-              }
-            ].map((industry, index) => (
-              <div key={index} className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">{industry.name}</h3>
-                <p className="text-gray-600 mb-4">{industry.description}</p>
-                <div className="bg-gray-200 h-32 rounded-lg flex items-center justify-center mb-4">
-                  <p className="text-gray-500 text-sm">See in Action: {industry.video}</p>
-                </div>
-                <Link href="/use-cases">
-                  <button className="cursor-pointer text-blue-600 hover:text-blue-800 font-semibold">Learn More →</button>
-                </Link>
-              </div>
-            ))}
-          </div>
-          <div className="text-center mt-12">
-            <button className="cursor-pointer bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
-              Request a Demo for Your Sector
-            </button>
-          </div>
-        </div>
-      </section> */}
       {/* INDUSTRY BLOCKS WITH HOVER EFFECTS */}
       <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+          <div className="mb-12 text-center">
+            <h2 className="mb-4 text-3xl font-bold text-gray-900">
               Solutions for Every Sector
             </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            <p className="max-w-3xl mx-auto text-lg text-gray-600">
               From residential complexes to industrial sites, our access control
               solutions adapt to your unique security requirements.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
             {[
               {
                 name: "Residential & Cluster Homes",
@@ -223,7 +164,7 @@ export default function Industries() {
               return (
                 <div
                   key={index}
-                  className="group relative bg-white p-8 rounded-3xl shadow-xl transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 border border-gray-100 overflow-hidden"
+                  className="relative p-8 overflow-hidden transition-all duration-500 bg-white border border-gray-100 shadow-xl group rounded-3xl hover:shadow-2xl hover:-translate-y-2"
                 >
                   {/* Decorative background gradient */}
                   <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[#2090C4]/10 to-transparent rounded-full transform translate-x-16 -translate-y-16"></div>
@@ -236,15 +177,15 @@ export default function Industries() {
                   </div>
 
                   {/* Content */}
-                  <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                  <h3 className="mb-3 text-2xl font-bold text-gray-900">
                     {industry.name}
                   </h3>
-                  <p className="text-gray-600 mb-6 line-clamp-3">
+                  <p className="mb-6 text-gray-600 line-clamp-3">
                     {industry.description}
                   </p>
 
                   {/* Features list */}
-                  <ul className="space-y-2 mb-6">
+                  <ul className="mb-6 space-y-2">
                     {industry.features.map((feature, idx) => (
                       <li
                         key={idx}
@@ -283,14 +224,14 @@ export default function Industries() {
             <div className="relative py-12 px-6 rounded-[2rem] bg-gradient-to-br from-gray-50 to-gray-100 overflow-hidden">
               <div className="absolute top-0 left-0 w-full h-full opacity-5">
                 <div className="absolute top-10 left-10 w-64 h-64 bg-[#2090C4] rounded-full filter blur-3xl"></div>
-                <div className="absolute bottom-10 right-10 w-96 h-96 bg-blue-500 rounded-full filter blur-3xl"></div>
+                <div className="absolute bg-blue-500 rounded-full bottom-10 right-10 w-96 h-96 filter blur-3xl"></div>
               </div>
 
               <div className="relative">
-                <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                <h3 className="mb-4 text-3xl font-bold text-gray-900">
                   Ready to Secure Your Industry?
                 </h3>
-                <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
+                <p className="max-w-2xl mx-auto mb-8 text-lg text-gray-600">
                   Get a personalized demo and see how SmatAccess can transform
                   your security infrastructure.
                 </p>

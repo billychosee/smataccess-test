@@ -16,6 +16,14 @@ export const metadata: Metadata = {
 };
 
 export default function UseCases() {
+  const usecaseImages = [
+    "/smataccess-usecase.jpg",
+    "/smatprop-usecase.jpg",
+    "/smatqr-usecase.jpg",
+    "/smatutor-usecase.jpg",
+    "/smatpay-usecase.jpg",
+    "/njere-usecase.jpg",
+  ];
   return (
     <div className="min-h-screen bg-gray-50">
       <Navbar />
@@ -27,7 +35,7 @@ export default function UseCases() {
           style={{ height: "calc(100vh - 8rem)" }}
         >
           <Image
-            src="/hero.png"
+            src="/use-cases-hero.png"
             alt="SmatAccess Use Cases Background"
             fill
             style={{ objectFit: "cover" }}
@@ -39,7 +47,7 @@ export default function UseCases() {
           <div className="relative z-20 max-w-4xl px-5 text-center md:px-20">
             <div className="mb-4">
               <span className="inline-block px-4 py-2 mb-4 text-sm font-medium rounded-full bg-white/20 backdrop-blur-sm">
-                SmatAccess in Action
+                Use Cases
               </span>
             </div>
             <h1 className="mb-6 text-5xl font-bold leading-tight tracking-tight md:text-6xl">
@@ -96,13 +104,16 @@ export default function UseCases() {
                 </h3>
                 <p className="mb-4 text-gray-600">{useCase.description}</p>
 
-                <div className="mb-4 overflow-hidden bg-gray-100 rounded-lg">
-                  <div className="flex items-center justify-center w-full h-44 bg-black/5">
-                    {/* Placeholder for video thumbnail */}
-                    <p className="text-sm text-gray-500">
-                      Video: {useCase.videoLabel}
-                    </p>
-                  </div>
+                <div className="relative mb-4 -mx-6 overflow-hidden h-44 rounded-t-3xl">
+                  {/* Make image span full card width (flush with card edges) */}
+                  <Image
+                    src={usecaseImages[index % usecaseImages.length]}
+                    alt={`${useCase.name} thumbnail`}
+                    fill
+                    style={{ objectFit: "cover" }}
+                    className="rounded-t-3xl"
+                  />
+                  <div className="absolute inset-0 bg-black/20 rounded-t-3xl" />
                 </div>
 
                 <UseCaseCardButtons index={index} useCaseName={useCase.name} />

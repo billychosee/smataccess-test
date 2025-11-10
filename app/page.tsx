@@ -237,16 +237,16 @@ export default function Home() {
     },
   ];
 
-  // Define client logos using placeholder images
+  // Define client logos — use available use-case images from public/ as partner placeholders
   const clientLogos = [
-    { name: "TechCorp Industries", logo: "/placeholder-device1.png" },
-    { name: "Global Financial Services", logo: "/placeholder-device2.png" },
-    { name: "Healthcare Plus Network", logo: "/placeholder-device3.png" },
-    { name: "Luxury Living Communities", logo: "/feature-monitoring.png" },
-    { name: "Educational Institutions Group", logo: "/feature-whatsapp.png" },
-    { name: "Manufacturing Excellence", logo: "/feature-codes.png" },
-    { name: "Retail Chain International", logo: "/feature-multisite.png" },
-    { name: "Government Services", logo: "/feature-cloud.png" },
+    { name: "SmatAccess", logo: "/smataccess-usecase.jpg" },
+    { name: "SmatProp", logo: "/smatprop-usecase.jpg" },
+    { name: "SmatQR", logo: "/smatqr-usecase.jpg" },
+    { name: "SmatUtor", logo: "/smatutor-usecase.jpg" },
+    { name: "SmatPay", logo: "/smatpay-usecase.jpg" },
+    { name: "Njere", logo: "/njere-usecase.jpg" },
+    { name: "Team A", logo: "/team-1.jpg" },
+    { name: "Team B", logo: "/team-2.jpg" },
   ];
 
   // **********************************************
@@ -342,7 +342,7 @@ export default function Home() {
       <Navbar />
 
       {/* HERO SECTION - Updated for sleek design */}
-      <div className="px-4 py-8 mx-auto max-w-7xl sm:px-6 lg:px-0 sm:py-12 bg-gray-50">
+      <div className="px-4 py-8 pt-20 mx-auto max-w-7xl sm:px-6 lg:px-0 sm:py-12 md:pt-8 bg-gray-50">
         <section
           className="relative flex items-end text-white overflow-hidden rounded-[44px] shadow-2xl"
           style={{ height: "calc(100vh - 8rem)" }}
@@ -350,7 +350,7 @@ export default function Home() {
           {/* Background Image */}
           <Image
             src="/hero.png"
-            alt="SmatAccess Hero Background"
+            alt="SmatAccess Home Hero Background"
             layout="fill"
             objectFit="cover"
             className="z-0"
@@ -360,23 +360,18 @@ export default function Home() {
 
           {/* Content Container */}
           <div className="relative z-20 w-full px-5 pb-16 md:px-20">
-            <div className="grid items-end grid-cols-1 gap-8 lg:grid-cols-2">
-              <div className="text-left">
-                <h1 className="text-5xl font-bold leading-tight md:text-6xl">
-                  Secure Your World with Intelligence.
-                </h1>
-              </div>
-
-              <div className="text-right">
-                <p className="max-w-lg mb-8 ml-auto text-xl text-white md:text-xl">
-                  SmatAccess – Smart Access Control for Homes, Offices &
-                  Enterprises. Simplify entry, strengthen security, and manage
-                  visitors, vehicles, and staff with one intelligent platform.
-                </p>
-                <button className="cursor-pointer bg-white text-[#2090C4] px-10 py-4 rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg">
-                  Request a Demo
-                </button>
-              </div>
+            <div className="flex flex-col items-center justify-center max-w-4xl mx-auto text-center">
+              <h1 className="mb-6 text-5xl font-bold leading-tight md:text-6xl">
+                Secure Your World with Intelligence.
+              </h1>
+              <p className="max-w-2xl mb-8 text-xl text-white md:text-xl">
+                SmatAccess – Smart Access Control for Homes, Offices &
+                Enterprises. Simplify entry, strengthen security, and manage
+                visitors, vehicles, and staff with one intelligent platform.
+              </p>
+              <button className="cursor-pointer bg-white text-[#2090C4] px-10 py-4 rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg">
+                Request a Demo
+              </button>
             </div>
           </div>
         </section>
@@ -394,79 +389,121 @@ export default function Home() {
             </p>
           </div>
 
-          {/* First 6 cards (2 full rows) */}
-          <div className="grid items-stretch grid-cols-1 pt-10 mb-16 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
-            {industrySolutions.slice(0, 6).map((item, index) => {
-              const Icon = item.icon;
+          {/* All 8 cards - Mobile: single grid, Desktop: split layout */}
+          {/* Mobile layout: All cards in one grid */}
+          <div className="block md:hidden">
+            <div className="grid items-stretch grid-cols-1 pt-10 gap-x-8 gap-y-16">
+              {industrySolutions.map((item, index) => {
+                const Icon = item.icon;
+                return (
+                  <div key={index} className="h-full">
+                    <div className="bg-black p-8 pt-16 rounded-2xl shadow-2xl flex flex-col items-center text-center justify-start relative h-full min-h-[300px] w-full transition-all duration-300 ease-in-out transform hover:scale-[1.02] hover:shadow-[#2090C4]/50 border border-transparent hover:border-[#2090C4]">
+                      {/* Icon Circle - ABSOLUTE POSITIONING */}
+                      <div className="w-20 h-20 bg-black rounded-full border border-[#2090C4] flex items-center justify-center mb-6 absolute top-0 transform -translate-y-1/2">
+                        <Icon className="w-12 h-12 text-[#2090C4]" />
+                      </div>
 
-              return (
-                <div key={index} className="h-full lg:col-span-1">
-                  <div className="bg-black p-8 pt-16 rounded-2xl shadow-2xl flex flex-col items-center text-center justify-start relative h-full min-h-[300px] w-full transition-all duration-300 ease-in-out transform hover:scale-[1.02] hover:shadow-[#2090C4]/50 border border-transparent hover:border-[#2090C4]">
-                    {/* Icon Circle - ABSOLUTE POSITIONING */}
-                    <div className="w-20 h-20 bg-black rounded-full border border-[#2090C4] flex items-center justify-center mb-6 absolute top-0 transform -translate-y-1/2">
-                      <Icon className="w-12 h-12 text-[#2090C4]" />
+                      {/* Title */}
+                      <h3 className="mt-4 mb-4 text-2xl font-bold text-white">
+                        {item.title}
+                      </h3>
+
+                      {/* Description */}
+                      <p className="max-w-sm mb-6 text-base text-gray-300 grow">
+                        {item.description}
+                      </p>
+
+                      {/* Learn More Link */}
+                      <Link
+                        href={`/use-cases/${item.slug}`}
+                        className="text-[#2090C4] hover:text-[#2090C4]/80 font-medium transition-colors mt-auto flex items-center"
+                      >
+                        Learn More
+                        <ArrowRightIcon className="w-4 h-4 ml-2" />
+                      </Link>
                     </div>
-
-                    {/* Title */}
-                    <h3 className="mt-4 mb-4 text-2xl font-bold text-white">
-                      {item.title}
-                    </h3>
-
-                    {/* Description */}
-                    <p className="max-w-sm mb-6 text-base text-gray-300 grow">
-                      {item.description}
-                    </p>
-
-                    {/* Learn More Link */}
-                    <Link
-                      href={`/use-cases/${item.slug}`}
-                      className="text-[#2090C4] hover:text-[#2090C4]/80 font-medium transition-colors mt-auto flex items-center"
-                    >
-                      Learn More
-                      <ArrowRightIcon className="w-4 h-4 ml-2" />
-                    </Link>
                   </div>
-                </div>
-              );
-            })}
+                );
+              })}
+            </div>
           </div>
 
-          {/* Last 2 cards centered */}
-          <div className="flex justify-center gap-x-8">
-            {industrySolutions.slice(6).map((item, index) => {
-              const Icon = item.icon;
-              const actualIndex = index + 6; // Adjust index to match original array
+          {/* Desktop layout: First 6 cards in grid, last 2 centered */}
+          <div className="hidden md:block">
+            {/* First 6 cards (2 full rows) */}
+            <div className="grid items-stretch grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
+              {industrySolutions.slice(0, 6).map((item, index) => {
+                const Icon = item.icon;
 
-              return (
-                <div key={actualIndex} className="w-full max-w-md">
-                  <div className="bg-black p-8 pt-16 rounded-2xl shadow-2xl flex flex-col items-center text-center justify-start relative h-full min-h-[300px] w-full transition-all duration-300 ease-in-out transform hover:scale-[1.02] hover:shadow-[#2090C4]/50 border border-transparent hover:border-[#2090C4]">
-                    {/* Icon Circle - ABSOLUTE POSITIONING */}
-                    <div className="w-20 h-20 bg-black rounded-full border border-[#2090C4] flex items-center justify-center mb-6 absolute top-0 transform -translate-y-1/2">
-                      <Icon className="w-12 h-12 text-[#2090C4]" />
+                return (
+                  <div key={index} className="h-full lg:col-span-1">
+                    <div className="bg-black p-8 pt-16 rounded-2xl shadow-2xl flex flex-col items-center text-center justify-start relative h-full min-h-[300px] w-full transition-all duration-300 ease-in-out transform hover:scale-[1.02] hover:shadow-[#2090C4]/50 border border-transparent hover:border-[#2090C4]">
+                      {/* Icon Circle - ABSOLUTE POSITIONING */}
+                      <div className="w-20 h-20 bg-black rounded-full border border-[#2090C4] flex items-center justify-center mb-6 absolute top-0 transform -translate-y-1/2">
+                        <Icon className="w-12 h-12 text-[#2090C4]" />
+                      </div>
+
+                      {/* Title */}
+                      <h3 className="mt-4 mb-4 text-2xl font-bold text-white">
+                        {item.title}
+                      </h3>
+
+                      {/* Description */}
+                      <p className="max-w-sm mb-6 text-base text-gray-300 grow">
+                        {item.description}
+                      </p>
+
+                      {/* Learn More Link */}
+                      <Link
+                        href={`/use-cases/${item.slug}`}
+                        className="text-[#2090C4] hover:text-[#2090C4]/80 font-medium transition-colors mt-auto flex items-center"
+                      >
+                        Learn More
+                        <ArrowRightIcon className="w-4 h-4 ml-2" />
+                      </Link>
                     </div>
-
-                    {/* Title */}
-                    <h3 className="mt-4 mb-4 text-2xl font-bold text-white">
-                      {item.title}
-                    </h3>
-
-                    {/* Description */}
-                    <p className="max-w-sm mb-6 text-base text-gray-300 grow">
-                      {item.description}
-                    </p>
-
-                    {/* Learn More Link */}
-                    <Link
-                      href={`/use-cases/${item.slug}`}
-                      className="text-[#2090C4] hover:text-[#2090C4]/80 font-medium transition-colors mt-auto flex items-center"
-                    >
-                      Learn More
-                      <ArrowRightIcon className="w-4 h-4 ml-2" />
-                    </Link>
                   </div>
-                </div>
-              );
-            })}
+                );
+              })}
+            </div>
+
+            {/* Last 2 cards centered */}
+            <div className="flex justify-center mt-16 gap-x-8">
+              {industrySolutions.slice(6).map((item, index) => {
+                const Icon = item.icon;
+                const actualIndex = index + 6; // Adjust index to match original array
+
+                return (
+                  <div key={actualIndex} className="w-full max-w-md">
+                    <div className="bg-black p-8 pt-16 rounded-2xl shadow-2xl flex flex-col items-center text-center justify-start relative h-full min-h-[300px] w-full transition-all duration-300 ease-in-out transform hover:scale-[1.02] hover:shadow-[#2090C4]/50 border border-transparent hover:border-[#2090C4]">
+                      {/* Icon Circle - ABSOLUTE POSITIONING */}
+                      <div className="w-20 h-20 bg-black rounded-full border border-[#2090C4] flex items-center justify-center mb-6 absolute top-0 transform -translate-y-1/2">
+                        <Icon className="w-12 h-12 text-[#2090C4]" />
+                      </div>
+
+                      {/* Title */}
+                      <h3 className="mt-4 mb-4 text-2xl font-bold text-white">
+                        {item.title}
+                      </h3>
+
+                      {/* Description */}
+                      <p className="max-w-sm mb-6 text-base text-gray-300 grow">
+                        {item.description}
+                      </p>
+
+                      {/* Learn More Link */}
+                      <Link
+                        href={`/use-cases/${item.slug}`}
+                        className="text-[#2090C4] hover:text-[#2090C4]/80 font-medium transition-colors mt-auto flex items-center"
+                      >
+                        Learn More
+                        <ArrowRightIcon className="w-4 h-4 ml-2" />
+                      </Link>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
           </div>
 
           <div className="mt-8 text-center">
@@ -720,10 +757,7 @@ export default function Home() {
               <div className="pb-4 overflow-x-auto scrollbar-hide">
                 <div className="flex px-12 space-x-12">
                   {clientLogos.map((client, index) => (
-                    <div
-                      key={index}
-                      className="cursor-pointer shrink-0 group"
-                    >
+                    <div key={index} className="cursor-pointer shrink-0 group">
                       <div className="relative flex items-center justify-center w-32 h-16 p-4 transition-all duration-300 bg-gray-100 rounded-lg md:w-40 md:h-20 group-hover:bg-gray-200 group-hover:shadow-md">
                         <Image
                           src={client.logo}
