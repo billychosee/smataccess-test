@@ -319,11 +319,11 @@ export default function Hardware() {
           </div>
 
           {/* Last 2 cards centered */}
-          <div className="flex justify-center gap-8 mt-8">
+          <div className="flex flex-col md:flex-row justify-center gap-8 mt-8">
             {hardwareData.slice(3).map((hardware, index) => {
               const actualIndex = index + 3; // Adjust index to match original array
               return (
-                <div key={actualIndex} className="w-full max-w-md">
+                <div key={actualIndex} className="w-full md:w-1/2 max-w-md">
                   <div className="relative p-8 overflow-hidden transition-all duration-500 bg-white border border-gray-100 shadow-xl group rounded-3xl hover:shadow-2xl hover:-translate-y-2">
                     {/* Decorative background gradient */}
                     <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[#2090C4]/10 to-transparent rounded-full transform translate-x-16 -translate-y-16"></div>
