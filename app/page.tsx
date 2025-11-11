@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 "use client";
 
 import Navbar from "../components/Navbar";
@@ -16,10 +17,10 @@ import {
   BuildingOfficeIcon,
   TicketIcon,
   ArrowRightIcon,
-  UserPlusIcon, // New icon for Step 1
-  QrCodeIcon, // New icon for Step 2
-  ClockIcon, // New icon for Step 3
-  ChartBarIcon, // New icon for Step 4
+  UserPlusIcon,
+  QrCodeIcon,
+  ClockIcon,
+  ChartBarIcon,
   PlayIcon,
   // Icons for Why Choose SmatAccess section
   EyeIcon,
@@ -28,16 +29,19 @@ import {
   ServerIcon,
   CloudIcon,
   PhoneIcon,
+  // New icons for additional features
+  CpuChipIcon,
+  PuzzlePieceIcon,
+  WifiIcon,
   // Icons for testimonials
-  StarIcon,
-  CheckIcon, // New icon for pricing features
-  XMarkIcon, // New icon for missing features
-  CurrencyDollarIcon, // New icon for pricing
-} from "@heroicons/react/24/outline"; // Using outline style for the example
+  CheckIcon,
+  XMarkIcon,
+  CurrencyDollarIcon,
+} from "@heroicons/react/24/outline";
 
 export default function Home() {
   // State for testimonial rotation
-  const [currentTestimonialIndex, setCurrentTestimonialIndex] = useState(0);
+  const [, setCurrentTestimonialIndex] = useState(0);
 
   // Define all industries with titles, descriptions, and the imported Heroicon component
   const industrySolutions = [
@@ -77,11 +81,25 @@ export default function Home() {
       slug: "healthcare-facilities",
     },
     {
-      title: "Industrial Sites",
+      title: "Mining Operations",
+      description:
+        "Secure remote mining sites with robust access control, equipment tracking, and emergency response systems.",
+      icon: WrenchScrewdriverIcon,
+      slug: "mining-operations",
+    },
+    {
+      title: "Banking",
+      description:
+        "Meet strict financial security requirements with multi-layer authentication and compliance reporting.",
+      icon: BuildingOfficeIcon,
+      slug: "banking",
+    },
+    {
+      title: "Manufacturing Facilities",
       description:
         "Track personnel and equipment across large, complex locations with enhanced security measures.",
       icon: WrenchScrewdriverIcon,
-      slug: "industrial-sites",
+      slug: "manufacturing-facilities",
     },
     {
       title: "Government Buildings",
@@ -179,6 +197,30 @@ export default function Home() {
       color: "bg-cyan-500",
     },
     {
+      title: "7-Day Offline",
+      description:
+        "Our system keeps working perfectly—including all access rules—even during power cuts or network failures. All actions sync to the audit log once reconnected.",
+      icon: WifiIcon,
+      imageSrc: "/feature-cloud.png",
+      color: "bg-orange-500",
+    },
+    {
+      title: "Integrated Smat-Ecosystem",
+      description:
+        "Connects natively to SmatProp to automate tenant management and SmatPay to build a complete 'super app' for your community.",
+      icon: PuzzlePieceIcon,
+      imageSrc: "/feature-multisite.png",
+      color: "bg-pink-500",
+    },
+    {
+      title: "Advanced AI Security",
+      description:
+        "Add powerful modules for AI Facial Recognition and ANPR (Vehicle Plate Recognition) for high-security zones.",
+      icon: CpuChipIcon,
+      imageSrc: "/feature-monitoring.png",
+      color: "bg-violet-500",
+    },
+    {
       title: "Local Support",
       description:
         "Get 24/7 assistance from our dedicated support team with technicians in your region.",
@@ -265,7 +307,7 @@ export default function Home() {
     },
     {
       name: "Business Standard",
-      price: "5",
+      price: "70",
       tagline: "Perfect for corporate offices and single-building facilities.",
       isPopular: true,
       features: [
@@ -273,6 +315,8 @@ export default function Home() {
         "Time & Attendance",
         "WhatsApp Integration",
         "24/7 Phone Support",
+        "Cloud-Based Audit Logs",
+        "ANPR Integration (Optional Add-on)",
       ],
       missingFeatures: ["Dedicated Account Manager"],
       buttonText: "Request Quote",
@@ -297,7 +341,7 @@ export default function Home() {
   // **********************************************
 
   // **********************************************
-  // HARDWARE DATA for Showcase Section - All dummy images are now /placeholder-device1.png
+  // HARDWARE DATA for Showcase Section
   // **********************************************
   const hardwareDevices = [
     {
@@ -333,9 +377,6 @@ export default function Home() {
   }, [testimonials.length]);
 
   // Function to handle manual testimonial navigation
-  const goToTestimonial = (index: number) => {
-    setCurrentTestimonialIndex(index);
-  };
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -362,12 +403,17 @@ export default function Home() {
           <div className="relative z-20 w-full px-5 pb-16 md:px-20">
             <div className="flex flex-col items-center justify-center max-w-4xl mx-auto text-center">
               <h1 className="mb-6 text-5xl font-bold leading-tight md:text-6xl">
-                Secure Your World with Intelligence.
+                Unlock Simplicity, Reliability, and Control.
               </h1>
-              <p className="max-w-2xl mb-8 text-xl text-white md:text-xl">
-                SmatAccess – Smart Access Control for Homes, Offices &
-                Enterprises. Simplify entry, strengthen security, and manage
-                visitors, vehicles, and staff with one intelligent platform.
+              <p className="max-w-2xl mb-4 text-xl text-white md:text-xl">
+                {/* eslint-disable-next-line max-len, max-len */}
+                The African-built access platform that works even when the
+                lights go out—effortless, secure, and trusted by the
+                region&apos;s top properties.
+              </p>
+              <p className="max-w-2xl mb-8 text-lg text-white md:text-lg">
+                Gain real-time visibility, tenant trust, and control over every
+                entry—no matter your industry, even during power cuts.
               </p>
               <button className="cursor-pointer bg-white text-[#2090C4] px-10 py-4 rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg">
                 Request a Demo
@@ -385,7 +431,7 @@ export default function Home() {
               Industry Solutions
             </h2>
             <p className="text-lg text-gray-600">
-              Tailored access control for every sector.
+              Control every gate with ease
             </p>
           </div>
 
@@ -655,86 +701,166 @@ export default function Home() {
 
       {/* --- */}
 
-      {/* SECTION 6 – TESTIMONIALS / CLIENT BRANDS - REDESIGNED WITH AUTO-ROTATING TESTIMONIALS */}
-      <section className="py-16 bg-white">
-        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-          <div className="mb-12 text-center">
-            <h2 className="mb-4 text-3xl font-bold text-gray-900">
-              Trusted by Leading Organizations
-            </h2>
-            <p className="text-lg text-gray-600">See what our clients say.</p>
-          </div>
+      {/* SECTION 6 – OUR PARTNERS - Enhanced Sleek Design */}
+      <section className="relative py-20 overflow-hidden bg-gradient-to-br from-gray-50 to-white">
+        {/* Background decoration */}
+        <div className="absolute top-0 left-0 w-full h-full opacity-5">
+          <div className="absolute w-96 h-96 bg-[#2090C4] rounded-full top-20 left-20 filter blur-3xl"></div>
+          <div className="absolute w-64 h-64 bg-blue-500 rounded-full bottom-20 right-20 filter blur-3xl"></div>
+        </div>
 
-          {/* Testimonials Carousel */}
-          <div className="relative mb-16">
-            <div className="max-w-4xl mx-auto">
-              <div className="relative p-8 overflow-hidden shadow-xl bg-gray-50 rounded-2xl md:p-12">
-                {/* Quote mark decoration */}
-                <div className="absolute top-4 left-4 text-[#2090C4]/10">
+        <div className="relative z-10 px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+          <div className="mb-16 text-center">
+            <div className="inline-block mb-6 px-6 py-2 bg-gradient-to-r from-[#2090C4] to-[#1a7bb7] rounded-full text-white text-sm font-semibold uppercase tracking-wider">
+              Partnership Program
+            </div>
+            <h2 className="mb-6 text-4xl font-bold text-gray-900 md:text-5xl">
+              Become a SmatAccess Partner
+            </h2>
+            <div className="w-full">
+              <h3 className="text-3xl font-bold text-[#2090C4] mb-8">
+                Join Zimbabwe&apos;s Fastest-Growing Security Ecosystem
+              </h3>
+              <p className="mb-12 text-xl leading-relaxed text-gray-600">
+                At SmatAccess, we believe the future of property security is
+                built on partnership, innovation, and local expertise.
+                That&apos;s why we invite leading security companies like yours
+                to become official SmatAccess Partners.
+              </p>
+
+              {/* Sleek Horizontal Cards */}
+              <div className="grid grid-cols-1 gap-6 mb-16 sm:grid-cols-2 md:grid-cols-4">
+                {/* Card 1: Boost Your Offering */}
+                <div className="group relative bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100 hover:border-[#2090C4]/30 overflow-hidden">
+                  <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-[#2090C4] to-[#1a7bb7] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                  <div className="p-6">
+                    <div className="flex items-center mb-4">
+                      <div className="w-10 h-10 bg-gradient-to-br from-[#2090C4] to-[#1a7bb7] rounded-lg flex items-center justify-center mr-3">
+                        <CheckIcon className="w-5 h-5 text-white" />
+                      </div>
+                      <h4 className="text-lg font-bold text-gray-900">
+                        Boost Your Offering
+                      </h4>
+                    </div>
+                    <p className="text-sm leading-relaxed text-gray-600">
+                      Modern, AI-driven access control—purpose-built for Africa,
+                      resilient to power cuts, instantly familiar via WhatsApp.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Card 2: Win More Deals */}
+                <div className="group relative bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100 hover:border-[#2090C4]/30 overflow-hidden">
+                  <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-[#2090C4] to-[#1a7bb7] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                  <div className="p-6">
+                    <div className="flex items-center mb-4">
+                      <div className="w-10 h-10 bg-gradient-to-br from-[#2090C4] to-[#1a7bb7] rounded-lg flex items-center justify-center mr-3">
+                        <CheckIcon className="w-5 h-5 text-white" />
+                      </div>
+                      <h4 className="text-lg font-bold text-gray-900">
+                        Win More Deals
+                      </h4>
+                    </div>
+                    <p className="text-sm leading-relaxed text-gray-600">
+                      Recurring SaaS income, best-in-class support, and unique
+                      features competitors can&apos;t match.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Card 3: Grow With Us */}
+                <div className="group relative bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100 hover:border-[#2090C4]/30 overflow-hidden">
+                  <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-[#2090C4] to-[#1a7bb7] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                  <div className="p-6">
+                    <div className="flex items-center mb-4">
+                      <div className="w-10 h-10 bg-gradient-to-br from-[#2090C4] to-[#1a7bb7] rounded-lg flex items-center justify-center mr-3">
+                        <CheckIcon className="w-5 h-5 text-white" />
+                      </div>
+                      <h4 className="text-lg font-bold text-gray-900">
+                        Grow With Us
+                      </h4>
+                    </div>
+                    <p className="text-sm leading-relaxed text-gray-600">
+                      Exclusive training, priority support, co-branded
+                      materials, and dedicated success team.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Card 4: Get Noticed */}
+                <div className="group relative bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100 hover:border-[#2090C4]/30 overflow-hidden">
+                  <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-[#2090C4] to-[#1a7bb7] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                  <div className="p-6">
+                    <div className="flex items-center mb-4">
+                      <div className="w-10 h-10 bg-gradient-to-br from-[#2090C4] to-[#1a7bb7] rounded-lg flex items-center justify-center mr-3">
+                        <CheckIcon className="w-5 h-5 text-white" />
+                      </div>
+                      <h4 className="text-lg font-bold text-gray-900">
+                        Get Noticed
+                      </h4>
+                    </div>
+                    <p className="text-sm leading-relaxed text-gray-600">
+                      Feature your logo in our trusted &quot;Our Partners&quot;
+                      section and show cutting-edge technology leadership.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Enhanced CTA Section */}
+              <div className="relative p-10 bg-gradient-to-br from-[#2090C4] to-[#1a7bb7] rounded-3xl text-white overflow-hidden">
+                {/* Background pattern */}
+                <div className="absolute inset-0 opacity-10">
                   <svg
-                    className="w-24 h-24"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
+                    className="w-full h-full"
+                    xmlns="http://www.w3.org/2000/svg"
                   >
-                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z" />
+                    <defs>
+                      <pattern
+                        id="partner-pattern"
+                        width="40"
+                        height="40"
+                        patternUnits="userSpaceOnUse"
+                      >
+                        <path
+                          d="M 40 0 L 0 0 0 40"
+                          fill="none"
+                          stroke="white"
+                          strokeWidth="1"
+                        />
+                      </pattern>
+                    </defs>
+                    <rect
+                      width="100%"
+                      height="100%"
+                      fill="url(#partner-pattern)"
+                    />
                   </svg>
                 </div>
 
-                {/* Testimonial content */}
                 <div className="relative z-10">
-                  <div className="flex justify-center mb-4">
-                    {[...Array(5)].map((_, i) => (
-                      <StarIcon
-                        key={i}
-                        className={`w-6 h-6 ${
-                          i < testimonials[currentTestimonialIndex].rating
-                            ? "text-yellow-400"
-                            : "text-gray-300"
-                        }`}
-                      />
-                    ))}
-                  </div>
-
-                  <p className="mb-8 text-xl italic text-center text-gray-700 md:text-2xl">
-                    &ldquo;{testimonials[currentTestimonialIndex].quote}&rdquo;
+                  <h4 className="mb-4 text-2xl font-bold">
+                    Ready to Step Ahead of the Competition?
+                  </h4>
+                  <p className="mb-8 text-lg text-blue-100">
+                    Let&apos;s build a safer, smarter Africa—together.
                   </p>
-
-                  <div className="text-center">
-                    <p className="text-lg font-semibold text-gray-900">
-                      {testimonials[currentTestimonialIndex].author}
-                    </p>
-                    <p className="text-gray-600">
-                      {testimonials[currentTestimonialIndex].position},{" "}
-                      {testimonials[currentTestimonialIndex].company}
-                    </p>
+                  <div className="space-y-4">
+                    <button className="cursor-pointer relative bg-white text-[#2090C4] px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 transform hover:scale-105 hover:bg-gray-100 shadow-xl inline-flex items-center group">
+                      Apply to Become a SmatAccess Partner
+                      <ArrowRightIcon className="w-5 h-5 ml-2 transition-transform duration-300 transform group-hover:translate-x-1" />
+                    </button>
+                    <div className="text-blue-100">
+                      Or contact our Partner Success team at{" "}
+                      <a
+                        href="mailto:info@smataccess.com"
+                        className="font-semibold text-white hover:underline"
+                      >
+                        info@smataccess.com
+                      </a>{" "}
+                      to start your application or learn more.
+                    </div>
                   </div>
-                </div>
-
-                {/* Progress indicator */}
-                <div className="flex justify-center mt-8 space-x-2">
-                  {testimonials.map((_, index) => (
-                    <button
-                      key={index}
-                      onClick={() => goToTestimonial(index)}
-                      className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                        index === currentTestimonialIndex
-                          ? "bg-[#2090C4] w-8"
-                          : "bg-gray-300"
-                      }`}
-                      aria-label={`Go to testimonial ${index + 1}`}
-                    />
-                  ))}
-                </div>
-
-                {/* Auto-rotate timer */}
-                <div className="h-1 mt-4 overflow-hidden bg-gray-200 rounded-full">
-                  <div
-                    className="h-full bg-[#2090C4] rounded-full"
-                    style={{
-                      animation: "progress 10s linear infinite",
-                      animationPlayState: "running",
-                    }}
-                  ></div>
                 </div>
               </div>
             </div>
@@ -782,7 +908,7 @@ export default function Home() {
 
       {/* --- */}
 
-      {/* SECTION 7 – PRICING PREVIEW - SLEEKEST REDESIGN */}
+      {/* SECTION 7 – PRICING PREVIEW */}
       <section className="relative py-16 overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100">
         {/* Background decoration */}
         <div className="absolute top-0 left-0 w-full h-full opacity-5">
@@ -797,7 +923,7 @@ export default function Home() {
             </h2>
             <p className="max-w-2xl mx-auto text-xl text-gray-600">
               Flexible and transparent pricing designed to scale with your
-              needs. **Full details are on the pricing page.**
+              needs. Full details are on the pricing page.
             </p>
           </div>
 
@@ -921,7 +1047,32 @@ export default function Home() {
           {/* VIEW FULL PRICING BUTTON - Styled with brand colors and rounded-full */}
           <div className="mt-16 text-center">
             <Link href="/pricing">
-              <button className="cursor-pointer bg-[#2090C4] text-white px-10 py-4 rounded-full font-semibold hover:bg-[#1a7bb7] transition-colors flex items-center justify-center mx-auto w-fit text-lg shadow-md transform hover:scale-105">
+              <button
+                className={[
+                  "cursor-pointer",
+                  "bg-[#2090C4]",
+                  "text-white",
+                  "px-10",
+                  "py-4",
+                  "rounded-full",
+                  "font-semibold",
+                  "flex",
+                  "items-center",
+                  "justify-center",
+                  "mx-auto",
+                  "w-fit",
+                  "text-lg",
+                  "shadow-md",
+                  "transition-transform",
+                  "transition-shadow",
+                  "transition-colors",
+                  "duration-300",
+                  "ease-in-out",
+                  "hover:scale-105",
+                  "hover:shadow-xl",
+                  "hover:bg-[#1a7bb7]",
+                ].join(" ")}
+              >
                 View Full Pricing
                 <ArrowRightIcon className="w-5 h-5 ml-3" />
               </button>
@@ -940,8 +1091,14 @@ export default function Home() {
               Explore Our Smart Hardware
             </h2>
             <p className="text-xl text-gray-600">
-              Seamlessly integrated, durable, and reliable devices built for any
-              environment.
+              SmatAccess is a software-first platform designed to be
+              hardware-agnostic. It integrates seamlessly with your existing
+              biometric scanners, gate barriers, turnstiles, and smart locks.
+              For the client who needs a fully integrated solution, we also
+              offer bespoke hardware solutions
+              <a href="/hardware" className="text-[#2090C4] hover:underline">
+                Explore our Hardware Solutions
+              </a>
             </p>
           </div>
 
@@ -988,7 +1145,7 @@ export default function Home() {
           <div className="mt-16 text-center">
             <Link href="/hardware">
               <button className="flex items-center justify-center px-10 py-4 mx-auto text-lg font-semibold text-gray-800 transition-colors bg-gray-200 rounded-full shadow-md cursor-pointer hover:bg-gray-300 w-fit">
-                View All Hardware Solutions
+                Explore Devices
                 <ArrowRightIcon className="w-5 h-5 ml-3" />
               </button>
             </Link>
@@ -998,8 +1155,7 @@ export default function Home() {
 
       {/* --- */}
 
-      {/* SECTION 9 – CALL TO ACTION - Standard Design */}
-      {/* SECTION 9 – CALL TO ACTION - Sleek Design with Animations */}
+      {/* SECTION 9 – CALL TO ACTION */}
       <section className="relative py-20 bg-gradient-to-br from-[#2090C4] via-[#1a7bb7] to-[#0f5d8c] overflow-hidden">
         {/* Animated background elements */}
         <div className="absolute inset-0">

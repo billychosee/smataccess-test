@@ -44,3 +44,26 @@
     background-image: linear-gradient(to top right, var(--tw-gradient-stops));
   }
 }
+
+/* Smooth button transitions applied globally so CTAs feel responsive and consistent */
+@layer components {
+  /* Apply smooth transitions to button-like elements */
+  button,
+  .btn,
+  a.btn {
+    @apply transform transition duration-300 ease-in-out;
+  }
+
+  /* Hover/active affordances: subtle scale + shadow */
+  button:hover,
+  .btn:hover,
+  a.btn:hover {
+    @apply scale-105 shadow-lg;
+  }
+
+  button:active,
+  .btn:active,
+  a.btn:active {
+    @apply scale-100;
+  }
+}

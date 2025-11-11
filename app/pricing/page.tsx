@@ -26,6 +26,52 @@ export default function Pricing() {
     analytics: false,
   });
 
+  // PRICING TIERS Data from Home Page
+  const pricingTiers = [
+    {
+      name: "Residential",
+      price: "3",
+      tagline: "Ideal for small communities and single-site homes.",
+      isPopular: false,
+      features: ["Up to 50 Users", "Mobile App Access", "Basic Event Log"],
+      missingFeatures: ["Multi-Site Control", "WhatsApp Integration"],
+      buttonText: "Start Free Trial",
+      link: "/signup/residential",
+    },
+    {
+      name: "Business Standard",
+      price: "70",
+      tagline: "Perfect for corporate offices and single-building facilities.",
+      isPopular: true,
+      features: [
+        "Up to 500 Users",
+        "Time & Attendance",
+        "WhatsApp Integration",
+        "24/7 Phone Support",
+        "Cloud-Based Audit Logs",
+        "ANPR Integration (Optional Add-on)",
+      ],
+      missingFeatures: ["Dedicated Account Manager"],
+      buttonText: "Request Quote",
+      link: "/contact/business",
+    },
+    {
+      name: "Enterprise",
+      price: "Custom",
+      tagline: "Tailored security for large-scale operations and government.",
+      isPopular: false,
+      features: [
+        "Unlimited Users",
+        "Multi-Site Control",
+        "Dedicated Account Manager",
+        "Custom Integrations (API)",
+      ],
+      missingFeatures: [],
+      buttonText: "Contact Sales",
+      link: "/contact/enterprise",
+    },
+  ];
+
   const basePrice = userCount > 100 ? 5 : 3;
   const totalBase = userCount * basePrice;
   const addOnCost =
@@ -91,7 +137,7 @@ export default function Pricing() {
         </section>
       </div>
 
-      {/* PRICING TIERS - Sleek Card Design */}
+      {/* PRICING TIERS - Enhanced Card Design */}
       <section className="py-20 bg-white">
         <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div className="mb-16 text-center">
@@ -103,178 +149,135 @@ export default function Pricing() {
             </p>
           </div>
 
-          <div className="grid items-stretch grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-12">
-            {/* Starter Plan */}
-            <div className="relative flex flex-col p-8 rounded-3xl shadow-lg transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl group bg-white border border-gray-200 hover:border-[#2090C4]/50">
-              <div className="mb-8 text-center">
-                <h3 className="mb-2 text-2xl font-bold text-gray-900">
-                  Starter
-                </h3>
-                <p className="mb-6 text-gray-600">
-                  Perfect for small businesses and single locations
-                </p>
-
-                <div className="flex items-center justify-center mb-6">
-                  <CurrencyDollarIcon className="w-8 h-8 text-[#2090C4] mr-1" />
-                  <span className="text-5xl font-extrabold text-gray-900">
-                    3
-                  </span>
-                  <span className="ml-1 text-gray-600">/user/year</span>
-                </div>
-              </div>
-
-              <ul className="flex flex-col mb-8 space-y-4 grow">
-                <li className="flex items-start">
-                  <CheckIcon className="w-6 h-6 text-green-500 shrink-0 mr-3 mt-0.5" />
-                  <span className="text-gray-700">Up to 50 users</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckIcon className="w-6 h-6 text-green-500 shrink-0 mr-3 mt-0.5" />
-                  <span className="text-gray-700">Mobile app access</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckIcon className="w-6 h-6 text-green-500 shrink-0 mr-3 mt-0.5" />
-                  <span className="text-gray-700">Basic event logging</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckIcon className="w-6 h-6 text-green-500 shrink-0 mr-3 mt-0.5" />
-                  <span className="text-gray-700">Email support</span>
-                </li>
-                <li className="flex items-start">
-                  <XMarkIcon className="w-6 h-6 text-red-400 shrink-0 mr-3 mt-0.5" />
-                  <span className="text-gray-400 line-through">
-                    Multi-site control
-                  </span>
-                </li>
-                <li className="flex items-start">
-                  <XMarkIcon className="w-6 h-6 text-red-400 shrink-0 mr-3 mt-0.5" />
-                  <span className="text-gray-400 line-through">
-                    WhatsApp integration
-                  </span>
-                </li>
-              </ul>
-
-              <button className="cursor-pointer w-full py-3 rounded-full font-semibold text-lg transition-all duration-300 transform group-hover:scale-105 bg-[#2090C4] text-white hover:bg-[#1a7bb7] shadow-md">
-                Start Free Trial
-              </button>
-            </div>
-
-            {/* Business Plan - Most Popular */}
-            <div className="relative flex flex-col p-8 rounded-3xl shadow-xl transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl group bg-gradient-to-br from-[#2090C4] to-[#1a7bb7] text-white ring-4 ring-offset-2 ring-[#2090C4] z-10">
-              {/* Popular Badge */}
-              <div className="absolute top-0 right-0 -mt-4 -mr-4 px-5 py-1 bg-white text-[#2090C4] text-sm font-bold rounded-full shadow-lg transform rotate-6">
-                Most Popular
-              </div>
-
-              <div className="mb-8 text-center">
-                <h3 className="mb-2 text-2xl font-bold">Business</h3>
-                <p className="mb-6 text-blue-100">
-                  Ideal for growing businesses and single buildings
-                </p>
-
-                <div className="flex items-center justify-center mb-6">
-                  <CurrencyDollarIcon className="w-8 h-8 mr-1 text-white" />
-                  <span className="text-5xl font-extrabold">5</span>
-                  <span className="ml-1 text-blue-100">/user/year</span>
-                </div>
-              </div>
-
-              <ul className="flex flex-col mb-8 space-y-4 grow">
-                <li className="flex items-start">
-                  <CheckIcon className="w-6 h-6 text-white shrink-0 mr-3 mt-0.5" />
-                  <span className="text-blue-100">Up to 500 users</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckIcon className="w-6 h-6 text-white shrink-0 mr-3 mt-0.5" />
-                  <span className="text-blue-100">
-                    Time & attendance tracking
-                  </span>
-                </li>
-                <li className="flex items-start">
-                  <CheckIcon className="w-6 h-6 text-white shrink-0 mr-3 mt-0.5" />
-                  <span className="text-blue-100">WhatsApp integration</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckIcon className="w-6 h-6 text-white shrink-0 mr-3 mt-0.5" />
-                  <span className="text-blue-100">24/7 phone support</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckIcon className="w-6 h-6 text-white shrink-0 mr-3 mt-0.5" />
-                  <span className="text-blue-100">Advanced reporting</span>
-                </li>
-                <li className="flex items-start">
-                  <XMarkIcon className="w-6 h-6 text-blue-200 shrink-0 mr-3 mt-0.5" />
-                  <span className="text-blue-200 line-through">
-                    Dedicated account manager
-                  </span>
-                </li>
-              </ul>
-
-              <Link
-                href="/contact"
-                className="cursor-pointer w-full py-3 rounded-full font-semibold text-lg transition-all duration-300 transform group-hover:scale-105 bg-white text-[#2090C4] hover:bg-gray-100 shadow-md flex items-center justify-center"
+          <div className="grid items-stretch grid-cols-1 gap-8 md:grid-cols-3 lg:gap-12">
+            {pricingTiers.map((tier, index) => (
+              <div
+                key={index}
+                className={`group relative flex flex-col p-8 rounded-3xl shadow-xl transition-all duration-500 hover:scale-[1.05] overflow-hidden
+                  ${
+                    tier.isPopular
+                      ? "bg-gradient-to-br from-[#2090C4] to-[#1a7bb7] text-white shadow-2xl ring-4 ring-offset-2 ring-[#2090C4] z-10"
+                      : "bg-white text-gray-900 ring-1 ring-gray-200 hover:ring-[#2090C4]/50"
+                  }
+                `}
               >
-                Request Quote
-              </Link>
-            </div>
+                {/* Popular Badge */}
+                {tier.isPopular && (
+                  <div className="absolute top-0 right-0 -mt-4 -mr-4 px-5 py-1 bg-white text-[#2090C4] text-sm font-bold rounded-full shadow-lg transform rotate-6">
+                    Most Popular
+                  </div>
+                )}
 
-            {/* Enterprise Plan */}
-            <div className="relative flex flex-col p-8 rounded-3xl shadow-lg transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl group bg-white border border-gray-200 hover:border-[#2090C4]/50">
-              <div className="mb-8 text-center">
-                <h3 className="mb-2 text-2xl font-bold text-gray-900">
-                  Enterprise
-                </h3>
-                <p className="mb-6 text-gray-600">
-                  Tailored solutions for large-scale operations
-                </p>
+                {/* Gradient Top Border */}
+                <div className={`absolute top-0 left-0 w-full h-0.5 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left
+                  ${tier.isPopular
+                    ? "bg-white/20"
+                    : "bg-gradient-to-r from-[#2090C4] to-[#1a7bb7]"
+                  }
+                `}></div>
 
-                <div className="flex items-center justify-center mb-6">
-                  <span className="text-5xl font-extrabold text-gray-900">
-                    Custom
-                  </span>
+                {/* Card Header */}
+                <div className="mb-8 text-center">
+                  <h3 className={`mb-3 text-3xl font-bold ${
+                    tier.isPopular ? "text-white" : "text-gray-900"
+                  }`}>
+                    {tier.name}
+                  </h3>
+                  <p className={`text-lg mb-8 ${
+                    tier.isPopular ? "text-blue-100" : "text-gray-600"
+                  }`}>
+                    {tier.tagline}
+                  </p>
+
+                  {/* Price Display */}
+                  <div className="flex items-center justify-center mb-8">
+                    {tier.price !== "Custom" ? (
+                      <>
+                        <CurrencyDollarIcon
+                          className={`w-10 h-10 ${
+                            tier.isPopular ? "text-white" : "text-[#2090C4]"
+                          } mr-2`}
+                        />
+                        <span
+                          className={`text-6xl font-extrabold ${
+                            tier.isPopular ? "text-white" : "text-gray-900"
+                          }`}
+                        >
+                          {tier.price}
+                        </span>
+                        <span className={`ml-2 text-lg ${
+                          tier.isPopular ? "text-blue-100" : "text-gray-600"
+                        }`}>
+                          /user/year
+                        </span>
+                      </>
+                    ) : (
+                      <span
+                        className={`text-5xl font-extrabold ${
+                          tier.isPopular ? "text-white" : "text-gray-900"
+                        }`}
+                      >
+                        {tier.price}
+                      </span>
+                    )}
+                  </div>
                 </div>
+
+                {/* Features List */}
+                <ul className="flex flex-col mb-10 space-y-3 grow">
+                  {/* Included Features */}
+                  {tier.features.map((feature, i) => (
+                    <li
+                      key={i}
+                      className={`flex items-start ${
+                        tier.isPopular ? "text-blue-100" : "text-gray-700"
+                      }`}
+                    >
+                      <CheckIcon
+                        className={`w-6 h-6 ${
+                          tier.isPopular ? "text-white" : "text-green-500"
+                        } shrink-0 mr-3 mt-0.5`}
+                      />
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+
+                  {/* Missing/Excluded Features */}
+                  {tier.missingFeatures.map((feature, i) => (
+                    <li
+                      key={i}
+                      className={`flex items-start ${
+                        tier.isPopular
+                          ? "text-blue-300 line-through"
+                          : "text-gray-400 line-through"
+                      }`}
+                    >
+                      <XMarkIcon
+                        className={`w-6 h-6 ${
+                          tier.isPopular ? "text-blue-200" : "text-red-400"
+                        } shrink-0 mr-3 mt-0.5`}
+                      />
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                {/* CTA Button */}
+                <Link href={tier.link} className="block mt-auto">
+                  <button
+                    className={`w-full py-4 rounded-full font-bold text-lg transition-all duration-300 transform group-hover:scale-105
+                      ${
+                        tier.isPopular
+                          ? "bg-white text-[#2090C4] hover:bg-gray-100 shadow-md"
+                          : "bg-[#2090C4] text-white hover:bg-[#1a7bb7] shadow-md"
+                      }
+                    `}
+                  >
+                    {tier.buttonText}
+                  </button>
+                </Link>
               </div>
-
-              <ul className="flex flex-col mb-8 space-y-4 grow">
-                <li className="flex items-start">
-                  <CheckIcon className="w-6 h-6 text-green-500 shrink-0 mr-3 mt-0.5" />
-                  <span className="text-gray-700">Unlimited users</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckIcon className="w-6 h-6 text-green-500 shrink-0 mr-3 mt-0.5" />
-                  <span className="text-gray-700">Multi-site management</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckIcon className="w-6 h-6 text-green-500 shrink-0 mr-3 mt-0.5" />
-                  <span className="text-gray-700">
-                    Dedicated account manager
-                  </span>
-                </li>
-                <li className="flex items-start">
-                  <CheckIcon className="w-6 h-6 text-green-500 shrink-0 mr-3 mt-0.5" />
-                  <span className="text-gray-700">
-                    Custom integrations (API)
-                  </span>
-                </li>
-                <li className="flex items-start">
-                  <CheckIcon className="w-6 h-6 text-green-500 shrink-0 mr-3 mt-0.5" />
-                  <span className="text-gray-700">
-                    On-premise deployment option
-                  </span>
-                </li>
-                <li className="flex items-start">
-                  <CheckIcon className="w-6 h-6 text-green-500 shrink-0 mr-3 mt-0.5" />
-                  <span className="text-gray-700">SLA guarantees</span>
-                </li>
-              </ul>
-
-              <Link
-                href="/contact"
-                className="cursor-pointer w-full py-3 rounded-full font-semibold text-lg transition-all duration-300 transform group-hover:scale-105 bg-[#2090C4] text-white hover:bg-[#1a7bb7] shadow-md flex items-center justify-center"
-              >
-                Contact Sales
-              </Link>
-            </div>
+            ))}
           </div>
         </div>
       </section>
