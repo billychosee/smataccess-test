@@ -161,7 +161,7 @@ export default function Pricing() {
                   }
                 `}
               >
-                {/* Popular Badge */}
+                {/* Popular Badge (for the popular card) - Home page style */}
                 {tier.isPopular && (
                   <div className="absolute top-0 right-0 -mt-4 -mr-4 px-5 py-1 bg-white text-[#2090C4] text-sm font-bold rounded-full shadow-lg transform rotate-6">
                     Most Popular
@@ -208,7 +208,7 @@ export default function Pricing() {
                         <span className={`ml-2 text-lg ${
                           tier.isPopular ? "text-blue-100" : "text-gray-600"
                         }`}>
-                          /user/year
+                          /{tier.name === "Business Standard" ? "month" : "user/year"}
                         </span>
                       </>
                     ) : (
