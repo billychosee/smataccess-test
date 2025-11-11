@@ -20,7 +20,7 @@ interface HardwareItem {
   description: string;
   specs: string;
   image: string;
-  modalImage?: string; // Optional separate image for modal view
+  modalImage?: string;
   features: string[];
 }
 
