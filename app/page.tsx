@@ -423,8 +423,8 @@ export default function Home() {
         </section>
       </div>
 
-      {/* SECTION 3 – INDUSTRY SOLUTIONS - Sleek Card Design */}
-      <section className="py-16 bg-gray-50">
+      {/* SECTION 3 – INDUSTRY SOLUTIONS - Glass Glowing Blue Style */}
+      <section className="py-16 bg-gradient-to-br from-blue-50 to-cyan-50">
         <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div className="mb-12 text-center">
             <h2 className="mb-4 text-3xl font-bold text-gray-900">
@@ -443,26 +443,26 @@ export default function Home() {
                 const Icon = item.icon;
                 return (
                   <div key={index} className="h-full">
-                    <div className="bg-black p-8 pt-16 rounded-2xl shadow-2xl flex flex-col items-center text-center justify-start relative h-full min-h-[300px] w-full transition-all duration-300 ease-in-out transform hover:scale-[1.02] hover:shadow-[#2090C4]/50 border border-transparent hover:border-[#2090C4]">
+                    <div className="relative p-8 pt-16 rounded-2xl flex flex-col items-center text-center justify-start h-full min-h-[300px] w-full transition-all duration-300 ease-in-out transform hover:scale-[1.02] glass-glow-blue">
                       {/* Icon Circle - ABSOLUTE POSITIONING */}
-                      <div className="w-20 h-20 bg-black rounded-full border border-[#2090C4] flex items-center justify-center mb-6 absolute top-0 transform -translate-y-1/2">
-                        <Icon className="w-12 h-12 text-[#2090C4]" />
+                      <div className="w-20 h-20 bg-gradient-to-br from-blue-400 to-cyan-400 rounded-full flex items-center justify-center mb-6 absolute top-0 transform -translate-y-1/2 shadow-lg">
+                        <Icon className="w-12 h-12 text-white" />
                       </div>
 
                       {/* Title */}
-                      <h3 className="mt-4 mb-4 text-2xl font-bold text-white">
+                      <h3 className="mt-4 mb-4 text-2xl font-bold text-gray-800">
                         {item.title}
                       </h3>
 
                       {/* Description */}
-                      <p className="max-w-sm mb-6 text-base text-gray-300 grow">
+                      <p className="max-w-sm mb-6 text-base text-gray-600 grow">
                         {item.description}
                       </p>
 
                       {/* Learn More Link */}
                       <Link
                         href={`/use-cases/${item.slug}`}
-                        className="text-[#2090C4] hover:text-[#2090C4]/80 font-medium transition-colors mt-auto flex items-center"
+                        className="text-blue-600 hover:text-blue-800 font-medium transition-colors mt-auto flex items-center"
                       >
                         Learn More
                         <ArrowRightIcon className="w-4 h-4 ml-2" />
@@ -483,26 +483,26 @@ export default function Home() {
 
                 return (
                   <div key={index} className="h-full lg:col-span-1">
-                    <div className="bg-black p-8 pt-16 rounded-2xl shadow-2xl flex flex-col items-center text-center justify-start relative h-full min-h-[300px] w-full transition-all duration-300 ease-in-out transform hover:scale-[1.02] hover:shadow-[#2090C4]/50 border border-transparent hover:border-[#2090C4]">
+                    <div className="relative p-8 pt-16 rounded-2xl flex flex-col items-center text-center justify-start h-full min-h-[300px] w-full transition-all duration-300 ease-in-out transform hover:scale-[1.02] glass-glow-blue">
                       {/* Icon Circle - ABSOLUTE POSITIONING */}
-                      <div className="w-20 h-20 bg-black rounded-full border border-[#2090C4] flex items-center justify-center mb-6 absolute top-0 transform -translate-y-1/2">
-                        <Icon className="w-12 h-12 text-[#2090C4]" />
+                      <div className="w-20 h-20 bg-gradient-to-br from-blue-400 to-cyan-400 rounded-full flex items-center justify-center mb-6 absolute top-0 transform -translate-y-1/2 shadow-lg">
+                        <Icon className="w-12 h-12 text-white" />
                       </div>
 
                       {/* Title */}
-                      <h3 className="mt-4 mb-4 text-2xl font-bold text-white">
+                      <h3 className="mt-4 mb-4 text-2xl font-bold text-gray-800">
                         {item.title}
                       </h3>
 
                       {/* Description */}
-                      <p className="max-w-sm mb-6 text-base text-gray-300 grow">
+                      <p className="max-w-sm mb-6 text-base text-gray-600 grow">
                         {item.description}
                       </p>
 
                       {/* Learn More Link */}
                       <Link
                         href={`/use-cases/${item.slug}`}
-                        className="text-[#2090C4] hover:text-[#2090C4]/80 font-medium transition-colors mt-auto flex items-center"
+                        className="text-blue-600 hover:text-blue-800 font-medium transition-colors mt-auto flex items-center"
                       >
                         Learn More
                         <ArrowRightIcon className="w-4 h-4 ml-2" />
@@ -521,26 +521,26 @@ export default function Home() {
 
                 return (
                   <div key={actualIndex} className="w-full max-w-md">
-                    <div className="bg-black p-8 pt-16 rounded-2xl shadow-2xl flex flex-col items-center text-center justify-start relative h-full min-h-[300px] w-full transition-all duration-300 ease-in-out transform hover:scale-[1.02] hover:shadow-[#2090C4]/50 border border-transparent hover:border-[#2090C4]">
+                    <div className="relative p-8 pt-16 rounded-2xl flex flex-col items-center text-center justify-start h-full min-h-[300px] w-full transition-all duration-300 ease-in-out transform hover:scale-[1.02] glass-glow-blue">
                       {/* Icon Circle - ABSOLUTE POSITIONING */}
-                      <div className="w-20 h-20 bg-black rounded-full border border-[#2090C4] flex items-center justify-center mb-6 absolute top-0 transform -translate-y-1/2">
-                        <Icon className="w-12 h-12 text-[#2090C4]" />
+                      <div className="w-20 h-20 bg-gradient-to-br from-blue-400 to-cyan-400 rounded-full flex items-center justify-center mb-6 absolute top-0 transform -translate-y-1/2 shadow-lg">
+                        <Icon className="w-12 h-12 text-white" />
                       </div>
 
                       {/* Title */}
-                      <h3 className="mt-4 mb-4 text-2xl font-bold text-white">
+                      <h3 className="mt-4 mb-4 text-2xl font-bold text-gray-800">
                         {item.title}
                       </h3>
 
                       {/* Description */}
-                      <p className="max-w-sm mb-6 text-base text-gray-300 grow">
+                      <p className="max-w-sm mb-6 text-base text-gray-600 grow">
                         {item.description}
                       </p>
 
                       {/* Learn More Link */}
                       <Link
                         href={`/use-cases/${item.slug}`}
-                        className="text-[#2090C4] hover:text-[#2090C4]/80 font-medium transition-colors mt-auto flex items-center"
+                        className="text-blue-600 hover:text-blue-800 font-medium transition-colors mt-auto flex items-center"
                       >
                         Learn More
                         <ArrowRightIcon className="w-4 h-4 ml-2" />
@@ -553,7 +553,7 @@ export default function Home() {
           </div>
 
           <div className="mt-8 text-center">
-            <button className="cursor-pointer bg-[#2090C4] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#2090C4]/80 transition-colors">
+            <button className="cursor-pointer bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-8 py-3 rounded-full font-semibold hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 shadow-lg">
               Find Your Industry
             </button>
           </div>
@@ -1296,6 +1296,23 @@ export default function Home() {
 
         .animate-float {
           animation: float 4s ease-in-out infinite;
+        }
+      `}</style>
+      <style jsx>{`
+        .glass-glow-blue {
+          background: rgba(255, 255, 255, 0.25);
+          backdrop-filter: blur(10px);
+          -webkit-backdrop-filter: blur(10px);
+          border: 1px solid rgba(59, 130, 246, 0.18);
+          box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+          border-radius: 18px;
+          border: 1px solid rgba(255, 255, 255, 0.18);
+          box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+        }
+
+        .glass-glow-blue:hover {
+          box-shadow: 0 8px 32px 0 rgba(59, 130, 246, 0.3);
+          border: 1px solid rgba(59, 130, 246, 0.3);
         }
       `}</style>
     </div>

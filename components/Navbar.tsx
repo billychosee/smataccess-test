@@ -82,6 +82,7 @@ const Navbar = () => {
     { href: "/use-cases", label: "Use Cases" },
     { href: "/hardware", label: "Hardware" },
     { href: "/pricing", label: "Pricing" },
+    { href: "/contact", label: "Contact" },
   ];
 
   return (
@@ -130,13 +131,26 @@ const Navbar = () => {
             ))}
           </div>
 
-          {/* 3. Contact Button & Mobile Button (Right Side) */}
-          <div className="flex items-center space-x-4">
+          {/* 3. Login & Sign Up Buttons & Mobile Button (Right Side) */}
+          <div className="flex items-center space-x-3">
+            {/* Login Button (Desktop Only) */}
             <Link
-              href="/contact"
+              href="https://client.smataccess.com/login"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden lg:block border-2 border-[#2090C4] text-[#2090C4] px-6 py-2 rounded-full font-semibold hover:bg-[#2090C4] hover:text-white transition-all duration-300"
+            >
+              Login
+            </Link>
+
+            {/* Sign Up Button (Desktop Only) */}
+            <Link
+              href="https://client.smataccess.com/register"
+              target="_blank"
+              rel="noopener noreferrer"
               className="hidden lg:block bg-[#2090C4] text-white px-6 py-2 rounded-full font-semibold hover:bg-[#2090C4]/80 transition-colors"
             >
-              Contact Us
+              Sign Up
             </Link>
 
             {/* Mobile Menu Button (Toggle) */}
@@ -184,13 +198,25 @@ const Navbar = () => {
               </Link>
             ))}
 
-            <div className="px-6 py-3 mt-2 border-t border-gray-100">
+            {/* Mobile Login & Sign Up Buttons */}
+            <div className="px-6 py-3 mt-2 space-y-2 border-t border-gray-100">
               <Link
-                href="/contact"
+                href="https://client.smataccess.com/login"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="block w-full border-2 border-[#2090C4] text-[#2090C4] px-4 py-2 rounded-full font-semibold hover:bg-[#2090C4] hover:text-white transition-all duration-300 text-center"
+              >
+                Login
+              </Link>
+              <Link
+                href="https://client.smataccess.com/register"
+                target="_blank"
+                rel="noopener noreferrer"
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="block w-full bg-[#2090C4] text-white px-4 py-2 rounded-full font-semibold hover:bg-[#2090C4]/80 transition-colors text-center"
               >
-                Contact Us
+                Sign Up
               </Link>
             </div>
           </div>

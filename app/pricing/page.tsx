@@ -20,6 +20,12 @@ export default function Pricing() {
   const [propertyType, setPropertyType] = useState("");
   const [userCount, setUserCount] = useState(100);
   const [vatRequired, setVatRequired] = useState(false);
+  const [vatDetails, setVatDetails] = useState({
+    companyName: "",
+    vatNumber: "",
+    companyAddress: "",
+    companyEmail: "",
+  });
   const [addOns, setAddOns] = useState({
     whatsapp: false,
     maintenance: false,
@@ -83,6 +89,13 @@ export default function Pricing() {
   const vat = vatRequired ? subtotal * 0.15 : 0;
   const total = subtotal + vat;
 
+  const handleVatDetailChange = (field: string, value: string) => {
+    setVatDetails({
+      ...vatDetails,
+      [field]: value,
+    });
+  };
+
   return (
     <div className="min-h-screen bg-gray-50">
       <Navbar />
@@ -120,13 +133,11 @@ export default function Pricing() {
             </p>
             <button
               onClick={() =>
-                document
-                  .getElementById("calculator")
-                  ?.scrollIntoView({
-                    behavior: "smooth",
-                    block: "start",
-                    inline: "nearest",
-                  })
+                document.getElementById("calculator")?.scrollIntoView({
+                  behavior: "smooth",
+                  block: "start",
+                  inline: "nearest",
+                })
               }
               className="cursor-pointer bg-white text-[#2090C4] px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center mx-auto"
             >
@@ -169,23 +180,30 @@ export default function Pricing() {
                 )}
 
                 {/* Gradient Top Border */}
-                <div className={`absolute top-0 left-0 w-full h-0.5 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left
-                  ${tier.isPopular
-                    ? "bg-white/20"
-                    : "bg-gradient-to-r from-[#2090C4] to-[#1a7bb7]"
+                <div
+                  className={`absolute top-0 left-0 w-full h-0.5 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left
+                  ${
+                    tier.isPopular
+                      ? "bg-white/20"
+                      : "bg-gradient-to-r from-[#2090C4] to-[#1a7bb7]"
                   }
-                `}></div>
+                `}
+                ></div>
 
                 {/* Card Header */}
                 <div className="mb-8 text-center">
-                  <h3 className={`mb-3 text-3xl font-bold ${
-                    tier.isPopular ? "text-white" : "text-gray-900"
-                  }`}>
+                  <h3
+                    className={`mb-3 text-3xl font-bold ${
+                      tier.isPopular ? "text-white" : "text-gray-900"
+                    }`}
+                  >
                     {tier.name}
                   </h3>
-                  <p className={`text-lg mb-8 ${
-                    tier.isPopular ? "text-blue-100" : "text-gray-600"
-                  }`}>
+                  <p
+                    className={`text-lg mb-8 ${
+                      tier.isPopular ? "text-blue-100" : "text-gray-600"
+                    }`}
+                  >
                     {tier.tagline}
                   </p>
 
@@ -205,10 +223,15 @@ export default function Pricing() {
                         >
                           {tier.price}
                         </span>
-                        <span className={`ml-2 text-lg ${
-                          tier.isPopular ? "text-blue-100" : "text-gray-600"
-                        }`}>
-                          /{tier.name === "Business Standard" ? "month" : "user/year"}
+                        <span
+                          className={`ml-2 text-lg ${
+                            tier.isPopular ? "text-blue-100" : "text-gray-600"
+                          }`}
+                        >
+                          /
+                          {tier.name === "Business Standard"
+                            ? "month"
+                            : "user/year"}
                         </span>
                       </>
                     ) : (
@@ -403,13 +426,80 @@ export default function Pricing() {
               </label>
             </div>
 
+            {/* VAT Details Section - Appears when VAT checkbox is checked */}
+            {vatRequired && (
+              <div className="p-6 mb-6 border border-blue-200 rounded-lg bg-blue-50">
+                <h3 className="mb-4 text-lg font-semibold text-gray-900">
+                  VAT Details
+                </h3>
+                <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+                  <div>
+                    <label className="block mb-2 text-sm font-medium text-gray-700">
+                      Company Name
+                    </label>
+                    <input
+                      type="text"
+                      value={vatDetails.companyName}
+                      onChange={(e) =>
+                        handleVatDetailChange("companyName", e.target.value)
+                      }
+                      placeholder="Enter company name"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#2090C4] focus:border-transparent"
+                    />
+                  </div>
+                  <div>
+                    <label className="block mb-2 text-sm font-medium text-gray-700">
+                      VAT Number
+                    </label>
+                    <input
+                      type="text"
+                      value={vatDetails.vatNumber}
+                      onChange={(e) =>
+                        handleVatDetailChange("vatNumber", e.target.value)
+                      }
+                      placeholder="Enter VAT number"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#2090C4] focus:border-transparent"
+                    />
+                  </div>
+                  <div className="md:col-span-2">
+                    <label className="block mb-2 text-sm font-medium text-gray-700">
+                      Company Address
+                    </label>
+                    <input
+                      type="text"
+                      value={vatDetails.companyAddress}
+                      onChange={(e) =>
+                        handleVatDetailChange("companyAddress", e.target.value)
+                      }
+                      placeholder="Enter company address"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#2090C4] focus:border-transparent"
+                    />
+                  </div>
+                  <div className="md:col-span-2">
+                    <label className="block mb-2 text-sm font-medium text-gray-700">
+                      Company Email
+                    </label>
+                    <input
+                      type="email"
+                      value={vatDetails.companyEmail}
+                      onChange={(e) =>
+                        handleVatDetailChange("companyEmail", e.target.value)
+                      }
+                      placeholder="Enter company email"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#2090C4] focus:border-transparent"
+                    />
+                  </div>
+                </div>
+              </div>
+            )}
+
             <div className="bg-gradient-to-r from-[#2090C4]/5 to-[#1a7bb7]/5 p-6 rounded-lg mb-6 border border-[#2090C4]/10">
               <h3 className="mb-2 text-2xl font-bold text-center text-gray-900">
                 Estimated Annual Total: ${total.toFixed(2)}
               </h3>
               {vatRequired && (
                 <p className="text-sm text-center text-gray-600">
-                  (VAT Included)
+                  (VAT Included: ${vat.toFixed(2)})
                 </p>
               )}
             </div>
