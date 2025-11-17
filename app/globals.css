@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom utilities to handle all gradient classes used in the codebase */
+@layer utilities {
+  /* Gradient direction utilities that honor Tailwind's gradient color stops */
+  .bg-linear-to-t {
+    background-image: linear-gradient(to top, var(--tw-gradient-stops));
+  }
+
+  .bg-linear-to-br {
+    background-image: linear-gradient(
+      to bottom right,
+      var(--tw-gradient-stops)
+    );
+  }
+
+  .bg-linear-to-r {
+    background-image: linear-gradient(to right, var(--tw-gradient-stops));
+  }
+
+  .bg-linear-to-tr {
+    background-image: linear-gradient(to top right, var(--tw-gradient-stops));
+  }
+
+  /* Backwards-compatible names (Tailwind uses bg-gradient-to-*) */
+  .bg-gradient-to-t {
+    background-image: linear-gradient(to top, var(--tw-gradient-stops));
+  }
+
+  .bg-gradient-to-br {
+    background-image: linear-gradient(
+      to bottom right,
+      var(--tw-gradient-stops)
+    );
+  }
+
+  .bg-gradient-to-r {
+    background-image: linear-gradient(to right, var(--tw-gradient-stops));
+  }
+
+  .bg-gradient-to-tr {
+    background-image: linear-gradient(to top right, var(--tw-gradient-stops));
+  }
+}
+
+/* Smooth button transitions applied globally so CTAs feel responsive and consistent */
+@layer components {
+  /* Apply smooth transitions to button-like elements */
+  button,
+  .btn,
+  a.btn {
+    @apply transform transition duration-300 ease-in-out;
+  }
+
+  /* Hover/active affordances: subtle scale + shadow */
+  button:hover,
+  .btn:hover,
+  a.btn:hover {
+    @apply scale-105 shadow-lg;
+  }
+
+  button:active,
+  .btn:active,
+  a.btn:active {
+    @apply scale-100;
+  }
+}
