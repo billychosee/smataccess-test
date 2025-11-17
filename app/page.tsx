@@ -297,41 +297,50 @@ export default function Home() {
   const pricingTiers = [
     {
       name: "Residential",
-      price: "3",
-      tagline: "Ideal for small communities and single-site homes.",
+      price: "5",
+      tagline: "Cluster Homes, Residential Complexes, Apartment Buildings",
       isPopular: false,
-      features: ["Up to 50 Users", "Mobile App Access", "Basic Event Log"],
-      missingFeatures: ["Multi-Site Control", "WhatsApp Integration"],
+      features: [
+        "Digital Visitor Logbook",
+        "Web-Based Admin Portal",
+        "Tier 1 (Self-Serve) Support",
+        "Mobile App (iOS & Android)",
+        "Time & Attendance Module",
+        "Cloud-Based Audit Logs"
+      ],
+      missingFeatures: ["Advanced Zoned-Off Access Control"],
       buttonText: "Start Free Trial",
       link: "/signup/residential",
     },
     {
       name: "Business Standard",
       price: "70",
-      tagline: "Perfect for corporate offices and single-building facilities.",
+      tagline: "Best for Corporate Offices, SMEs, Single-Site Facilities",
       isPopular: true,
       features: [
-        "Up to 500 Users",
-        "Time & Attendance",
-        "WhatsApp Integration",
-        "24/7 Phone Support",
+        "Time & Attendance Module",
         "Cloud-Based Audit Logs",
-        "ANPR Integration (Optional Add-on)",
+        "Web Admin Portal",
+        "All core access control features",
+        "Tier 1 (Self-Serve) Support",
+        "Advanced Zoned-Off Access Control",
+        "Centralized Multi-Site Management"
       ],
-      missingFeatures: ["Dedicated Account Manager"],
+      missingFeatures: ["Custom Integrations & API Access"],
       buttonText: "Request Quote",
       link: "/contact/business",
     },
     {
       name: "Enterprise",
-      price: "Custom",
-      tagline: "Tailored security for large-scale operations and government.",
+      price: "500 - 1200",
+      tagline: "Best for Mining Operations, Banks, Manufacturing, Multi-Site Corporations",
       isPopular: false,
       features: [
-        "Unlimited Users",
-        "Multi-Site Control",
-        "Dedicated Account Manager",
-        "Custom Integrations (API)",
+        "Advanced Zoned-Off Access Control (for high-security areas, vaults, etc.)",
+        "Centralized Multi-Site Management Dashboard",
+        "Custom Integrations & API Access",
+        "Includes all Business Standard features",
+        "Tier 2 (Enterprise) Support"
       ],
       missingFeatures: [],
       buttonText: "Contact Sales",
@@ -445,7 +454,7 @@ export default function Home() {
                   <div key={index} className="h-full">
                     <div className="relative p-8 pt-16 rounded-2xl flex flex-col items-center text-center justify-start h-full min-h-[300px] w-full transition-all duration-300 ease-in-out transform hover:scale-[1.02] glass-glow-blue">
                       {/* Icon Circle - ABSOLUTE POSITIONING */}
-                      <div className="w-20 h-20 bg-gradient-to-br from-blue-400 to-cyan-400 rounded-full flex items-center justify-center mb-6 absolute top-0 transform -translate-y-1/2 shadow-lg">
+                      <div className="absolute top-0 flex items-center justify-center w-20 h-20 mb-6 transform -translate-y-1/2 rounded-full shadow-lg bg-gradient-to-br from-blue-400 to-cyan-400">
                         <Icon className="w-12 h-12 text-white" />
                       </div>
 
@@ -462,7 +471,7 @@ export default function Home() {
                       {/* Learn More Link */}
                       <Link
                         href={`/use-cases/${item.slug}`}
-                        className="text-blue-600 hover:text-blue-800 font-medium transition-colors mt-auto flex items-center"
+                        className="flex items-center mt-auto font-medium text-blue-600 transition-colors hover:text-blue-800"
                       >
                         Learn More
                         <ArrowRightIcon className="w-4 h-4 ml-2" />
@@ -485,7 +494,7 @@ export default function Home() {
                   <div key={index} className="h-full lg:col-span-1">
                     <div className="relative p-8 pt-16 rounded-2xl flex flex-col items-center text-center justify-start h-full min-h-[300px] w-full transition-all duration-300 ease-in-out transform hover:scale-[1.02] glass-glow-blue">
                       {/* Icon Circle - ABSOLUTE POSITIONING */}
-                      <div className="w-20 h-20 bg-gradient-to-br from-blue-400 to-cyan-400 rounded-full flex items-center justify-center mb-6 absolute top-0 transform -translate-y-1/2 shadow-lg">
+                      <div className="absolute top-0 flex items-center justify-center w-20 h-20 mb-6 transform -translate-y-1/2 rounded-full shadow-lg bg-gradient-to-br from-blue-400 to-cyan-400">
                         <Icon className="w-12 h-12 text-white" />
                       </div>
 
@@ -502,7 +511,7 @@ export default function Home() {
                       {/* Learn More Link */}
                       <Link
                         href={`/use-cases/${item.slug}`}
-                        className="text-blue-600 hover:text-blue-800 font-medium transition-colors mt-auto flex items-center"
+                        className="flex items-center mt-auto font-medium text-blue-600 transition-colors hover:text-blue-800"
                       >
                         Learn More
                         <ArrowRightIcon className="w-4 h-4 ml-2" />
@@ -523,7 +532,7 @@ export default function Home() {
                   <div key={actualIndex} className="w-full max-w-md">
                     <div className="relative p-8 pt-16 rounded-2xl flex flex-col items-center text-center justify-start h-full min-h-[300px] w-full transition-all duration-300 ease-in-out transform hover:scale-[1.02] glass-glow-blue">
                       {/* Icon Circle - ABSOLUTE POSITIONING */}
-                      <div className="w-20 h-20 bg-gradient-to-br from-blue-400 to-cyan-400 rounded-full flex items-center justify-center mb-6 absolute top-0 transform -translate-y-1/2 shadow-lg">
+                      <div className="absolute top-0 flex items-center justify-center w-20 h-20 mb-6 transform -translate-y-1/2 rounded-full shadow-lg bg-gradient-to-br from-blue-400 to-cyan-400">
                         <Icon className="w-12 h-12 text-white" />
                       </div>
 
@@ -540,7 +549,7 @@ export default function Home() {
                       {/* Learn More Link */}
                       <Link
                         href={`/use-cases/${item.slug}`}
-                        className="text-blue-600 hover:text-blue-800 font-medium transition-colors mt-auto flex items-center"
+                        className="flex items-center mt-auto font-medium text-blue-600 transition-colors hover:text-blue-800"
                       >
                         Learn More
                         <ArrowRightIcon className="w-4 h-4 ml-2" />
@@ -553,7 +562,7 @@ export default function Home() {
           </div>
 
           <div className="mt-8 text-center">
-            <button className="cursor-pointer bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-8 py-3 rounded-full font-semibold hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 shadow-lg">
+            <button className="px-8 py-3 font-semibold text-white transition-all duration-300 rounded-full shadow-lg cursor-pointer bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600">
               Find Your Industry
             </button>
           </div>
@@ -919,11 +928,10 @@ export default function Home() {
         <div className="relative z-10 px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div className="mb-16 text-center">
             <h2 className="mb-4 text-4xl font-extrabold text-gray-900">
-              Unlock Your Perfect Plan
+              Pricing Structure
             </h2>
             <p className="max-w-2xl mx-auto text-xl text-gray-600">
-              Flexible and transparent pricing designed to scale with your
-              needs. Full details are on the pricing page.
+              Choose the plan that fits your specific needs and scale as you grow.
             </p>
           </div>
 
@@ -962,7 +970,22 @@ export default function Home() {
                 </p>
 
                 <div className="flex items-center justify-start mb-8">
-                  {tier.price !== "Custom" ? (
+                  {tier.price.includes("500 - 1200") ? (
+                    <>
+                      <CurrencyDollarIcon
+                        className={`w-7 h-7 ${
+                          tier.isPopular ? "text-white" : "text-[#2090C4]"
+                        } mr-1`}
+                      />
+                      <span
+                        className={`text-3xl font-extrabold ${
+                          tier.isPopular ? "text-white" : "text-gray-900"
+                        }`}
+                      >
+                        {tier.price}
+                      </span>
+                    </>
+                  ) : (
                     <>
                       <CurrencyDollarIcon
                         className={`w-10 h-10 ${
@@ -977,15 +1000,14 @@ export default function Home() {
                         {tier.price}
                       </span>
                     </>
-                  ) : (
-                    <span
-                      className={`text-5xl font-extrabold ${
-                        tier.isPopular ? "text-white" : "text-gray-900"
-                      }`}
-                    >
-                      {tier.price}
-                    </span>
                   )}
+                  <span
+                    className={`ml-2 text-lg ${
+                      tier.isPopular ? "text-blue-100" : "text-gray-600"
+                    }`}
+                  >
+                    /month
+                  </span>
                 </div>
 
                 <ul className="flex flex-col mb-10 space-y-3 grow">
@@ -1318,3 +1340,4 @@ export default function Home() {
     </div>
   );
 }
+

@@ -36,41 +36,46 @@ export default function Pricing() {
   const pricingTiers = [
     {
       name: "Residential",
-      price: "3",
-      tagline: "Ideal for small communities and single-site homes.",
+      price: "5",
+      tagline: "Cluster Homes, Residential Complexes, Apartment Buildings",
       isPopular: false,
-      features: ["Up to 50 Users", "Mobile App Access", "Basic Event Log"],
-      missingFeatures: ["Multi-Site Control", "WhatsApp Integration"],
+      features: [
+        "Digital Visitor Logbook",
+        "Web-Based Admin Portal",
+        "Tier 1 (Self-Serve) Support",
+        "Mobile App (iOS & Android)"
+      ],
+      missingFeatures: ["Time & Attendance Module", "Cloud-Based Audit Logs"],
       buttonText: "Start Free Trial",
       link: "/signup/residential",
     },
     {
       name: "Business Standard",
       price: "70",
-      tagline: "Perfect for corporate offices and single-building facilities.",
+      tagline: "Best for Corporate Offices, SMEs, Single-Site Facilities",
       isPopular: true,
       features: [
-        "Up to 500 Users",
-        "Time & Attendance",
-        "WhatsApp Integration",
-        "24/7 Phone Support",
+        "Time & Attendance Module",
         "Cloud-Based Audit Logs",
-        "ANPR Integration (Optional Add-on)",
+        "Web Admin Portal",
+        "All core access control features",
+        "Tier 1 (Self-Serve) Support"
       ],
-      missingFeatures: ["Dedicated Account Manager"],
+      missingFeatures: ["Advanced Zoned-Off Access Control", "Centralized Multi-Site Management"],
       buttonText: "Request Quote",
       link: "/contact/business",
     },
     {
       name: "Enterprise",
-      price: "Custom",
-      tagline: "Tailored security for large-scale operations and government.",
+      price: "500 - 1200",
+      tagline: "Best for Mining Operations, Banks, Manufacturing, Multi-Site Corporations",
       isPopular: false,
       features: [
-        "Unlimited Users",
-        "Multi-Site Control",
-        "Dedicated Account Manager",
-        "Custom Integrations (API)",
+        "Advanced Zoned-Off Access Control (for high-security areas, vaults, etc.)",
+        "Centralized Multi-Site Management Dashboard",
+        "Custom Integrations & API Access",
+        "Includes all Business Standard features",
+        "Tier 2 (Enterprise) Support"
       ],
       missingFeatures: [],
       buttonText: "Contact Sales",
@@ -153,10 +158,10 @@ export default function Pricing() {
         <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div className="mb-16 text-center">
             <h2 className="mb-4 text-4xl font-bold text-gray-900">
-              Choose Your Perfect Plan
+              Pricing Structure
             </h2>
             <p className="max-w-3xl mx-auto text-xl text-gray-600">
-              Designed to scale with your business from startup to enterprise.
+              Choose the plan that fits your specific needs and scale as you grow.
             </p>
           </div>
 
@@ -209,7 +214,23 @@ export default function Pricing() {
 
                   {/* Price Display */}
                   <div className="flex items-center justify-center mb-8">
-                    {tier.price !== "Custom" ? (
+                    {tier.price === "Custom Quote" ? (
+                      <span
+                        className={`text-4xl font-extrabold ${
+                          tier.isPopular ? "text-white" : "text-gray-900"
+                        }`}
+                      >
+                        {tier.price}
+                      </span>
+                    ) : tier.price.includes("-") || tier.price.includes("Custom") ? (
+                      <span
+                        className={`text-5xl font-extrabold ${
+                          tier.isPopular ? "text-white" : "text-gray-900"
+                        }`}
+                      >
+                        ${tier.price}
+                      </span>
+                    ) : (
                       <>
                         <CurrencyDollarIcon
                           className={`w-10 h-10 ${
@@ -228,20 +249,9 @@ export default function Pricing() {
                             tier.isPopular ? "text-blue-100" : "text-gray-600"
                           }`}
                         >
-                          /
-                          {tier.name === "Business Standard"
-                            ? "month"
-                            : "user/year"}
+                          /month
                         </span>
                       </>
-                    ) : (
-                      <span
-                        className={`text-5xl font-extrabold ${
-                          tier.isPopular ? "text-white" : "text-gray-900"
-                        }`}
-                      >
-                        {tier.price}
-                      </span>
                     )}
                   </div>
                 </div>
@@ -301,6 +311,46 @@ export default function Pricing() {
                 </Link>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CUSTOM QUOTE CTA SECTION */}
+      <section className="py-16 bg-gradient-to-br from-[#2090C4] via-[#1a7bb7] to-[#0f5d8c] relative overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute top-0 left-0 w-full h-full opacity-10">
+            <div className="absolute w-64 h-64 bg-white rounded-full top-20 left-20 filter blur-3xl animate-pulse"></div>
+            <div
+              className="absolute bg-white rounded-full bottom-20 right-20 w-96 h-96 filter blur-3xl animate-pulse"
+              style={{ animationDelay: "1s" }}
+            ></div>
+          </div>
+        </div>
+
+        <div className="relative z-10 max-w-4xl px-4 mx-auto text-center sm:px-6 lg:px-8">
+          <h2 className="mb-6 text-3xl font-bold text-white md:text-4xl">
+            Need a Custom Quote?
+          </h2>
+          <p className="max-w-2xl mx-auto mb-8 text-lg text-white/90">
+            Get a tailored pricing solution for your specific requirements, whether you need
+            multi-site management, enterprise security, or custom property park solutions.
+          </p>
+
+          <div className="flex flex-col justify-center gap-4 sm:flex-row">
+            <Link
+              href="/contact"
+              className="cursor-pointer bg-white text-[#2090C4] px-8 py-4 rounded-full font-bold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-xl flex items-center justify-center"
+            >
+              <CurrencyDollarIcon className="w-5 h-5 mr-2" />
+              Get Custom Quote
+            </Link>
+            <Link
+              href="/contact"
+              className="cursor-pointer border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-[#2090C4] transition-all duration-300 flex items-center justify-center"
+            >
+              <PhoneIcon className="w-5 h-5 mr-2" />
+              Speak to Expert
+            </Link>
           </div>
         </div>
       </section>
@@ -636,3 +686,4 @@ export default function Pricing() {
     </div>
   );
 }
+
