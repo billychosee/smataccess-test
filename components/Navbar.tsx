@@ -79,7 +79,7 @@ const Navbar = () => {
     { href: "/about", label: "About" },
     { href: "/industries", label: "Industries" },
     { href: "/services", label: "Services" },
-    { href: "/use-cases", label: "Use Cases" },
+    // { href: "/use-cases", label: "Use Cases" }, // TEMPORARILY HIDDEN
     { href: "/hardware", label: "Hardware" },
     { href: "/pricing", label: "Pricing" },
     { href: "/contact", label: "Contact" },
