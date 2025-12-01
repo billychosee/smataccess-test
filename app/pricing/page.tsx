@@ -315,6 +315,193 @@ export default function Pricing() {
         </div>
       </section>
 
+      {/* OPTIONAL ADD-ONS SECTION */}
+      <section className="py-20 bg-gray-50">
+        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+          <div className="mb-16 text-center">
+            <h2 className="mb-4 text-4xl font-bold text-gray-900">
+              Optional Add-On Software Modules
+            </h2>
+            <p className="max-w-3xl mx-auto text-xl text-gray-600">
+              Enhance your SmatAccess plan with these powerful modules. These are billed monthly in addition to your SaaS plan.
+            </p>
+          </div>
+
+          {/* Software Modules Grid */}
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4 mb-16">
+            {/* ANPR Module */}
+            <div className="group relative bg-white p-8 rounded-3xl shadow-xl transition-all duration-500 hover:scale-105 border border-gray-100 hover:border-[#2090C4]/30">
+              <div className="text-center">
+                <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-[#2090C4] to-[#1a7bb7] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                <div className="mb-6 pt-2">
+                  <div className="w-16 h-16 mx-auto bg-gradient-to-br from-[#2090C4] to-[#1a7bb7] rounded-full flex items-center justify-center">
+                    <CurrencyDollarIcon className="w-8 h-8 text-white" />
+                  </div>
+                </div>
+                <h3 className="mb-4 text-xl font-bold text-gray-900">
+                  ANPR (Vehicle Plate Recognition)
+                </h3>
+                <div className="mb-4">
+                  <span className="text-3xl font-extrabold text-[#2090C4]">$50</span>
+                  <span className="text-gray-600 ml-1">/ month</span>
+                </div>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  Automatically open gates for registered vehicles. Logs all vehicle entry/exits.
+                </p>
+              </div>
+            </div>
+
+            {/* AI Facial Recognition */}
+            <div className="group relative bg-white p-8 rounded-3xl shadow-xl transition-all duration-500 hover:scale-105 border border-gray-100 hover:border-[#2090C4]/30">
+              <div className="text-center">
+                <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-[#2090C4] to-[#1a7bb7] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                <div className="mb-6 pt-2">
+                  <div className="w-16 h-16 mx-auto bg-gradient-to-br from-[#2090C4] to-[#1a7bb7] rounded-full flex items-center justify-center">
+                    <ShieldCheckIcon className="w-8 h-8 text-white" />
+                  </div>
+                </div>
+                <h3 className="mb-4 text-xl font-bold text-gray-900">
+                  AI Facial Recognition
+                </h3>
+                <div className="mb-4">
+                  <span className="text-3xl font-extrabold text-[#2090C4]">$50</span>
+                  <span className="text-gray-600 ml-1">/ month</span>
+                </div>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  Add high-security, touchless access for sensitive areas.
+                </p>
+              </div>
+            </div>
+
+            {/* Biometrics/Fingerprint */}
+            <div className="group relative bg-white p-8 rounded-3xl shadow-xl transition-all duration-500 hover:scale-105 border border-gray-100 hover:border-[#2090C4]/30">
+              <div className="text-center">
+                <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-[#2090C4] to-[#1a7bb7] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                <div className="mb-6 pt-2">
+                  <div className="w-16 h-16 mx-auto bg-gradient-to-br from-[#2090C4] to-[#1a7bb7] rounded-full flex items-center justify-center">
+                    <LightBulbIcon className="w-8 h-8 text-white" />
+                  </div>
+                </div>
+                <h3 className="mb-4 text-xl font-bold text-gray-900">
+                  Biometrics / Fingerprint
+                </h3>
+                <div className="mb-4">
+                  <span className="text-3xl font-extrabold text-[#2090C4]">$20</span>
+                  <span className="text-gray-600 ml-1">/ month</span>
+                </div>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  Enables management of fingerprint/biometric data through the cloud dashboard.
+                </p>
+              </div>
+            </div>
+
+            {/* WhatsApp Bot */}
+            <div className="group relative bg-white p-8 rounded-3xl shadow-xl transition-all duration-500 hover:scale-105 border border-gray-100 hover:border-[#2090C4]/30">
+              <div className="text-center">
+                <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-[#2090C4] to-[#1a7bb7] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                <div className="mb-6 pt-2">
+                  <div className="w-16 h-16 mx-auto bg-gradient-to-br from-[#2090C4] to-[#1a7bb7] rounded-full flex items-center justify-center">
+                    <PhoneIcon className="w-8 h-8 text-white" />
+                  </div>
+                </div>
+                <h3 className="mb-4 text-xl font-bold text-gray-900">
+                  WhatsApp Bot
+                </h3>
+                <div className="mb-4">
+                  <span className="text-3xl font-extrabold text-[#2090C4]">$2</span>
+                  <span className="text-gray-600 ml-1">per user / month</span>
+                </div>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  Allows users to interact with the system, receive alerts, and manage visitors via WhatsApp.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Premium Support Plans Section */}
+          <div className="mb-8 text-center">
+            <h2 className="mb-4 text-4xl font-bold text-gray-900">
+              Premium Support Plans (For Enterprise Clients)
+            </h2>
+            <p className="max-w-3xl mx-auto text-xl text-gray-600">
+              Choose the support level that matches your business needs
+            </p>
+          </div>
+
+          {/* Support Plans Grid */}
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+            {/* Tier 1 */}
+            <div className="group relative bg-white p-8 rounded-3xl shadow-xl transition-all duration-500 hover:scale-105 border border-gray-100">
+              <div className="text-center">
+                <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-green-500 to-emerald-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                <div className="mb-6 pt-2">
+                  <div className="w-16 h-16 mx-auto bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center">
+                    <CheckIcon className="w-8 h-8 text-white" />
+                  </div>
+                </div>
+                <h3 className="mb-4 text-xl font-bold text-gray-900">
+                  Tier 1 (Self-Serve)
+                </h3>
+                <div className="mb-6">
+                  <span className="text-3xl font-extrabold text-green-600">$0</span>
+                  <span className="text-gray-600 ml-2 text-sm">(Included with all plans)</span>
+                </div>
+                <p className="text-gray-600 leading-relaxed">
+                  Access to our full knowledge base and email support.
+                </p>
+              </div>
+            </div>
+
+            {/* Tier 2 */}
+            <div className="group relative bg-gradient-to-br from-[#2090C4] to-[#1a7bb7] text-white p-8 rounded-3xl shadow-2xl transition-all duration-500 hover:scale-105 border-2 border-white/20 overflow-hidden">
+              <div className="absolute top-0 right-0 -mt-4 -mr-4 px-5 py-1 bg-white text-[#2090C4] text-sm font-bold rounded-full shadow-lg transform rotate-6">
+                Enterprise
+              </div>
+              <div className="text-center">
+                <div className="absolute top-0 left-0 w-full h-0.5 bg-white/20 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                <div className="mb-6 pt-2">
+                  <div className="w-16 h-16 mx-auto bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm">
+                    <PhoneIcon className="w-8 h-8 text-white" />
+                  </div>
+                </div>
+                <h3 className="mb-4 text-xl font-bold text-white">
+                  Tier 2 (Enterprise Support)
+                </h3>
+                <div className="mb-6">
+                  <span className="text-3xl font-extrabold text-white">$200</span>
+                  <span className="text-blue-100 ml-2 text-sm">(Included with Enterprise Plans)</span>
+                </div>
+                <p className="text-blue-100 leading-relaxed">
+                  Access to our 24/7 phone and email support agents based in Harare
+                </p>
+              </div>
+            </div>
+
+            {/* Tier 3 */}
+            <div className="group relative bg-white p-8 rounded-3xl shadow-xl transition-all duration-500 hover:scale-105 border border-gray-100 hover:border-[#2090C4]/30">
+              <div className="text-center">
+                <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-[#2090C4] to-[#1a7bb7] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                <div className="mb-6 pt-2">
+                  <div className="w-16 h-16 mx-auto bg-gradient-to-br from-[#2090C4] to-[#1a7bb7] rounded-full flex items-center justify-center">
+                    <LightBulbIcon className="w-8 h-8 text-white" />
+                  </div>
+                </div>
+                <h3 className="mb-4 text-xl font-bold text-gray-900">
+                  Tier 3 (Dedicated Support)
+                </h3>
+                <div className="mb-6">
+                  <span className="text-3xl font-extrabold text-[#2090C4]">$20</span>
+                  <span className="text-gray-600 ml-1">/ month</span>
+                </div>
+                <p className="text-gray-600 leading-relaxed">
+                  A dedicated Account Manager for strategic accounts requiring bespoke support
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CUSTOM QUOTE CTA SECTION */}
       <section className="py-16 bg-gradient-to-br from-[#2090C4] via-[#1a7bb7] to-[#0f5d8c] relative overflow-hidden">
         <div className="absolute inset-0">
