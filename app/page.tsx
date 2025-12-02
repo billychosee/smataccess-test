@@ -393,23 +393,23 @@ export default function Home() {
 
       {/* HERO SECTION - Updated for sleek design */}
       <div className="px-4 py-8 pt-20 mx-auto max-w-7xl sm:px-6 lg:px-0 sm:py-12 md:pt-8 bg-gray-50">
-        <section
-          className="relative flex items-end text-white overflow-hidden rounded-[44px] shadow-2xl"
-          style={{ height: "calc(100vh - 8rem)" }}
-        >
-          {/* Background Image */}
-          <Image
-            src="/hero.png"
-            alt="SmatAccess Home Hero Background"
-            layout="fill"
-            objectFit="cover"
-            className="z-0"
-          />
-          {/* Dark Gradient Overlay */}
-          <div className="absolute inset-0 z-10 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
-
-          {/* Content Container */}
-          <div className="relative z-20 w-full px-5 pb-16 md:px-20">
+              <section
+                className="relative flex items-center justify-center text-white overflow-hidden rounded-[44px] shadow-2xl"
+                style={{ height: "calc(100vh - 8rem)" }}
+              >
+                {/* Background Image */}
+                <div className="absolute inset-0 z-0">
+                  <Image
+                    src="/home-hero.png"
+                    alt="SmatAccess Hardware Hero Background"
+                    fill
+                    style={{ objectFit: "cover" }}
+                    className="z-0"
+                  />
+                  <div className="absolute inset-0 z-10 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+                </div>
+          {/* Content Container - Positioned at bottom */}
+          <div className="absolute bottom-0 left-0 right-0 z-20 w-full px-5 pb-16 md:px-20">
             <div className="flex flex-col items-center justify-center max-w-4xl mx-auto text-center">
               <h1 className="mb-6 text-5xl font-bold leading-tight md:text-6xl">
                 Unlock Simplicity, Reliability, and Control.
@@ -1340,4 +1340,5 @@ export default function Home() {
     </div>
   );
 }
+
 
