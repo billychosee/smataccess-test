@@ -1,6 +1,6 @@
+/* eslint-disable max-len */
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
-import Image from 'next/image';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -15,9 +15,9 @@ export default function UseCases() {
 
       {/* HERO SECTION */}
       <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">SmatAccess in Action — See Real-World Applications.</h1>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+        <div className="px-4 mx-auto text-center max-w-7xl sm:px-6 lg:px-8">
+          <h1 className="mb-4 text-4xl font-bold text-gray-900">SmatAccess in Action — See Real-World Applications.</h1>
+          <p className="max-w-2xl mx-auto text-lg text-gray-600">
             From cluster homes to corporate parks, explore how SmatAccess transforms access management.
           </p>
         </div>
@@ -25,8 +25,8 @@ export default function UseCases() {
 
       {/* USE CASE BLOCKS WITH VIDEOS */}
       {/* <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
             {[
               {
                 name: 'Cluster Homes',
@@ -49,18 +49,19 @@ export default function UseCases() {
                 video: 'Event Venues: Temporary passes and guest management.'
               }
             ].map((useCase, index) => (
-              <div key={index} className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">{useCase.name}</h3>
-                <p className="text-gray-600 mb-4">{useCase.description}</p>
-                <div className="bg-gray-200 h-32 rounded-lg flex items-center justify-center mb-4">
-                  <p className="text-gray-500 text-sm">Video: {useCase.video}</p>
+              <div key={index} className="p-6 transition-shadow bg-white rounded-lg shadow-md hover:shadow-lg">
+                <h3 className="mb-2 text-xl font-semibold text-gray-900">{useCase.name}</h3>
+                <p className="mb-4 text-gray-600">{useCase.description}</p>
+                <div className="flex items-center justify-center h-32 mb-4 bg-gray-200 rounded-lg">
+                  <p className="text-sm text-gray-500">Video: {useCase.video}</p>
                 </div>
-                <button className="cursor-pointer text-blue-600 hover:text-blue-800 font-semibold">Learn More →</button>
+                <button className="font-semibold text-blue-600 cursor-pointer hover:text-blue-800">Learn More →</button>
               </div>
             ))}
           </div>
-          <div className="text-center mt-12">
-            <button className="cursor-pointer bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+          <div className="mt-12 text-center">
+            // eslint-disable-next-line max-len
+            <button className="px-8 py-3 font-semibold text-white transition-colors bg-blue-600 rounded-lg cursor-pointer hover:bg-blue-700">
               Watch Full App Walkthrough
             </button>
           </div>

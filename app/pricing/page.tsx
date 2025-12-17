@@ -1,26 +1,21 @@
-'use client';
+/* eslint-disable max-len */
+"use client";
 
-import Navbar from '../../components/Navbar';
-import Footer from '../../components/Footer';
-import { useState } from 'react';
+import Navbar from "../../components/Navbar";
+import Footer from "../../components/Footer";
+import { useState } from "react";
 
 export default function Pricing() {
-  const [propertyType, setPropertyType] = useState('');
-  const [userCount, setUserCount] = useState(100);
-  const [vatRequired, setVatRequired] = useState(false);
-  const [addOns, setAddOns] = useState({
+  const [, _setUserCount] = useState(100);
+  const [] = useState(false);
+  const [] = useState({
     whatsapp: false,
     maintenance: false,
-    analytics: false
+    analytics: false,
   });
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const [, setPropertyType] = useState("");
 
-  const basePrice = userCount > 100 ? 5 : 3;
-  const totalBase = userCount * basePrice;
-  const addOnCost = (addOns.whatsapp ? 1 : 0) + (addOns.maintenance ? 1 : 0) + (addOns.analytics ? 2 : 0);
-  const totalAddOns = userCount * addOnCost;
-  const subtotal = totalBase + totalAddOns;
-  const vat = vatRequired ? subtotal * 0.15 : 0;
-  const total = subtotal + vat;
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -28,10 +23,12 @@ export default function Pricing() {
 
       {/* HERO SECTION */}
       <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">Transparent Pricing. Total Control.</h1>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
-          Estimate your cost instantly — no hidden fees.
+        <div className="px-4 mx-auto text-center max-w-7xl sm:px-6 lg:px-8">
+          <h1 className="mb-4 text-4xl font-bold text-gray-900">
+            Transparent Pricing. Total Control.
+          </h1>
+          <p className="max-w-2xl mx-auto mb-8 text-lg text-gray-600">
+            Estimate your cost instantly — no hidden fees.
           </p>
           <button className="cursor-pointer bg-[#2090C4] text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
             Try the Calculator
@@ -41,13 +38,13 @@ export default function Pricing() {
 
       {/* INTERACTIVE PRICING CALCULATOR */}
       {/* <section className="py-16 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white p-8 rounded-lg shadow-lg">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">Pricing Calculator</h2>
+        <div className="max-w-4xl px-4 mx-auto sm:px-6 lg:px-8">
+          <div className="p-8 bg-white rounded-lg shadow-lg">
+            <h2 className="mb-6 text-2xl font-bold text-gray-900">Pricing Calculator</h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+            <div className="grid grid-cols-1 gap-6 mb-6 md:grid-cols-2">
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
+                <label className="block mb-2 text-sm font-medium text-gray-700">
                   Property Type
                 </label>
                 <select
@@ -66,7 +63,7 @@ export default function Pricing() {
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
+                <label className="block mb-2 text-sm font-medium text-gray-700">
                   Number of Users
                 </label>
                 <input
@@ -74,15 +71,15 @@ export default function Pricing() {
                   min="1"
                   max="1000"
                   value={userCount}
-                  onChange={(e) => setUserCount(Number(e.target.value))}
+                  onChange={(e) => _setUserCount(Number(e.target.value))}
                   className="w-full"
                 />
-                <div className="text-center mt-2">{userCount} users</div>
+                <div className="mt-2 text-center">{userCount} users</div>
               </div>
             </div>
 
             <div className="mb-6">
-              <label className="block text-sm font-medium text-gray-700 mb-2">
+              <label className="block mb-2 text-sm font-medium text-gray-700">
                 Add-ons
               </label>
               <div className="space-y-2">
@@ -128,19 +125,19 @@ export default function Pricing() {
               </label>
             </div>
 
-            <div className="bg-gray-50 p-6 rounded-lg">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Estimated Annual Total: ${total.toFixed(2)}</h3>
+            <div className="p-6 rounded-lg bg-gray-50">
+              <h3 className="mb-4 text-xl font-semibold text-gray-900">Estimated Annual Total: ${total.toFixed(2)}</h3>
               {vatRequired && <p className="text-sm text-gray-600">(VAT Included)</p>}
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 mt-6">
+            <div className="flex flex-col gap-4 mt-6 sm:flex-row">
               <button className="cursor-pointer bg-[#2090C4] text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
                 Request Formal Quote
               </button>
               <button className="cursor-pointer border-2 border-blue-600 text-[#2090C4] px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 hover:text-white transition-colors">
                 Book a Demo
               </button>
-              <button className="cursor-pointer border-2 border-gray-600 text-gray-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-700 hover:text-white transition-colors">
+              <button className="px-6 py-3 font-semibold text-gray-600 transition-colors border-2 border-gray-600 rounded-lg cursor-pointer hover:bg-gray-700 hover:text-white">
                 Talk to Sales
               </button>
             </div>
@@ -150,23 +147,23 @@ export default function Pricing() {
 
       {/* STATIC PRICING SECTION */}
       {/* <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-gray-50 p-6 rounded-lg">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Standard Plan</h3>
+        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+            <div className="p-6 rounded-lg bg-gray-50">
+              <h3 className="mb-4 text-xl font-semibold text-gray-900">Standard Plan</h3>
               <p className="text-2xl font-bold text-[#2090C4] mb-2">$3–$5 per user annually</p>
               <p className="text-gray-600">Basic access control features</p>
             </div>
-            <div className="bg-blue-50 p-6 rounded-lg">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Enterprise Plan</h3>
+            <div className="p-6 rounded-lg bg-blue-50">
+              <h3 className="mb-4 text-xl font-semibold text-gray-900">Enterprise Plan</h3>
               <p className="text-2xl font-bold text-[#2090C4] mb-2">Custom quote</p>
               <p className="text-gray-600">Includes advanced integrations</p>
             </div>
           </div>
-          <div className="text-center mt-8">
-            <p className="text-red-600 font-semibold">Special Offer: 40% OFF annual plans for a limited time</p>
+          <div className="mt-8 text-center">
+            <p className="font-semibold text-red-600">Special Offer: 40% OFF annual plans for a limited time</p>
           </div>
-          <div className="text-center mt-4">
+          <div className="mt-4 text-center">
             <p className="text-gray-600">Trusted by 100+ estates and institutions.</p>
           </div>
         </div>

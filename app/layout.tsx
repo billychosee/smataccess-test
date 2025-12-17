@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Sofia_Sans, Geist_Mono, Inter } from "next/font/google";
+import { Sofia_Sans, Roboto_Mono, Inter } from "next/font/google";
 import "./globals.css";
 
 const sofiaSans = Sofia_Sans({
@@ -8,8 +8,8 @@ const sofiaSans = Sofia_Sans({
   weight: ["300", "400", "500", "600", "700"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const robotoMono = Roboto_Mono({
+  variable: "--font-roboto-mono",
   subsets: ["latin"],
 });
 
@@ -44,7 +44,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${sofiaSans.variable} ${geistMono.variable} ${inter.variable} antialiased font-inter`}
+        className={`${sofiaSans.variable} ${robotoMono.variable} ${inter.variable} antialiased font-inter`}
       >
         {children}
       </body>

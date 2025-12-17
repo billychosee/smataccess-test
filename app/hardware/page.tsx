@@ -1,6 +1,6 @@
+/* eslint-disable max-len */
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
-import Image from 'next/image';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -15,9 +15,9 @@ export default function Hardware() {
 
       {/* HERO SECTION */}
       <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">The Technology Behind the Access.</h1>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+        <div className="px-4 mx-auto text-center max-w-7xl sm:px-6 lg:px-8">
+          <h1 className="mb-4 text-4xl font-bold text-gray-900">The Technology Behind the Access.</h1>
+          <p className="max-w-2xl mx-auto text-lg text-gray-600">
             Industrial-grade, Smat-engineered hardware that works seamlessly with our software.
           </p>
         </div>
@@ -25,8 +25,8 @@ export default function Hardware() {
 
       {/* HARDWARE CARDS */}
       {/* <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
             {[
               {
                 name: 'Biometric Scanners',
@@ -54,19 +54,19 @@ export default function Hardware() {
                 specs: 'IP65 rated, offline capability'
               }
             ].map((hardware, index) => (
-              <div key={index} className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                <div className="bg-gray-200 h-32 rounded-lg flex items-center justify-center mb-4">
+              <div key={index} className="p-6 transition-shadow bg-white rounded-lg shadow-md hover:shadow-lg">
+                <div className="flex items-center justify-center h-32 mb-4 bg-gray-200 rounded-lg">
                   <p className="text-gray-500">Image: {hardware.name}</p>
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">{hardware.name}</h3>
-                <p className="text-gray-600 mb-2">{hardware.description}</p>
-                <p className="text-sm text-gray-500 mb-4">{hardware.specs}</p>
-                <button className="cursor-pointer text-blue-600 hover:text-blue-800 font-semibold">Learn More →</button>
+                <h3 className="mb-2 text-xl font-semibold text-gray-900">{hardware.name}</h3>
+                <p className="mb-2 text-gray-600">{hardware.description}</p>
+                <p className="mb-4 text-sm text-gray-500">{hardware.specs}</p>
+                <button className="font-semibold text-blue-600 cursor-pointer hover:text-blue-800">Learn More →</button>
               </div>
             ))}
           </div>
-          <div className="text-center mt-12">
-            <button className="cursor-pointer bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+          <div className="mt-12 text-center">
+            <button className="px-8 py-3 font-semibold text-white transition-colors bg-blue-600 rounded-lg cursor-pointer hover:bg-blue-700">
               Request Hardware Quote
             </button>
           </div>

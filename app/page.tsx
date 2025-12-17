@@ -342,7 +342,7 @@ export default function Home() {
       <Navbar />
 
       {/* HERO SECTION - Updated for sleek design */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-0 py-8 sm:py-12 bg-gray-50">
+      <div className="px-4 py-8 mx-auto max-w-7xl sm:px-6 lg:px-0 sm:py-12 bg-gray-50">
         <section
           className="relative flex items-end text-white overflow-hidden rounded-[44px] shadow-2xl"
           style={{ height: "calc(100vh - 8rem)" }}
@@ -356,19 +356,19 @@ export default function Home() {
             className="z-0"
           />
           {/* Dark Gradient Overlay */}
-          <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/40 to-transparent z-10"></div>
+          <div className="absolute inset-0 z-10 bg-linear-to-t from-black/80 via-black/40 to-transparent"></div>
 
           {/* Content Container */}
-          <div className="relative pb-16 w-full z-20 px-5 md:px-20">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-end">
+          <div className="relative z-20 w-full px-5 pb-16 md:px-20">
+            <div className="grid items-end grid-cols-1 gap-8 lg:grid-cols-2">
               <div className="text-left">
-                <h1 className="text-5xl md:text-6xl font-bold leading-tight">
+                <h1 className="text-5xl font-bold leading-tight md:text-6xl">
                   Secure Your World with Intelligence.
                 </h1>
               </div>
 
               <div className="text-right">
-                <p className="text-xl md:text-xl mb-8 text-white max-w-lg ml-auto">
+                <p className="max-w-lg mb-8 ml-auto text-xl text-white md:text-xl">
                   SmatAccess – Smart Access Control for Homes, Offices &
                   Enterprises. Simplify entry, strengthen security, and manage
                   visitors, vehicles, and staff with one intelligent platform.
@@ -384,9 +384,9 @@ export default function Home() {
 
       {/* SECTION 3 – INDUSTRY SOLUTIONS - Sleek Card Design */}
       <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+          <div className="mb-12 text-center">
+            <h2 className="mb-4 text-3xl font-bold text-gray-900">
               Industry Solutions
             </h2>
             <p className="text-lg text-gray-600">
@@ -395,12 +395,12 @@ export default function Home() {
           </div>
 
           {/* First 6 cards (2 full rows) */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-stretch gap-x-8 gap-y-16 pt-10 mb-16">
+          <div className="grid items-stretch grid-cols-1 pt-10 mb-16 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
             {industrySolutions.slice(0, 6).map((item, index) => {
               const Icon = item.icon;
 
               return (
-                <div key={index} className="lg:col-span-1 h-full">
+                <div key={index} className="h-full lg:col-span-1">
                   <div className="bg-black p-8 pt-16 rounded-2xl shadow-2xl flex flex-col items-center text-center justify-start relative h-full min-h-[300px] w-full transition-all duration-300 ease-in-out transform hover:scale-[1.02] hover:shadow-[#2090C4]/50 border border-transparent hover:border-[#2090C4]">
                     {/* Icon Circle - ABSOLUTE POSITIONING */}
                     <div className="w-20 h-20 bg-black rounded-full border border-[#2090C4] flex items-center justify-center mb-6 absolute top-0 transform -translate-y-1/2">
@@ -408,12 +408,12 @@ export default function Home() {
                     </div>
 
                     {/* Title */}
-                    <h3 className="text-2xl font-bold text-white mb-4 mt-4">
+                    <h3 className="mt-4 mb-4 text-2xl font-bold text-white">
                       {item.title}
                     </h3>
 
                     {/* Description */}
-                    <p className="text-gray-300 text-base mb-6 max-w-sm grow">
+                    <p className="max-w-sm mb-6 text-base text-gray-300 grow">
                       {item.description}
                     </p>
 
@@ -446,12 +446,12 @@ export default function Home() {
                     </div>
 
                     {/* Title */}
-                    <h3 className="text-2xl font-bold text-white mb-4 mt-4">
+                    <h3 className="mt-4 mb-4 text-2xl font-bold text-white">
                       {item.title}
                     </h3>
 
                     {/* Description */}
-                    <p className="text-gray-300 text-base mb-6 max-w-sm grow">
+                    <p className="max-w-sm mb-6 text-base text-gray-300 grow">
                       {item.description}
                     </p>
 
@@ -469,7 +469,7 @@ export default function Home() {
             })}
           </div>
 
-          <div className="text-center mt-8">
+          <div className="mt-8 text-center">
             <button className="cursor-pointer bg-[#2090C4] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#2090C4]/80 transition-colors">
               Find Your Industry
             </button>
@@ -481,9 +481,9 @@ export default function Home() {
 
       {/* SECTION 4 – HOW IT WORKS (Sleek Grid Layout) */}
       <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+          <div className="mb-12 text-center">
+            <h2 className="mb-4 text-3xl font-bold text-gray-900">
               How It Works
             </h2>
             <p className="text-lg text-gray-600">
@@ -492,7 +492,7 @@ export default function Home() {
           </div>
 
           {/* Grid for the steps - two columns on medium, three on large */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
             {howItWorksSteps.map((stepItem, index) => {
               const IconComponent = stepItem.icon;
               return (
@@ -508,25 +508,25 @@ export default function Home() {
                   {/* Image/Icon Placeholder */}
                   <div className="relative w-full h-32 mb-6">
                     {/* Placeholder for the image */}
-                    <div className="flex items-center justify-center w-full h-full bg-gray-200 rounded-lg border border-gray-300">
+                    <div className="flex items-center justify-center w-full h-full bg-gray-200 border border-gray-300 rounded-lg">
                       <IconComponent className="w-12 h-12 text-[#2090C4]" />
                     </div>
                     {/* Optional: Actual Next/Image if you had a dedicated image */}
-                    {/* <Image 
-                      src={stepItem.imageSrc} 
+                    {/* <Image
+                      src={stepItem.imageSrc}
                       alt={`Step ${stepItem.step} illustration`}
-                      layout="fill" 
-                      objectFit="contain" 
+                      layout="fill"
+                      objectFit="contain"
                     /> */}
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">
+                  <h3 className="mb-2 text-xl font-bold text-gray-900">
                     {stepItem.title}
                   </h3>
 
                   {/* Description */}
-                  <p className="text-gray-600 text-sm grow">
+                  <p className="text-sm text-gray-600 grow">
                     {stepItem.description}
                   </p>
                 </div>
@@ -534,7 +534,7 @@ export default function Home() {
             })}
           </div>
 
-          <div className="text-center mt-8">
+          <div className="mt-8 text-center">
             <button className="cursor-pointer bg-[#2090C4] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#2090C4]/80 transition-colors flex items-center justify-center mx-auto w-fit">
               Watch the Walkthrough Video
               <PlayIcon className="w-5 h-5 ml-2" />
@@ -546,31 +546,31 @@ export default function Home() {
       {/* --- */}
 
       {/* SECTION 5 – WHY CHOOSE SMATACCESS - REDESIGNED WITH IMAGES AND ANIMATIONS */}
-      <section className="py-16 bg-linear-to-br from-gray-50 to-gray-100 relative overflow-hidden">
+      <section className="relative py-16 overflow-hidden bg-linear-to-br from-gray-50 to-gray-100">
         {/* Background decoration */}
         <div className="absolute top-0 left-0 w-full h-full opacity-5">
           <div className="absolute top-10 left-10 w-64 h-64 bg-[#2090C4] rounded-full filter blur-3xl"></div>
-          <div className="absolute bottom-10 right-10 w-96 h-96 bg-blue-500 rounded-full filter blur-3xl"></div>
+          <div className="absolute bg-blue-500 rounded-full bottom-10 right-10 w-96 h-96 filter blur-3xl"></div>
         </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+        <div className="relative z-10 px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+          <div className="mb-12 text-center">
+            <h2 className="mb-4 text-3xl font-bold text-gray-900">
               Why Choose SmatAccess?
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="max-w-2xl mx-auto text-lg text-gray-600">
               Advanced features designed to provide unparalleled security and
               convenience for your organization.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
             {whyChooseFeatures.map((feature, index) => {
               const IconComponent = feature.icon;
               return (
                 <div
                   key={index}
-                  className="group relative bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-500 hover:shadow-2xl hover:-translate-y-2"
+                  className="relative overflow-hidden transition-all duration-500 bg-white shadow-lg group rounded-2xl hover:shadow-2xl hover:-translate-y-2"
                 >
                   {/* Image container with overlay */}
                   <div className="relative h-48 overflow-hidden">
@@ -586,7 +586,7 @@ export default function Home() {
                     ></div>
 
                     {/* Icon overlay */}
-                    <div className="absolute top-4 right-4 w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg opacity-0 group-hover:opacity-100 transition-all duration-500 transform group-hover:scale-110 group-hover:rotate-12">
+                    <div className="absolute flex items-center justify-center w-12 h-12 transition-all duration-500 transform bg-white rounded-full shadow-lg opacity-0 top-4 right-4 group-hover:opacity-100 group-hover:scale-110 group-hover:rotate-12">
                       <IconComponent className="w-6 h-6 text-gray-800" />
                     </div>
                   </div>
@@ -615,7 +615,7 @@ export default function Home() {
             })}
           </div>
 
-          <div className="text-center mt-12">
+          <div className="mt-12 text-center">
             <button className="cursor-pointer bg-[#2090C4] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#2090C4]/80 transition-all duration-300 transform hover:scale-105 shadow-lg">
               Request a Demo
             </button>
@@ -627,9 +627,9 @@ export default function Home() {
 
       {/* SECTION 6 – TESTIMONIALS / CLIENT BRANDS - REDESIGNED WITH AUTO-ROTATING TESTIMONIALS */}
       <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+          <div className="mb-12 text-center">
+            <h2 className="mb-4 text-3xl font-bold text-gray-900">
               Trusted by Leading Organizations
             </h2>
             <p className="text-lg text-gray-600">See what our clients say.</p>
@@ -638,7 +638,7 @@ export default function Home() {
           {/* Testimonials Carousel */}
           <div className="relative mb-16">
             <div className="max-w-4xl mx-auto">
-              <div className="bg-gray-50 rounded-2xl shadow-xl p-8 md:p-12 relative overflow-hidden">
+              <div className="relative p-8 overflow-hidden shadow-xl bg-gray-50 rounded-2xl md:p-12">
                 {/* Quote mark decoration */}
                 <div className="absolute top-4 left-4 text-[#2090C4]/10">
                   <svg
@@ -665,7 +665,7 @@ export default function Home() {
                     ))}
                   </div>
 
-                  <p className="text-xl md:text-2xl text-gray-700 italic mb-8 text-center">
+                  <p className="mb-8 text-xl italic text-center text-gray-700 md:text-2xl">
                     &ldquo;{testimonials[currentTestimonialIndex].quote}&rdquo;
                   </p>
 
@@ -681,7 +681,7 @@ export default function Home() {
                 </div>
 
                 {/* Progress indicator */}
-                <div className="mt-8 flex justify-center space-x-2">
+                <div className="flex justify-center mt-8 space-x-2">
                   {testimonials.map((_, index) => (
                     <button
                       key={index}
@@ -697,7 +697,7 @@ export default function Home() {
                 </div>
 
                 {/* Auto-rotate timer */}
-                <div className="mt-4 h-1 bg-gray-200 rounded-full overflow-hidden">
+                <div className="h-1 mt-4 overflow-hidden bg-gray-200 rounded-full">
                   <div
                     className="h-full bg-[#2090C4] rounded-full"
                     style={{
@@ -720,28 +720,28 @@ export default function Home() {
 
             <div className="relative">
               {/* Gradient overlays for fade effect */}
-              <div className="absolute left-0 top-0 bottom-0 w-12 bg-linear-to-r from-white to-transparent z-10"></div>
-              <div className="absolute right-0 top-0 bottom-0 w-12 bg-linear-to-l from-white to-transparent z-10"></div>
+              <div className="absolute top-0 bottom-0 left-0 z-10 w-12 bg-linear-to-r from-white to-transparent"></div>
+              <div className="absolute top-0 bottom-0 right-0 z-10 w-12 bg-linear-to-l from-white to-transparent"></div>
 
               {/* Logo container with horizontal scroll */}
-              <div className="overflow-x-auto pb-4 scrollbar-hide">
-                <div className="flex space-x-12 px-12">
+              <div className="pb-4 overflow-x-auto scrollbar-hide">
+                <div className="flex px-12 space-x-12">
                   {clientLogos.map((client, index) => (
                     <div
                       key={index}
-                      className="shrink-0 group cursor-pointer"
+                      className="cursor-pointer shrink-0 group"
                     >
-                      <div className="relative w-32 h-16 md:w-40 md:h-20 bg-gray-100 rounded-lg flex items-center justify-center p-4 transition-all duration-300 group-hover:bg-gray-200 group-hover:shadow-md">
+                      <div className="relative flex items-center justify-center w-32 h-16 p-4 transition-all duration-300 bg-gray-100 rounded-lg md:w-40 md:h-20 group-hover:bg-gray-200 group-hover:shadow-md">
                         <Image
                           src={client.logo}
                           alt={client.name}
                           width={120}
                           height={60}
                           objectFit="contain"
-                          className="filter grayscale opacity-70 group-hover:filter-none group-hover:opacity-100 transition-all duration-300"
+                          className="transition-all duration-300 filter grayscale opacity-70 group-hover:filter-none group-hover:opacity-100"
                         />
                       </div>
-                      <p className="text-center text-sm text-gray-600 mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <p className="mt-2 text-sm text-center text-gray-600 transition-opacity duration-300 opacity-0 group-hover:opacity-100">
                         {client.name}
                       </p>
                     </div>
@@ -756,25 +756,25 @@ export default function Home() {
       {/* --- */}
 
       {/* SECTION 7 – PRICING PREVIEW - SLEEKEST REDESIGN */}
-      <section className="py-16 bg-linear-to-br from-gray-50 to-gray-100 relative overflow-hidden">
+      <section className="relative py-16 overflow-hidden bg-linear-to-br from-gray-50 to-gray-100">
         {/* Background decoration */}
         <div className="absolute top-0 left-0 w-full h-full opacity-5">
-          <div className="absolute top-10 right-10 w-64 h-64 bg-blue-300 rounded-full filter blur-3xl"></div>
-          <div className="absolute bottom-10 left-10 w-96 h-96 bg-purple-300 rounded-full filter blur-3xl"></div>
+          <div className="absolute w-64 h-64 bg-blue-300 rounded-full top-10 right-10 filter blur-3xl"></div>
+          <div className="absolute bg-purple-300 rounded-full bottom-10 left-10 w-96 h-96 filter blur-3xl"></div>
         </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-extrabold text-gray-900 mb-4">
+        <div className="relative z-10 px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+          <div className="mb-16 text-center">
+            <h2 className="mb-4 text-4xl font-extrabold text-gray-900">
               Unlock Your Perfect Plan
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <p className="max-w-2xl mx-auto text-xl text-gray-600">
               Flexible and transparent pricing designed to scale with your
               needs. **Full details are on the pricing page.**
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12 items-stretch">
+          <div className="grid items-stretch grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
             {pricingTiers.map((tier, index) => (
               <div
                 key={index}
@@ -808,7 +808,7 @@ export default function Home() {
                   {tier.tagline}
                 </p>
 
-                <div className="mb-8 flex items-center justify-start">
+                <div className="flex items-center justify-start mb-8">
                   {tier.price !== "Custom" ? (
                     <>
                       <CurrencyDollarIcon
@@ -835,7 +835,7 @@ export default function Home() {
                   )}
                 </div>
 
-                <ul className="flex flex-col space-y-3 mb-10 grow">
+                <ul className="flex flex-col mb-10 space-y-3 grow">
                   {/* Included Features (Simplified) */}
                   {tier.features.map((feature, i) => (
                     <li
@@ -874,7 +874,7 @@ export default function Home() {
                 </ul>
 
                 {/* Button */}
-                <Link href={tier.link} className="mt-auto block">
+                <Link href={tier.link} className="block mt-auto">
                   <button
                     className={`w-full py-4 rounded-full font-bold text-lg transition-all duration-300 transform group-hover:scale-105
                       ${
@@ -892,7 +892,7 @@ export default function Home() {
           </div>
 
           {/* VIEW FULL PRICING BUTTON - Styled with brand colors and rounded-full */}
-          <div className="text-center mt-16">
+          <div className="mt-16 text-center">
             <Link href="/pricing">
               <button className="cursor-pointer bg-[#2090C4] text-white px-10 py-4 rounded-full font-semibold hover:bg-[#1a7bb7] transition-colors flex items-center justify-center mx-auto w-fit text-lg shadow-md transform hover:scale-105">
                 View Full Pricing
@@ -907,9 +907,9 @@ export default function Home() {
 
       {/* SECTION 8 – HARDWARE SHOWCASE - Corrected Layout for Image/Text */}
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+          <div className="mb-16 text-center">
+            <h2 className="mb-4 text-4xl font-bold text-gray-900">
               Explore Our Smart Hardware
             </h2>
             <p className="text-xl text-gray-600">
@@ -918,14 +918,14 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+          <div className="grid grid-cols-1 gap-10 md:grid-cols-3">
             {hardwareDevices.map((device, index) => (
               <div
                 key={index}
                 className={`relative overflow-hidden group ${device.color} p-8 rounded-3xl text-center shadow-lg transition-all duration-500 transform hover:scale-[1.03] hover:shadow-2xl hover:ring-2 hover:ring-offset-4 hover:ring-[#2090C4]/50 min-h-[500px] flex flex-col`}
               >
                 {/* Image Container - Fixed to prevent overflow */}
-                <div className="relative h-56 w-full flex items-center justify-center mb-8 z-10 border-2 border-gray-300 rounded-lg overflow-hidden">
+                <div className="relative z-10 flex items-center justify-center w-full h-56 mb-8 overflow-hidden border-2 border-gray-300 rounded-lg">
                   <div className="relative w-full h-full">
                     <Image
                       src={device.imageSrc}
@@ -936,15 +936,15 @@ export default function Home() {
                     />
                   </div>
                   {/* Shadow/Base to suggest floating */}
-                  <div className="absolute bottom-0 w-3/4 h-3 bg-black rounded-full opacity-10 blur-md transition-all duration-500 group-hover:w-4/5"></div>
+                  <div className="absolute bottom-0 w-3/4 h-3 transition-all duration-500 bg-black rounded-full opacity-10 blur-md group-hover:w-4/5"></div>
                 </div>
 
                 {/* Text Content */}
-                <div className="p-4 pt-0 grow flex flex-col">
-                  <h3 className="text-2xl font-extrabold text-gray-900 mb-2">
+                <div className="flex flex-col p-4 pt-0 grow">
+                  <h3 className="mb-2 text-2xl font-extrabold text-gray-900">
                     {device.name}
                   </h3>
-                  <p className="text-gray-700 mb-6 font-medium grow">
+                  <p className="mb-6 font-medium text-gray-700 grow">
                     {device.description}
                   </p>
 
@@ -958,9 +958,9 @@ export default function Home() {
             ))}
           </div>
 
-          <div className="text-center mt-16">
+          <div className="mt-16 text-center">
             <Link href="/hardware">
-              <button className="cursor-pointer bg-gray-200 text-gray-800 px-10 py-4 rounded-full font-semibold hover:bg-gray-300 transition-colors flex items-center justify-center mx-auto w-fit text-lg shadow-md">
+              <button className="flex items-center justify-center px-10 py-4 mx-auto text-lg font-semibold text-gray-800 transition-colors bg-gray-200 rounded-full shadow-md cursor-pointer hover:bg-gray-300 w-fit">
                 View All Hardware Solutions
                 <ArrowRightIcon className="w-5 h-5 ml-3" />
               </button>
@@ -977,9 +977,9 @@ export default function Home() {
         {/* Animated background elements */}
         <div className="absolute inset-0">
           <div className="absolute top-0 left-0 w-full h-full opacity-10">
-            <div className="absolute top-20 left-20 w-64 h-64 bg-white rounded-full filter blur-3xl animate-pulse"></div>
+            <div className="absolute w-64 h-64 bg-white rounded-full top-20 left-20 filter blur-3xl animate-pulse"></div>
             <div
-              className="absolute bottom-20 right-20 w-96 h-96 bg-white rounded-full filter blur-3xl animate-pulse"
+              className="absolute bg-white rounded-full bottom-20 right-20 w-96 h-96 filter blur-3xl animate-pulse"
               style={{ animationDelay: "1s" }}
             ></div>
           </div>
@@ -1007,15 +1007,15 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="relative z-10 max-w-5xl px-4 mx-auto text-center sm:px-6 lg:px-8">
           <div className="relative">
             {/* Animated underline for heading */}
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white relative inline-block">
+            <h2 className="relative inline-block mb-6 text-4xl font-bold text-white md:text-5xl">
               Ready to Secure Smarter?
-              <span className="absolute bottom-0 left-0 w-full h-1 bg-white transform scale-x-0 origin-left transition-transform duration-700 group-hover:scale-x-100"></span>
+              <span className="absolute bottom-0 left-0 w-full h-1 transition-transform duration-700 origin-left transform scale-x-0 bg-white group-hover:scale-x-100"></span>
             </h2>
 
-            <p className="text-lg md:text-xl mb-10 text-white/90 max-w-3xl mx-auto transform transition-all duration-500 hover:scale-105">
+            <p className="max-w-3xl mx-auto mb-10 text-lg transition-all duration-500 transform md:text-xl text-white/90 hover:scale-105">
               Schedule your demo today and see how SmatAccess transforms
               property security.
             </p>
@@ -1025,27 +1025,27 @@ export default function Home() {
               <button className="cursor-pointer relative bg-white text-[#2090C4] px-10 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-xl overflow-hidden group">
                 <span className="relative z-10 flex items-center">
                   Request a Demo
-                  <ArrowRightIcon className="w-5 h-5 ml-2 transform transition-transform duration-300 group-hover:translate-x-1" />
+                  <ArrowRightIcon className="w-5 h-5 ml-2 transition-transform duration-300 transform group-hover:translate-x-1" />
                 </span>
 
                 {/* Ripple effect */}
-                <span className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-500"></span>
+                <span className="absolute inset-0 transition-opacity duration-500 bg-white opacity-0 group-hover:opacity-20"></span>
 
                 {/* Animated background gradient */}
-                <span className="absolute inset-0 bg-linear-to-r from-transparent via-white to-transparent opacity-0 group-hover:opacity-30 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-all duration-1000"></span>
+                <span className="absolute inset-0 transition-all duration-1000 transform -translate-x-full -skew-x-12 opacity-0 bg-linear-to-r from-transparent via-white to-transparent group-hover:opacity-30 group-hover:translate-x-full"></span>
               </button>
             </div>
 
             {/* Floating security badges */}
-            <div className="mt-16 flex justify-center space-x-8">
+            <div className="flex justify-center mt-16 space-x-8">
               <div
                 className="flex flex-col items-center animate-float"
                 style={{ animationDelay: "0.2s" }}
               >
-                <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mb-2 shadow-lg transform transition-all duration-300 hover:scale-110">
+                <div className="flex items-center justify-center w-16 h-16 mb-2 transition-all duration-300 transform rounded-full shadow-lg bg-white/20 backdrop-blur-sm hover:scale-110">
                   <ShieldCheckIcon className="w-8 h-8 text-white" />
                 </div>
-                <span className="text-white/80 text-sm">
+                <span className="text-sm text-white/80">
                   Bank-Level Security
                 </span>
               </div>
@@ -1054,20 +1054,20 @@ export default function Home() {
                 className="flex flex-col items-center animate-float"
                 style={{ animationDelay: "0.5s" }}
               >
-                <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mb-2 shadow-lg transform transition-all duration-300 hover:scale-110">
+                <div className="flex items-center justify-center w-16 h-16 mb-2 transition-all duration-300 transform rounded-full shadow-lg bg-white/20 backdrop-blur-sm hover:scale-110">
                   <ClockIcon className="w-8 h-8 text-white" />
                 </div>
-                <span className="text-white/80 text-sm">24/7 Monitoring</span>
+                <span className="text-sm text-white/80">24/7 Monitoring</span>
               </div>
 
               <div
                 className="flex flex-col items-center animate-float"
                 style={{ animationDelay: "0.8s" }}
               >
-                <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mb-2 shadow-lg transform transition-all duration-300 hover:scale-110">
+                <div className="flex items-center justify-center w-16 h-16 mb-2 transition-all duration-300 transform rounded-full shadow-lg bg-white/20 backdrop-blur-sm hover:scale-110">
                   <UserPlusIcon className="w-8 h-8 text-white" />
                 </div>
-                <span className="text-white/80 text-sm">Easy Onboarding</span>
+                <span className="text-sm text-white/80">Easy Onboarding</span>
               </div>
             </div>
           </div>
@@ -1118,3 +1118,4 @@ export default function Home() {
     </div>
   );
 }
+
