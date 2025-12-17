@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Sofia_Sans, Roboto_Mono, Inter } from "next/font/google";
 import "./globals.css";
+import Chatbot from "../components/Chatbot";
 
 const sofiaSans = Sofia_Sans({
   variable: "--font-sofia-sans",
@@ -21,18 +22,22 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "SmatAcces - Secure Access Management Solutions",
-  description: "Leading access management platform providing enterprise-grade security solutions. Manage permissions, monitor activity, and ensure data protection with SmatAcces.",
-  keywords: "access management, security, permissions, enterprise security, data protection",
+  description:
+    "Leading access management platform providing enterprise-grade security solutions. Manage permissions, monitor activity, and ensure data protection with SmatAcces.",
+  keywords:
+    "access management, security, permissions, enterprise security, data protection",
   authors: [{ name: "SmatAcces Team" }],
   openGraph: {
     title: "SmatAcces - Secure Access Management Solutions",
-    description: "Leading access management platform providing enterprise-grade security solutions.",
+    description:
+      "Leading access management platform providing enterprise-grade security solutions.",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: "SmatAcces - Secure Access Management Solutions",
-    description: "Leading access management platform providing enterprise-grade security solutions.",
+    description:
+      "Leading access management platform providing enterprise-grade security solutions.",
   },
 };
 
@@ -47,6 +52,7 @@ export default function RootLayout({
         className={`${sofiaSans.variable} ${robotoMono.variable} ${inter.variable} antialiased font-inter`}
       >
         {children}
+        <Chatbot />
       </body>
     </html>
   );

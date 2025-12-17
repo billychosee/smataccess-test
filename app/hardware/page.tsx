@@ -27,42 +27,84 @@ interface HardwareItem {
 // Hardware data
 const hardwareData: HardwareItem[] = [
   {
-    name: 'Biometric Scanners',
-    description: 'Advanced face and fingerprint verification systems with AI-powered recognition.',
-    specs: '99.9% accuracy, IP65 weather-resistant, anti-spoofing technology',
-    image: '/biometric-scanners.png',
-    modalImage: '/biometric-scanners-view.png',
-    features: ['Face Recognition', 'Fingerprint Scanner', 'Anti-spoofing', 'Weather Resistant', 'High-Speed Processing', 'Tamper Alerts']
+    name: "Biometric Scanners",
+    description:
+      "Advanced face and fingerprint verification systems with AI-powered recognition.",
+    specs: "99.9% accuracy, IP65 weather-resistant, anti-spoofing technology",
+    image: "/biometric-scanners.png",
+    modalImage: "/biometric-scanners-view.png",
+    features: [
+      "Face Recognition",
+      "Fingerprint Scanner",
+      "Anti-spoofing",
+      "Weather Resistant",
+      "High-Speed Processing",
+      "Tamper Alerts",
+    ],
   },
   {
-    name: 'RFID Readers',
-    description: 'High-speed contactless access with secure encryption and long-range reading.',
-    specs: 'Up to 10m range, AES-256 encryption, multi-frequency support',
-    image: '/rfid-readers.png',
-    modalImage: '/rfid-readers-view.png',
-    features: ['Long Range', 'Secure Encryption', 'Multi-frequency', 'Fast Processing', 'Wiegand/OSDP Support', 'Integrated Antenna']
+    name: "RFID Readers",
+    description:
+      "High-speed contactless access with secure encryption and long-range reading.",
+    specs: "Up to 10m range, AES-256 encryption, multi-frequency support",
+    image: "/rfid-readers.png",
+    modalImage: "/rfid-readers-view.png",
+    features: [
+      "Long Range",
+      "Secure Encryption",
+      "Multi-frequency",
+      "Fast Processing",
+      "Wiegand/OSDP Support",
+      "Integrated Antenna",
+    ],
   },
   {
-    name: 'Turnstiles',
-    description: 'Modern, durable gate solutions with anti-tailgating and high throughput design.',
-    specs: 'Anti-tailgating sensors, 30+ users/minute, stainless steel construction',
-    image: '/high-traffic.png',
-    features: ['Anti-tailgating', 'High Throughput', 'Durable Build', 'Safety Sensors', 'Emergency Breakaway', 'Bi-directional Flow']
+    name: "Turnstiles",
+    description:
+      "Modern, durable gate solutions with anti-tailgating and high throughput design.",
+    specs:
+      "Anti-tailgating sensors, 30+ users/minute, stainless steel construction",
+    image: "/high-traffic.png",
+    features: [
+      "Anti-tailgating",
+      "High Throughput",
+      "Durable Build",
+      "Safety Sensors",
+      "Emergency Breakaway",
+      "Bi-directional Flow",
+    ],
   },
   {
-    name: 'Gate Barriers',
-    description: 'Intelligent vehicle control systems with automatic operation and detection.',
-    specs: 'ANPR integration, 3m barrier length, solar power option',
-    image: '/gate-barrier.png',
-    features: ['ANPR Integration', 'Automatic Operation', 'Solar Power', 'Vehicle Detection', 'Fast Open/Close', 'Safety Loop Sensors']
+    name: "Gate Barriers",
+    description:
+      "Intelligent vehicle control systems with automatic operation and detection.",
+    specs: "ANPR integration, 3m barrier length, solar power option",
+    image: "/gate-barrier.png",
+    features: [
+      "ANPR Integration",
+      "Automatic Operation",
+      "Solar Power",
+      "Vehicle Detection",
+      "Fast Open/Close",
+      "Safety Loop Sensors",
+    ],
   },
   {
-    name: 'Rugged Security Devices',
-    description: 'Handheld scanners and mobile ANPR cameras for field operations.',
-    specs: 'IP65 rated, 8-hour battery, offline capability',
-    image: '/device1.png',
-    features: ['IP65 Rated', 'Long Battery Life', 'Offline Mode', 'Thermal Imaging', 'Mobile Connectivity', 'GPS Tracking']
-  }
+    name: "Rugged Security Devices",
+    description:
+      "Handheld scanners and mobile ANPR cameras for field operations.",
+    specs: "IP65 rated, 8-hour battery, offline capability",
+    image: "/device1-overview.png",
+    modalImage: "/device1.png",
+    features: [
+      "IP65 Rated",
+      "Long Battery Life",
+      "Offline Mode",
+      "Thermal Imaging",
+      "Mobile Connectivity",
+      "GPS Tracking",
+    ],
+  },
 ];
 
 // --- MODAL COMPONENT ---
@@ -175,7 +217,6 @@ export default function Hardware() {
       <Navbar />
 
       {/* HERO SECTION - Modernized to match other pages */}
-      {/* ... (Hero section code remains the same) ... */}
       <div className="px-4 py-8 pt-20 mx-auto max-w-7xl sm:px-6 lg:px-0 sm:py-12 md:pt-8 bg-gray-50">
         <section
           className="relative flex items-center justify-center text-white overflow-hidden rounded-[44px] shadow-2xl"
@@ -319,11 +360,11 @@ export default function Hardware() {
           </div>
 
           {/* Last 2 cards centered */}
-          <div className="flex flex-col md:flex-row justify-center gap-8 mt-8">
+          <div className="flex flex-col justify-center gap-8 mt-8 md:flex-row">
             {hardwareData.slice(3).map((hardware, index) => {
               const actualIndex = index + 3; // Adjust index to match original array
               return (
-                <div key={actualIndex} className="w-full md:w-1/2 max-w-md">
+                <div key={actualIndex} className="w-full max-w-md md:w-1/2">
                   <div className="relative p-8 overflow-hidden transition-all duration-500 bg-white border border-gray-100 shadow-xl group rounded-3xl hover:shadow-2xl hover:-translate-y-2">
                     {/* Decorative background gradient */}
                     <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[#2090C4]/10 to-transparent rounded-full transform translate-x-16 -translate-y-16"></div>

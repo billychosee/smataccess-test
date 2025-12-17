@@ -51,7 +51,7 @@
   button,
   .btn,
   a.btn {
-    @apply transform transition duration-300 ease-in-out;
+    @apply transition duration-300 ease-in-out transform;
   }
 
   /* Hover/active affordances: subtle scale + shadow */
@@ -65,5 +65,38 @@
   .btn:active,
   a.btn:active {
     @apply scale-100;
+  }
+}
+
+/* Chatbot animations */
+@layer utilities {
+  /* Shimmer animation for header shine effect */
+  @keyframes shimmer {
+    0% {
+      transform: translateX(-100%) skewX(-12deg);
+    }
+    100% {
+      transform: translateX(200%) skewX(-12deg);
+    }
+  }
+
+  .animate-shimmer {
+    animation: shimmer 3s infinite;
+  }
+
+  /* Fade in animation for messages */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fadeIn {
+    animation: fadeIn 0.3s ease-out;
   }
 }
