@@ -1,8 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: "export",
   images: {
-    domains: [], // Add image domains if using external images
-    unoptimized: false, // Set to true if using static export
+    unoptimized: true, // Set to true if using static export
   },
 
   reactStrictMode: true,
