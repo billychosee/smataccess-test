@@ -149,20 +149,20 @@ const Footer = () => {
               <li className="flex items-center justify-center md:justify-start">
                 <PhoneIcon className="flex-shrink-0 w-5 h-5 mr-3 text-white" />
                 <a
-                  href="tel:+2638688008361"
+                  href="tel:+27107860259"
                   className="transition-colors hover:text-white"
                 >
-                  +263 86 8800 8361
+                  +27 10 786 0259
                 </a>
               </li>
               <li className="flex items-start justify-center md:justify-start">
                 <MapPinIcon className="flex-shrink-0 w-5 h-5 mt-1 mr-3 text-white" />
                 <span className="text-center md:text-left">
-                  13 Brentwood Avenue
+                  12 Riversands Road
                   <br />
-                  Groombridge, Harare
+                  Beverly, Sandton
                   <br />
-                  South Africa
+                  South Africa, 2191
                 </span>
               </li>
             </ul>

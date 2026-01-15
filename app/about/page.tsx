@@ -326,7 +326,7 @@ export default function About() {
                     <span className="mr-2 font-semibold text-gray-700">
                       Headquarters:
                     </span>
-                    <span>Harare, South Africa</span>
+                    <span>Sandton, South Africa</span>
                   </div>
                 </div>
               </div>
