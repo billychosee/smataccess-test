@@ -12,6 +12,8 @@ import {
   CpuChipIcon,
   ShieldCheckIcon,
   XMarkIcon, // <-- IMPORT XMarkIcon for closing
+  ChevronLeftIcon,
+  ChevronRightIcon,
 } from '@heroicons/react/24/outline';
 
 // Define the type for a hardware item for better type safety
@@ -21,6 +23,7 @@ interface HardwareItem {
   specs: string;
   image: string;
   modalImage?: string;
+  images?: string[]; // Optional array for multiple preview images
   features: string[];
 }
 
@@ -32,7 +35,7 @@ const hardwareData: HardwareItem[] = [
       "Advanced face and fingerprint verification systems with AI-powered recognition.",
     specs: "99.9% accuracy, IP65 weather-resistant, anti-spoofing technology",
     image: "/biometric-scanners.png",
-    modalImage: "/biometric-scanners-view.png",
+    images: ["/biometric-scanners.png", "/biometric-scanners-view.png"],
     features: [
       "Face Recognition",
       "Fingerprint Scanner",
@@ -48,7 +51,7 @@ const hardwareData: HardwareItem[] = [
       "High-speed contactless access with secure encryption and long-range reading.",
     specs: "Up to 10m range, AES-256 encryption, multi-frequency support",
     image: "/rfid-readers.png",
-    modalImage: "/rfid-readers-view.png",
+    images: ["/rfid-readers.png", "/long-range-rfid.jpg"],
     features: [
       "Long Range",
       "Secure Encryption",
@@ -65,6 +68,7 @@ const hardwareData: HardwareItem[] = [
     specs:
       "Anti-tailgating sensors, 30+ users/minute, stainless steel construction",
     image: "/high-traffic.png",
+    images: ["/TR03-Tripod-Turnstile.png", "/TR04-Tripod-Turnstile.png"],
     features: [
       "Anti-tailgating",
       "High Throughput",
@@ -95,7 +99,7 @@ const hardwareData: HardwareItem[] = [
       "Handheld scanners and mobile ANPR cameras for field operations.",
     specs: "IP65 rated, 8-hour battery, offline capability",
     image: "/device1-overview.png",
-    modalImage: "/device1.png",
+    images: ["/device1-overview.png", "/rugged-security.png"],
     features: [
       "IP65 Rated",
       "Long Battery Life",
@@ -109,6 +113,13 @@ const hardwareData: HardwareItem[] = [
 
 // --- MODAL COMPONENT ---
 const HardwareModal = ({ hardware, onClose }: { hardware: HardwareItem, onClose: () => void }) => {
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+    const imagesToShow = hardware.images || [hardware.modalImage || hardware.image];
+
+    const prevImage = () => setCurrentImageIndex((prev) => (prev - 1 + imagesToShow.length) % imagesToShow.length);
+    const nextImage = () => setCurrentImageIndex((prev) => (prev + 1) % imagesToShow.length);
+
     // Basic Tailwind CSS for the modal structure and styling
     return (
         // Modal Backdrop
@@ -131,14 +142,48 @@ const HardwareModal = ({ hardware, onClose }: { hardware: HardwareItem, onClose:
                 <div className="grid grid-cols-1 lg:grid-cols-2">
                     {/* Image Section */}
                     <div className="relative h-64 lg:h-full rounded-t-[2rem] lg:rounded-l-[2rem] lg:rounded-tr-none overflow-hidden bg-gray-100">
-                        <Image
-                            src={hardware.modalImage || hardware.image}
-                            alt={hardware.name}
-                            fill
-                            style={{ objectFit: 'cover' }}
-                            className="transition-transform duration-500 hover:scale-105"
-                        />
-                         <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                        <div className="absolute inset-0 flex transition-transform duration-500 ease-in-out" style={{ transform: `translateX(-${currentImageIndex * 100}%)` }}>
+                            {imagesToShow.map((imgSrc, index) => (
+                                <div key={index} className="flex-shrink-0 w-full h-full relative">
+                                    <Image
+                                        src={imgSrc}
+                                        alt={`${hardware.name} ${index + 1}`}
+                                        fill
+                                        style={{ objectFit: 'cover' }}
+                                        className="transition-transform duration-500 hover:scale-105"
+                                    />
+                                </div>
+                            ))}
+                        </div>
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                        {imagesToShow.length > 1 && (
+                            <>
+                                <button
+                                    onClick={prevImage}
+                                    className="absolute top-1/2 left-4 z-10 p-2 bg-white/80 rounded-full hover:bg-white transform -translate-y-1/2"
+                                    aria-label="Previous image"
+                                >
+                                    <ChevronLeftIcon className="w-6 h-6" />
+                                </button>
+                                <button
+                                    onClick={nextImage}
+                                    className="absolute top-1/2 right-4 z-10 p-2 bg-white/80 rounded-full hover:bg-white transform -translate-y-1/2"
+                                    aria-label="Next image"
+                                >
+                                    <ChevronRightIcon className="w-6 h-6" />
+                                </button>
+                                <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                                    {imagesToShow.map((_, index) => (
+                                        <button
+                                            key={index}
+                                            onClick={() => setCurrentImageIndex(index)}
+                                            className={`w-2 h-2 rounded-full transition-colors duration-300 ${index === currentImageIndex ? 'bg-white' : 'bg-white/50'}`}
+                                            aria-label={`Go to image ${index + 1}`}
+                                        />
+                                    ))}
+                                </div>
+                            </>
+                        )}
                     </div>
 
                     {/* Text Content Section */}
@@ -484,3 +529,4 @@ export default function Hardware() {
     </div>
   );
 }
+
