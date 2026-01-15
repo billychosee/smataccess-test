@@ -150,4 +150,4 @@ This project is proprietary software owned by SmatAccess.
 For questions or support, contact:
 - Email: info@smatechgroup.com
 - Phone: +263 86 8800 8361
-- Address: 13 Brentwood Avenue, Groombridge, Harare, Zimbabwe
+- Address: 13 Brentwood Avenue, Groombridge, Harare, South Africa

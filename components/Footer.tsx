@@ -1,6 +1,10 @@
-import Link from 'next/link';
-import Image from 'next/image';
-import { PhoneIcon, EnvelopeIcon, MapPinIcon } from '@heroicons/react/24/outline';
+import Link from "next/link";
+import Image from "next/image";
+import {
+  PhoneIcon,
+  EnvelopeIcon,
+  MapPinIcon,
+} from "@heroicons/react/24/outline";
 
 const Footer = () => {
   return (
@@ -135,15 +139,31 @@ const Footer = () => {
             <ul className="space-y-3 text-gray-400">
               <li className="flex items-center justify-center md:justify-start">
                 <EnvelopeIcon className="flex-shrink-0 w-5 h-5 mr-3 text-white" />
-                <a href="mailto:info@smatechgroup.com" className="transition-colors hover:text-white">info@smatechgroup.com</a>
+                <a
+                  href="mailto:info@smatechgroup.com"
+                  className="transition-colors hover:text-white"
+                >
+                  info@smatechgroup.com
+                </a>
               </li>
               <li className="flex items-center justify-center md:justify-start">
                 <PhoneIcon className="flex-shrink-0 w-5 h-5 mr-3 text-white" />
-                <a href="tel:+2638688008361" className="transition-colors hover:text-white">+263 86 8800 8361</a>
+                <a
+                  href="tel:+2638688008361"
+                  className="transition-colors hover:text-white"
+                >
+                  +263 86 8800 8361
+                </a>
               </li>
               <li className="flex items-start justify-center md:justify-start">
                 <MapPinIcon className="flex-shrink-0 w-5 h-5 mt-1 mr-3 text-white" />
-                <span className="text-center md:text-left">13 Brentwood Avenue<br />Groombridge, Harare<br />Zimbabwe</span>
+                <span className="text-center md:text-left">
+                  13 Brentwood Avenue
+                  <br />
+                  Groombridge, Harare
+                  <br />
+                  South Africa
+                </span>
               </li>
             </ul>
           </div>
@@ -159,4 +179,3 @@ const Footer = () => {
 };
 
 export default Footer;
-

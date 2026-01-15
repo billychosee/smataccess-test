@@ -1,8 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Required for cPanel / Apache static hosting
   output: "export",
+  trailingSlash: true,
+
   images: {
-    unoptimized: true, // Set to true if using static export
+    unoptimized: true,
   },
 
   reactStrictMode: true,
@@ -10,7 +13,15 @@ const nextConfig = {
 
   async headers() {
     const ContentSecurityPolicy =
-      "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; connect-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; frame-ancestors 'none'; form-action 'self'; base-uri 'self';";
+      "default-src 'self'; " +
+      "script-src 'self' 'unsafe-inline' 'unsafe-eval'; " +
+      "connect-src 'self'; " +
+      "img-src 'self' data: https:; " +
+      "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; " +
+      "font-src 'self' https://fonts.gstatic.com; " +
+      "frame-ancestors 'none'; " +
+      "form-action 'self'; " +
+      "base-uri 'self';";
 
     return [
       {
@@ -27,7 +38,10 @@ const nextConfig = {
           { key: "X-XSS-Protection", value: "1; mode=block" },
 
           // Referrer policy
-          { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
+          {
+            key: "Referrer-Policy",
+            value: "strict-origin-when-cross-origin",
+          },
 
           // HTTPS Strict Transport Security
           {
@@ -42,12 +56,24 @@ const nextConfig = {
           },
 
           // Cross-origin policies
-          { key: "Cross-Origin-Opener-Policy", value: "same-origin" },
-          { key: "Cross-Origin-Embedder-Policy", value: "require-corp" },
-          { key: "Cross-Origin-Resource-Policy", value: "same-origin" },
+          {
+            key: "Cross-Origin-Opener-Policy",
+            value: "same-origin",
+          },
+          {
+            key: "Cross-Origin-Embedder-Policy",
+            value: "require-corp",
+          },
+          {
+            key: "Cross-Origin-Resource-Policy",
+            value: "same-origin",
+          },
 
           // Content Security Policy
-          { key: "Content-Security-Policy", value: ContentSecurityPolicy },
+          {
+            key: "Content-Security-Policy",
+            value: ContentSecurityPolicy,
+          },
         ],
       },
     ];

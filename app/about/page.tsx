@@ -37,47 +37,75 @@ export default function About() {
     {
       name: "John Smith",
       role: "Founder & CEO",
-      description: "Visionary leader with deep expertise in security systems and African market dynamics. Founded SmatAccess to bridge the gap between advanced technology and practical security needs across Africa.",
+      description:
+        "Visionary leader with deep expertise in security systems and African market dynamics. Founded SmatAccess to bridge the gap between advanced technology and practical security needs across Africa.",
       experience: "15+ years in security systems",
       image: "/team-1.jpg",
       email: "john@smataccess.com",
       linkedin: "https://linkedin.com/in/johnsmith",
-      skills: ["Strategic Leadership", "Security Systems", "African Markets", "Business Development"],
-      funFact: "Speaks 4 African languages and has visited over 30 countries in Africa."
+      skills: [
+        "Strategic Leadership",
+        "Security Systems",
+        "African Markets",
+        "Business Development",
+      ],
+      funFact:
+        "Speaks 4 African languages and has visited over 30 countries in Africa.",
     },
     {
       name: "Sarah Johnson",
       role: "CTO",
-      description: "Tech innovator driving our platform architecture and cutting-edge security solutions. Sarah leads our technical vision with a focus on scalable, secure, and user-friendly solutions.",
+      description:
+        "Tech innovator driving our platform architecture and cutting-edge security solutions. Sarah leads our technical vision with a focus on scalable, secure, and user-friendly solutions.",
       experience: "12+ years experience",
       image: "/team-2.jpg",
       email: "sarah@smataccess.com",
       linkedin: "https://linkedin.com/in/sarahjohnson",
-      skills: ["System Architecture", "Security Engineering", "Team Leadership", "Innovation"],
-      funFact: "Built her first computer at age 12 and won multiple hackathons in university."
+      skills: [
+        "System Architecture",
+        "Security Engineering",
+        "Team Leadership",
+        "Innovation",
+      ],
+      funFact:
+        "Built her first computer at age 12 and won multiple hackathons in university.",
     },
     {
       name: "Michael Chen",
       role: "Head of Engineering",
-      description: "Expert in building scalable, secure systems that handle millions of access events daily. Michael ensures our platform can handle the demands of enterprise clients.",
+      description:
+        "Expert in building scalable, secure systems that handle millions of access events daily. Michael ensures our platform can handle the demands of enterprise clients.",
       experience: "Expert in scalable security solutions",
       image: "/team-3.jpg",
       email: "michael@smataccess.com",
       linkedin: "https://linkedin.com/in/michaelchen",
-      skills: ["Full-Stack Development", "System Design", "Performance Optimization", "Team Management"],
-      funFact: "Marathon runner who has completed 15 marathons across different African cities."
+      skills: [
+        "Full-Stack Development",
+        "System Design",
+        "Performance Optimization",
+        "Team Management",
+      ],
+      funFact:
+        "Marathon runner who has completed 15 marathons across different African cities.",
     },
     {
       name: "Emily Rodriguez",
       role: "Head of Design",
-      description: "Creating intuitive experiences that make complex security systems simple for everyone. Emily's user-centered design approach has made SmatAccess accessible to users of all technical levels.",
+      description:
+        "Creating intuitive experiences that make complex security systems simple for everyone. Emily's user-centered design approach has made SmatAccess accessible to users of all technical levels.",
       experience: "Creating intuitive user experiences",
       image: "/team-4.jpg",
       email: "emily@smataccess.com",
       linkedin: "https://linkedin.com/in/emilyrodriguez",
-      skills: ["UX/UI Design", "User Research", "Design Systems", "Accessibility"],
-      funFact: "Former professional photographer who has captured images in 15 African countries."
-    }
+      skills: [
+        "UX/UI Design",
+        "User Research",
+        "Design Systems",
+        "Accessibility",
+      ],
+      funFact:
+        "Former professional photographer who has captured images in 15 African countries.",
+    },
   ];
 
   // State for animated counters
@@ -94,13 +122,13 @@ export default function About() {
   const openMemberModal = (member: TeamMember) => {
     setSelectedMember(member);
     setIsModalOpen(true);
-    document.body.style.overflow = 'hidden';
+    document.body.style.overflow = "hidden";
   };
 
   const closeMemberModal = () => {
     setSelectedMember(null);
     setIsModalOpen(false);
-    document.body.style.overflow = 'unset';
+    document.body.style.overflow = "unset";
   };
 
   // Animate counters when they come into view
@@ -298,7 +326,7 @@ export default function About() {
                     <span className="mr-2 font-semibold text-gray-700">
                       Headquarters:
                     </span>
-                    <span>Harare, Zimbabwe</span>
+                    <span>Harare, South Africa</span>
                   </div>
                 </div>
               </div>
@@ -403,7 +431,7 @@ export default function About() {
               <button
                 key={index}
                 onClick={() => openMemberModal(member)}
-                className="overflow-hidden transition-all duration-500 bg-white shadow-lg group rounded-2xl hover:shadow-xl hover:-translate-y-2 text-left w-full"
+                className="w-full overflow-hidden text-left transition-all duration-500 bg-white shadow-lg group rounded-2xl hover:shadow-xl hover:-translate-y-2"
               >
                 <div className="h-48 overflow-hidden">
                   <Image
@@ -419,9 +447,7 @@ export default function About() {
                     {member.name}
                   </h3>
                   <p className="mb-2 text-sm text-gray-600">{member.role}</p>
-                  <p className="text-xs text-gray-500">
-                    {member.experience}
-                  </p>
+                  <p className="text-xs text-gray-500">{member.experience}</p>
                   <div className="mt-3 flex items-center text-[#2090C4] text-sm font-medium">
                     <span>View Profile</span>
                     <ArrowRightIcon className="w-4 h-4 ml-1" />
@@ -436,7 +462,7 @@ export default function About() {
               href="/contact"
               className="cursor-pointer bg-gradient-to-r from-[#2090C4] to-[#1a7bb7] text-white px-8 py-3 rounded-full font-semibold hover:from-[#1a7bb7] hover:to-[#2090C4] transition-all duration-300 transform hover:scale-105 shadow-lg inline-block"
             >
-              <UserGroupIcon className="w-5 h-5 inline-block mr-2" />
+              <UserGroupIcon className="inline-block w-5 h-5 mr-2" />
               Contact Our Team
               <ArrowRightIcon className="inline-block w-5 h-5 ml-2" />
             </a>
@@ -513,7 +539,10 @@ export default function About() {
 
       {/* TEAM MEMBER MODAL */}
       {isModalOpen && selectedMember && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black bg-opacity-70 backdrop-blur-sm" onClick={closeMemberModal}>
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black bg-opacity-70 backdrop-blur-sm"
+          onClick={closeMemberModal}
+        >
           <div
             className="relative w-full max-w-4xl max-h-full overflow-y-auto bg-white rounded-[2rem] shadow-2xl transform transition-all duration-300 scale-100 opacity-100"
             onClick={(e) => e.stopPropagation()}
@@ -535,7 +564,7 @@ export default function About() {
                   src={selectedMember.image}
                   alt={selectedMember.name}
                   fill
-                  style={{ objectFit: 'cover' }}
+                  style={{ objectFit: "cover" }}
                   className="transition-transform duration-500 hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
@@ -543,13 +572,21 @@ export default function About() {
 
               {/* Text Content Section */}
               <div className="p-8 lg:p-12">
-                <h2 className="mb-2 text-4xl font-extrabold text-gray-900">{selectedMember.name}</h2>
-                <p className="mb-4 text-xl text-[#2090C4] font-semibold">{selectedMember.role}</p>
-                <p className="mb-6 text-gray-600 leading-relaxed">{selectedMember.description}</p>
+                <h2 className="mb-2 text-4xl font-extrabold text-gray-900">
+                  {selectedMember.name}
+                </h2>
+                <p className="mb-4 text-xl text-[#2090C4] font-semibold">
+                  {selectedMember.role}
+                </p>
+                <p className="mb-6 leading-relaxed text-gray-600">
+                  {selectedMember.description}
+                </p>
 
                 {/* Skills */}
                 <div className="mb-6">
-                  <h4 className="mb-3 text-lg font-bold text-gray-900">Core Skills</h4>
+                  <h4 className="mb-3 text-lg font-bold text-gray-900">
+                    Core Skills
+                  </h4>
                   <div className="flex flex-wrap gap-2">
                     {selectedMember.skills.map((skill, idx) => (
                       <span
@@ -563,9 +600,13 @@ export default function About() {
                 </div>
 
                 {/* Fun Fact */}
-                <div className="mb-6 p-4 bg-gradient-to-r from-yellow-50 to-orange-50 border-l-4 border-yellow-400 rounded-r-lg">
-                  <h4 className="font-semibold text-yellow-800 mb-1">Fun Fact</h4>
-                  <p className="text-yellow-700 text-sm">{selectedMember.funFact}</p>
+                <div className="p-4 mb-6 border-l-4 border-yellow-400 rounded-r-lg bg-gradient-to-r from-yellow-50 to-orange-50">
+                  <h4 className="mb-1 font-semibold text-yellow-800">
+                    Fun Fact
+                  </h4>
+                  <p className="text-sm text-yellow-700">
+                    {selectedMember.funFact}
+                  </p>
                 </div>
 
                 {/* Contact Links */}
