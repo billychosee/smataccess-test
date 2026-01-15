@@ -1,9 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Required for cPanel / Apache static hosting
-  output: "export",
-  trailingSlash: true,
-
   images: {
     unoptimized: true,
   },
