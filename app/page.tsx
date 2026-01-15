@@ -287,8 +287,6 @@ export default function Home() {
     { name: "SmatUtor", logo: "/smatutor-usecase.jpg" },
     { name: "SmatPay", logo: "/smatpay-usecase.jpg" },
     { name: "Njere", logo: "/njere-usecase.jpg" },
-    { name: "Team A", logo: "/team-1.jpg" },
-    { name: "Team B", logo: "/team-2.jpg" },
   ];
 
   // **********************************************
@@ -306,7 +304,7 @@ export default function Home() {
         "Tier 1 (Self-Serve) Support",
         "Mobile App (iOS & Android)",
         "Time & Attendance Module",
-        "Cloud-Based Audit Logs"
+        "Cloud-Based Audit Logs",
       ],
       missingFeatures: ["Advanced Zoned-Off Access Control"],
       buttonText: "Start Free Trial",
@@ -324,7 +322,7 @@ export default function Home() {
         "All core access control features",
         "Tier 1 (Self-Serve) Support",
         "Advanced Zoned-Off Access Control",
-        "Centralized Multi-Site Management"
+        "Centralized Multi-Site Management",
       ],
       missingFeatures: ["Custom Integrations & API Access"],
       buttonText: "Request Quote",
@@ -333,14 +331,15 @@ export default function Home() {
     {
       name: "Enterprise",
       price: "500 - 1200",
-      tagline: "Best for Mining Operations, Banks, Manufacturing, Multi-Site Corporations",
+      tagline:
+        "Best for Mining Operations, Banks, Manufacturing, Multi-Site Corporations",
       isPopular: false,
       features: [
         "Advanced Zoned-Off Access Control (for high-security areas, vaults, etc.)",
         "Centralized Multi-Site Management Dashboard",
         "Custom Integrations & API Access",
         "Includes all Business Standard features",
-        "Tier 2 (Enterprise) Support"
+        "Tier 2 (Enterprise) Support",
       ],
       missingFeatures: [],
       buttonText: "Contact Sales",
@@ -393,21 +392,21 @@ export default function Home() {
 
       {/* HERO SECTION - Updated for sleek design */}
       <div className="px-4 py-8 pt-20 mx-auto max-w-7xl sm:px-6 lg:px-0 sm:py-12 md:pt-8 bg-gray-50">
-              <section
-                className="relative flex items-center justify-center text-white overflow-hidden rounded-[44px] shadow-2xl"
-                style={{ height: "calc(100vh - 8rem)" }}
-              >
-                {/* Background Image */}
-                <div className="absolute inset-0 z-0">
-                  <Image
-                    src="/home-hero.png"
-                    alt="SmatAccess Hardware Hero Background"
-                    fill
-                    style={{ objectFit: "cover" }}
-                    className="z-0"
-                  />
-                  <div className="absolute inset-0 z-10 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
-                </div>
+        <section
+          className="relative flex items-center justify-center text-white overflow-hidden rounded-[44px] shadow-2xl"
+          style={{ height: "calc(100vh - 8rem)" }}
+        >
+          {/* Background Image */}
+          <div className="absolute inset-0 z-0">
+            <Image
+              src="/home-hero.png"
+              alt="SmatAccess Hardware Hero Background"
+              fill
+              style={{ objectFit: "cover" }}
+              className="z-0"
+            />
+            <div className="absolute inset-0 z-10 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+          </div>
           {/* Content Container - Positioned at bottom */}
           <div className="absolute bottom-0 left-0 right-0 z-20 w-full px-5 pb-16 md:px-20">
             <div className="flex flex-col items-center justify-center max-w-4xl mx-auto text-center">
@@ -728,7 +727,7 @@ export default function Home() {
             </h2>
             <div className="w-full">
               <h3 className="text-3xl font-bold text-[#2090C4] mb-8">
-                Join Zimbabwe&apos;s Fastest-Growing Security Ecosystem
+                Join South Africa&apos;s Fastest-Growing Security Ecosystem
               </h3>
               <p className="mb-12 text-xl leading-relaxed text-gray-600">
                 At SmatAccess, we believe the future of property security is
@@ -931,7 +930,8 @@ export default function Home() {
               Pricing Structure
             </h2>
             <p className="max-w-2xl mx-auto text-xl text-gray-600">
-              Choose the plan that fits your specific needs and scale as you grow.
+              Choose the plan that fits your specific needs and scale as you
+              grow.
             </p>
           </div>
 
@@ -1340,5 +1340,3 @@ export default function Home() {
     </div>
   );
 }
-
-

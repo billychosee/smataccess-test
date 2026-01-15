@@ -28,7 +28,7 @@ export default function Contact() {
       <Navbar />
 
       {/* HERO SECTION - Enhanced with better visual hierarchy */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-0 py-8 sm:py-12 bg-gray-50">
+      <div className="px-4 py-8 mx-auto max-w-7xl sm:px-6 lg:px-0 sm:py-12 bg-gray-50">
         <section
           className="relative flex items-center justify-center text-white overflow-hidden rounded-[44px] shadow-2xl"
           style={{ height: "calc(100vh - 8rem)" }}
@@ -43,23 +43,23 @@ export default function Contact() {
           />
 
           {/* Enhanced Gradient Overlay */}
-          <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/50 to-transparent z-10"></div>
+          <div className="absolute inset-0 z-10 bg-linear-to-t from-black/90 via-black/50 to-transparent"></div>
 
           {/* Content Container - Enhanced with better spacing */}
-          <div className="relative z-20 px-5 md:px-20 text-center max-w-4xl">
+          <div className="relative z-20 max-w-4xl px-5 text-center md:px-20">
             <div className="mb-4">
-              <span className="inline-block px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-medium mb-4">
+              <span className="inline-block px-4 py-2 mb-4 text-sm font-medium rounded-full bg-white/20 backdrop-blur-sm">
                 We&apos;re here to help
               </span>
             </div>
-            <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-6 tracking-tight">
+            <h1 className="mb-6 text-5xl font-bold leading-tight tracking-tight md:text-7xl">
               Let&apos;s Get You Connected
             </h1>
-            <p className="text-xl md:text-2xl text-white/90 max-w-2xl mx-auto mb-10 leading-relaxed">
+            <p className="max-w-2xl mx-auto mb-10 text-xl leading-relaxed md:text-2xl text-white/90">
               Have questions or need a quote? We&apos;re here to help — and
               fast.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
               <button className="cursor-pointer bg-white text-[#2090C4] px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center">
                 Contact Us Now
                 <ArrowRightIcon className="w-5 h-5 ml-2" />
@@ -74,26 +74,26 @@ export default function Contact() {
       </div>
 
       {/* CONTACT OPTIONS SECTION - Redesigned to match other cards */}
-      <section className="py-20 bg-white relative overflow-hidden">
+      <section className="relative py-20 overflow-hidden bg-white">
         {/* Background decoration */}
         <div className="absolute top-0 left-0 w-full h-full opacity-5">
           <div className="absolute top-20 right-20 w-64 h-64 bg-[#2090C4] rounded-full filter blur-3xl"></div>
-          <div className="absolute bottom-20 left-20 w-96 h-96 bg-blue-500 rounded-full filter blur-3xl"></div>
+          <div className="absolute bg-blue-500 rounded-full bottom-20 left-20 w-96 h-96 filter blur-3xl"></div>
         </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+        <div className="relative z-10 px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+          <div className="mb-16 text-center">
+            <h2 className="mb-4 text-4xl font-bold text-gray-900">
               How Can We Help You?
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="max-w-3xl mx-auto text-xl text-gray-600">
               Choose the best way to connect with our team based on your needs
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
             {/* Sales & Demos Card - Updated to match other cards */}
-            <div className="group relative bg-white rounded-3xl shadow-xl p-8 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 border border-gray-100 h-full">
+            <div className="relative h-full p-8 transition-all duration-500 bg-white border border-gray-100 shadow-xl group rounded-3xl hover:shadow-2xl hover:-translate-y-2">
               {/* Background Image with Overlay */}
               <div className="absolute inset-0 z-0">
                 <Image
@@ -109,30 +109,30 @@ export default function Contact() {
               {/* Decorative element */}
               <div className="absolute top-0 right-0 w-40 h-40 bg-linear-to-br from-[#2090C4]/10 to-transparent rounded-full transform translate-x-20 -translate-y-20 z-0"></div>
 
-              <div className="relative z-10 h-full flex flex-col">
+              <div className="relative z-10 flex flex-col h-full">
                 <div className="w-20 h-20 bg-linear-to-br from-[#2090C4] to-[#1a7bb7] rounded-full flex items-center justify-center mb-6 transform group-hover:scale-110 transition-transform duration-300 shadow-lg">
                   <ChatBubbleLeftRightIcon className="w-10 h-10 text-white" />
                 </div>
 
-                <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                <h3 className="mb-3 text-2xl font-bold text-gray-900">
                   Sales & Demos
                 </h3>
-                <p className="text-gray-600 mb-6 leading-relaxed grow">
+                <p className="mb-6 leading-relaxed text-gray-600 grow">
                   Talk to our access experts for tailored recommendations and
                   see SmatAccess in action with a personalized demo.
                 </p>
 
-                <ul className="space-y-3 mb-6">
+                <ul className="mb-6 space-y-3">
                   <li className="flex items-center text-gray-700">
-                    <CheckCircleIcon className="w-5 h-5 text-green-500 mr-3 shrink-0" />
+                    <CheckCircleIcon className="w-5 h-5 mr-3 text-green-500 shrink-0" />
                     <span className="text-sm">Product demonstrations</span>
                   </li>
                   <li className="flex items-center text-gray-700">
-                    <CheckCircleIcon className="w-5 h-5 text-green-500 mr-3 shrink-0" />
+                    <CheckCircleIcon className="w-5 h-5 mr-3 text-green-500 shrink-0" />
                     <span className="text-sm">Custom solutions</span>
                   </li>
                   <li className="flex items-center text-gray-700">
-                    <CheckCircleIcon className="w-5 h-5 text-green-500 mr-3 shrink-0" />
+                    <CheckCircleIcon className="w-5 h-5 mr-3 text-green-500 shrink-0" />
                     <span className="text-sm">Pricing information</span>
                   </li>
                 </ul>
@@ -145,7 +145,7 @@ export default function Contact() {
             </div>
 
             {/* Support & Maintenance Card - Updated to match other cards */}
-            <div className="group relative bg-white rounded-3xl shadow-xl p-8 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 border border-gray-100 h-full">
+            <div className="relative h-full p-8 transition-all duration-500 bg-white border border-gray-100 shadow-xl group rounded-3xl hover:shadow-2xl hover:-translate-y-2">
               {/* Background Image with Overlay */}
               <div className="absolute inset-0 z-0">
                 <Image
@@ -159,37 +159,37 @@ export default function Contact() {
               </div>
 
               {/* Decorative element */}
-              <div className="absolute top-0 right-0 w-40 h-40 bg-linear-to-br from-green-500/10 to-transparent rounded-full transform translate-x-20 -translate-y-20 z-0"></div>
+              <div className="absolute top-0 right-0 z-0 w-40 h-40 transform translate-x-20 -translate-y-20 rounded-full bg-linear-to-br from-green-500/10 to-transparent"></div>
 
-              <div className="relative z-10 h-full flex flex-col">
-                <div className="w-20 h-20 bg-linear-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center mb-6 transform group-hover:scale-110 transition-transform duration-300 shadow-lg">
+              <div className="relative z-10 flex flex-col h-full">
+                <div className="flex items-center justify-center w-20 h-20 mb-6 transition-transform duration-300 transform rounded-full shadow-lg bg-linear-to-br from-green-500 to-green-600 group-hover:scale-110">
                   <QuestionMarkCircleIcon className="w-10 h-10 text-white" />
                 </div>
 
-                <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                <h3 className="mb-3 text-2xl font-bold text-gray-900">
                   Support & Maintenance
                 </h3>
-                <p className="text-gray-600 mb-6 leading-relaxed grow">
+                <p className="mb-6 leading-relaxed text-gray-600 grow">
                   Already a client? Get instant support through our WhatsApp bot
                   or connect with our technical team.
                 </p>
 
-                <ul className="space-y-3 mb-6">
+                <ul className="mb-6 space-y-3">
                   <li className="flex items-center text-gray-700">
-                    <CheckCircleIcon className="w-5 h-5 text-green-500 mr-3 shrink-0" />
+                    <CheckCircleIcon className="w-5 h-5 mr-3 text-green-500 shrink-0" />
                     <span className="text-sm">24/7 WhatsApp support</span>
                   </li>
                   <li className="flex items-center text-gray-700">
-                    <CheckCircleIcon className="w-5 h-5 text-green-500 mr-3 shrink-0" />
+                    <CheckCircleIcon className="w-5 h-5 mr-3 text-green-500 shrink-0" />
                     <span className="text-sm">Technical assistance</span>
                   </li>
                   <li className="flex items-center text-gray-700">
-                    <CheckCircleIcon className="w-5 h-5 text-green-500 mr-3 shrink-0" />
+                    <CheckCircleIcon className="w-5 h-5 mr-3 text-green-500 shrink-0" />
                     <span className="text-sm">Maintenance requests</span>
                   </li>
                 </ul>
 
-                <button className="cursor-pointer w-full bg-linear-to-r from-green-500 to-green-600 text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center">
+                <button className="flex items-center justify-center w-full px-6 py-3 font-semibold text-white transition-all duration-300 transform rounded-full cursor-pointer bg-linear-to-r from-green-500 to-green-600 hover:shadow-lg hover:scale-105">
                   Open WhatsApp Chat
                   <ArrowRightIcon className="w-5 h-5 ml-2" />
                 </button>
@@ -197,7 +197,7 @@ export default function Contact() {
             </div>
 
             {/* General Enquiries Card - Updated to match other cards */}
-            <div className="group relative bg-white rounded-3xl shadow-xl p-8 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 border border-gray-100 h-full">
+            <div className="relative h-full p-8 transition-all duration-500 bg-white border border-gray-100 shadow-xl group rounded-3xl hover:shadow-2xl hover:-translate-y-2">
               {/* Background Image with Overlay */}
               <div className="absolute inset-0 z-0">
                 <Image
@@ -211,37 +211,37 @@ export default function Contact() {
               </div>
 
               {/* Decorative element */}
-              <div className="absolute top-0 right-0 w-40 h-40 bg-linear-to-br from-gray-500/10 to-transparent rounded-full transform translate-x-20 -translate-y-20 z-0"></div>
+              <div className="absolute top-0 right-0 z-0 w-40 h-40 transform translate-x-20 -translate-y-20 rounded-full bg-linear-to-br from-gray-500/10 to-transparent"></div>
 
-              <div className="relative z-10 h-full flex flex-col">
-                <div className="w-20 h-20 bg-linear-to-br from-gray-600 to-gray-700 rounded-full flex items-center justify-center mb-6 transform group-hover:scale-110 transition-transform duration-300 shadow-lg">
+              <div className="relative z-10 flex flex-col h-full">
+                <div className="flex items-center justify-center w-20 h-20 mb-6 transition-transform duration-300 transform rounded-full shadow-lg bg-linear-to-br from-gray-600 to-gray-700 group-hover:scale-110">
                   <EnvelopeIcon className="w-10 h-10 text-white" />
                 </div>
 
-                <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                <h3 className="mb-3 text-2xl font-bold text-gray-900">
                   General Enquiries
                 </h3>
-                <p className="text-gray-600 mb-6 leading-relaxed grow">
+                <p className="mb-6 leading-relaxed text-gray-600 grow">
                   Need information about our services, partnership
                   opportunities, or have general questions?
                 </p>
 
-                <ul className="space-y-3 mb-6">
+                <ul className="mb-6 space-y-3">
                   <li className="flex items-center text-gray-700">
-                    <CheckCircleIcon className="w-5 h-5 text-green-500 mr-3 shrink-0" />
+                    <CheckCircleIcon className="w-5 h-5 mr-3 text-green-500 shrink-0" />
                     <span className="text-sm">Partnership inquiries</span>
                   </li>
                   <li className="flex items-center text-gray-700">
-                    <CheckCircleIcon className="w-5 h-5 text-green-500 mr-3 shrink-0" />
+                    <CheckCircleIcon className="w-5 h-5 mr-3 text-green-500 shrink-0" />
                     <span className="text-sm">General information</span>
                   </li>
                   <li className="flex items-center text-gray-700">
-                    <CheckCircleIcon className="w-5 h-5 text-green-500 mr-3 shrink-0" />
+                    <CheckCircleIcon className="w-5 h-5 mr-3 text-green-500 shrink-0" />
                     <span className="text-sm">Media inquiries</span>
                   </li>
                 </ul>
 
-                <button className="cursor-pointer w-full bg-linear-to-r from-gray-600 to-gray-700 text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center">
+                <button className="flex items-center justify-center w-full px-6 py-3 font-semibold text-white transition-all duration-300 transform rounded-full cursor-pointer bg-linear-to-r from-gray-600 to-gray-700 hover:shadow-lg hover:scale-105">
                   Email Us
                   <ArrowRightIcon className="w-5 h-5 ml-2" />
                 </button>
@@ -252,28 +252,28 @@ export default function Contact() {
       </section>
 
       {/* CONTACT INFORMATION SECTION - Reduced height */}
-      <section className="py-20 bg-linear-to-br from-gray-50 to-gray-100 relative overflow-hidden">
+      <section className="relative py-20 overflow-hidden bg-linear-to-br from-gray-50 to-gray-100">
         {/* Background decoration */}
         <div className="absolute top-0 left-0 w-full h-full opacity-5">
           <div className="absolute top-20 left-20 w-64 h-64 bg-[#2090C4] rounded-full filter blur-3xl"></div>
-          <div className="absolute bottom-20 right-20 w-96 h-96 bg-blue-500 rounded-full filter blur-3xl"></div>
+          <div className="absolute bg-blue-500 rounded-full bottom-20 right-20 w-96 h-96 filter blur-3xl"></div>
         </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+        <div className="relative z-10 px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+          <div className="mb-16 text-center">
+            <h2 className="mb-4 text-4xl font-bold text-gray-900">
               Get in Touch
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="max-w-3xl mx-auto text-xl text-gray-600">
               Our team is ready to assist you with any questions about our
               access control solutions
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-stretch">
+          <div className="grid items-stretch grid-cols-1 gap-16 lg:grid-cols-2">
             {/* Contact Information Card - Reduced height */}
             <div className="relative">
-              <div className="bg-white rounded-3xl shadow-xl p-8 border border-gray-100 relative overflow-hidden h-full">
+              <div className="relative h-full p-8 overflow-hidden bg-white border border-gray-100 shadow-xl rounded-3xl">
                 {/* Background Image with Overlay */}
                 <div className="absolute inset-0 z-0">
                   <Image
@@ -290,8 +290,8 @@ export default function Contact() {
                 <div className="absolute top-0 right-0 w-40 h-40 bg-linear-to-br from-[#2090C4]/10 to-transparent rounded-full transform translate-x-20 -translate-y-20 z-0"></div>
                 <div className="absolute bottom-0 left-0 w-32 h-32 bg-linear-to-tr from-[#2090C4]/5 to-transparent rounded-full transform -translate-x-16 translate-y-16 z-0"></div>
 
-                <div className="relative z-10 h-full flex flex-col">
-                  <div className="text-center mb-8">
+                <div className="relative z-10 flex flex-col h-full">
+                  <div className="mb-8 text-center">
                     <div className="inline-flex items-center justify-center w-16 h-16 bg-linear-to-br from-[#2090C4] to-[#1a7bb7] rounded-full mb-3 shadow-lg">
                       <svg
                         className="w-8 h-8 text-white"
@@ -316,12 +316,12 @@ export default function Contact() {
                     <h3 className="text-2xl font-bold text-gray-900">
                       Contact Information
                     </h3>
-                    <p className="text-gray-600 mt-1 text-sm">
+                    <p className="mt-1 text-sm text-gray-600">
                       Reach out to us through any of these channels
                     </p>
                   </div>
 
-                  <div className="grow space-y-4">
+                  <div className="space-y-4 grow">
                     {/* Location Card */}
                     <div className="group bg-linear-to-r from-[#2090C4]/5 to-transparent p-4 rounded-xl border border-[#2090C4]/10 transition-all duration-300 hover:shadow-md hover:border-[#2090C4]/20">
                       <div className="flex items-center">
@@ -329,11 +329,11 @@ export default function Contact() {
                           <MapPinIcon className="w-5 h-5 text-white" />
                         </div>
                         <div>
-                          <h4 className="text-base font-semibold text-gray-900 mb-1">
+                          <h4 className="mb-1 text-base font-semibold text-gray-900">
                             Head Office
                           </h4>
-                          <p className="text-gray-600 text-xs">
-                            13 Brentwood Avenue, Groombridge, Harare
+                          <p className="text-xs text-gray-600">
+                            12 Riversands Road, Beverly, Sandton, South Africa, 2191
                           </p>
                         </div>
                       </div>
@@ -346,11 +346,11 @@ export default function Contact() {
                           <PhoneIcon className="w-5 h-5 text-white" />
                         </div>
                         <div>
-                          <h4 className="text-base font-semibold text-gray-900 mb-1">
+                          <h4 className="mb-1 text-base font-semibold text-gray-900">
                             Phone
                           </h4>
-                          <p className="text-gray-600 text-xs">
-                            +263 86 8800 8361 / +263 789 566 428/7
+                          <p className="text-xs text-gray-600">
+                            +27 10 786 0259 / +27 010 226 9343
                           </p>
                         </div>
                       </div>
@@ -363,10 +363,10 @@ export default function Contact() {
                           <EnvelopeIcon className="w-5 h-5 text-white" />
                         </div>
                         <div>
-                          <h4 className="text-base font-semibold text-gray-900 mb-1">
+                          <h4 className="mb-1 text-base font-semibold text-gray-900">
                             Email
                           </h4>
-                          <p className="text-gray-600 text-xs">
+                          <p className="text-xs text-gray-600">
                             info@smatechgroup.com
                           </p>
                         </div>
@@ -380,10 +380,10 @@ export default function Contact() {
                           <ClockIcon className="w-5 h-5 text-white" />
                         </div>
                         <div>
-                          <h4 className="text-base font-semibold text-gray-900 mb-1">
+                          <h4 className="mb-1 text-base font-semibold text-gray-900">
                             Business Hours
                           </h4>
-                          <p className="text-gray-600 text-xs">
+                          <p className="text-xs text-gray-600">
                             Mon-Fri: 8AM-5PM / Sat: 9AM-1PM
                           </p>
                         </div>
@@ -392,8 +392,8 @@ export default function Contact() {
                   </div>
 
                   {/* Social Media Links */}
-                  <div className="mt-6 pt-4 border-t border-gray-100">
-                    <p className="text-center text-xs text-gray-600 mb-3">
+                  <div className="pt-4 mt-6 border-t border-gray-100">
+                    <p className="mb-3 text-xs text-center text-gray-600">
                       Follow us on social media
                     </p>
                     <div className="flex justify-center space-x-3">
@@ -450,7 +450,7 @@ export default function Contact() {
 
             {/* Contact Form - Updated with all requested fields */}
             <div className="relative">
-              <div className="bg-white rounded-3xl shadow-xl p-8 border border-gray-100 relative overflow-hidden h-full">
+              <div className="relative h-full p-8 overflow-hidden bg-white border border-gray-100 shadow-xl rounded-3xl">
                 {/* Background Image with Overlay */}
                 <div className="absolute inset-0 z-0">
                   <Image
@@ -466,13 +466,13 @@ export default function Contact() {
                 {/* Decorative element */}
                 <div className="absolute top-0 right-0 w-40 h-40 bg-linear-to-br from-[#2090C4]/10 to-transparent rounded-full transform translate-x-20 -translate-y-20 z-0"></div>
 
-                <div className="relative z-10 h-full flex flex-col">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-8">
+                <div className="relative z-10 flex flex-col h-full">
+                  <h3 className="mb-8 text-2xl font-bold text-gray-900">
                     Send us a Quick Message
                   </h3>
 
-                  <form className="space-y-5 grow flex flex-col">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                  <form className="flex flex-col space-y-5 grow">
+                    <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
                       <div className="relative">
                         <input
                           type="text"
@@ -603,7 +603,7 @@ export default function Contact() {
                         rows={4}
                         className="w-full h-full px-4 py-3 pl-12 border-2 border-gray-200 rounded-2xl focus:ring-2 focus:ring-[#2090C4] focus:border-[#2090C4] transition-all bg-gray-50 text-gray-900 placeholder-gray-500 resize-none"
                       ></textarea>
-                      <div className="absolute top-3 left-4 pointer-events-none">
+                      <div className="absolute pointer-events-none top-3 left-4">
                         <div className="w-8 h-8 bg-[#2090C4]/10 rounded-full flex items-center justify-center">
                           <svg
                             className="w-4 h-4 text-[#2090C4]"
@@ -627,7 +627,7 @@ export default function Contact() {
                       className="cursor-pointer w-full bg-linear-to-r from-[#2090C4] to-[#1a7bb7] text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center group"
                     >
                       Submit Request
-                      <PaperAirplaneIcon className="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform duration-300" />
+                      <PaperAirplaneIcon className="w-5 h-5 ml-2 transition-transform duration-300 transform group-hover:translate-x-1" />
                     </button>
                   </form>
                 </div>
@@ -642,24 +642,24 @@ export default function Contact() {
         {/* Background decoration */}
         <div className="absolute inset-0">
           <div className="absolute top-0 left-0 w-full h-full opacity-10">
-            <div className="absolute top-20 left-20 w-64 h-64 bg-white rounded-full filter blur-3xl animate-pulse"></div>
+            <div className="absolute w-64 h-64 bg-white rounded-full top-20 left-20 filter blur-3xl animate-pulse"></div>
             <div
-              className="absolute bottom-20 right-20 w-96 h-96 bg-white rounded-full filter blur-3xl animate-pulse"
+              className="absolute bg-white rounded-full bottom-20 right-20 w-96 h-96 filter blur-3xl animate-pulse"
               style={{ animationDelay: "1s" }}
             ></div>
           </div>
         </div>
 
-        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+        <div className="relative z-10 max-w-5xl px-4 mx-auto text-center sm:px-6 lg:px-8">
+          <h2 className="mb-6 text-4xl font-bold text-white md:text-5xl">
             Ready to Transform Your Security?
           </h2>
-          <p className="text-xl text-white/90 max-w-3xl mx-auto mb-10">
+          <p className="max-w-3xl mx-auto mb-10 text-xl text-white/90">
             Join hundreds of businesses across Africa using SmatAccess to secure
             their properties efficiently.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
             <button className="cursor-pointer bg-white text-[#2090C4] px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center">
               Request Demo
               <ArrowRightIcon className="w-5 h-5 ml-2" />

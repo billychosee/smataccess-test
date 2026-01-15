@@ -21,19 +21,25 @@ A modern, responsive website for SmatAccess - Smart Access Control for Homes, Of
 ### Installation
 
 1. **Install dependencies:**
+
    ```bash
    npm install
    ```
+
    or
+
    ```bash
    yarn install
    ```
 
 2. **Run the development server:**
+
    ```bash
    npm run dev
    ```
+
    or
+
    ```bash
    yarn dev
    ```
@@ -74,11 +80,13 @@ A modern, responsive website for SmatAccess - Smart Access Control for Homes, Of
 ## Dependencies
 
 ### Production Dependencies
+
 - **React** ^18.2.0 & **React-DOM** ^18.2.0 - Core React library
 - **Next.js** ^14.0.0 - React framework
 - **@heroicons/react** ^2.0.18 - Beautiful SVG icons
 
 ### Development Dependencies
+
 - **TypeScript** ^5.2.2 - Type safety
 - **@types/react** & **@types/react-dom** - Type definitions
 - **Tailwind CSS** ^3.3.5 - Utility-first CSS framework
@@ -89,6 +97,7 @@ A modern, responsive website for SmatAccess - Smart Access Control for Homes, Of
 ## Styling
 
 This project uses:
+
 - **Tailwind CSS** for utility-first styling
 - **Custom Google Fonts** (Sofia Sans, Inter, Geist Mono)
 - **Responsive design** that works on all screen sizes
@@ -127,14 +136,16 @@ npm run start
 To create a static export for hosting on platforms like Netlify or Vercel:
 
 1. Update `next.config.js` to include:
+
    ```javascript
    const nextConfig = {
-     output: 'export',
+     output: "export",
      // ... other config
-   }
+   };
    ```
 
 2. Build the project:
+
    ```bash
    npm run build
    ```
@@ -148,6 +159,7 @@ This project is proprietary software owned by SmatAccess.
 ## Support
 
 For questions or support, contact:
+
 - Email: info@smatechgroup.com
-- Phone: +263 86 8800 8361
-- Address: 13 Brentwood Avenue, Groombridge, Harare, Zimbabwe
+- Phone: +27 10 786 0259
+- Address: 12 Riversands Road, Beverly, Sandton, South Africa, 2191
