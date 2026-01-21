@@ -56,7 +56,9 @@ export default function Industries() {
               Find the perfect solution for your sector.
             </p>
             <Link
-              href="/contact"
+              href="https://erp.smatechgroup.com/appointly/appointments_public/book"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-[#2090C4] bg-white rounded-full hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               Get Started
@@ -208,7 +210,9 @@ export default function Industries() {
                     </Link>
 
                     <Link
-                      href="/contact"
+                      href="https://erp.smatechgroup.com/appointly/appointments_public/book"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 bg-[#2090C4]/10 text-[#2090C4] px-4 py-2 rounded-full text-sm font-semibold hover:bg-[#2090C4]/20 transition-colors"
                     >
                       Book Demo
@@ -236,7 +240,9 @@ export default function Industries() {
                   your security infrastructure.
                 </p>
                 <Link
-                  href="/contact"
+                  href="https://erp.smatechgroup.com/appointly/appointments_public/book"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 bg-[#2090C4] text-white px-8 py-4 rounded-full font-semibold hover:bg-[#1a7bb7] transition-colors text-lg shadow-lg"
                 >
                   Request Industry Demo

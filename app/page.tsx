@@ -377,7 +377,7 @@ export default function Home() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentTestimonialIndex((prevIndex) =>
-        prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1
+        prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1,
       );
     }, 10000);
 
@@ -423,7 +423,15 @@ export default function Home() {
                 Gain real-time visibility, tenant trust, and control over every
                 entry—no matter your industry, even during power cuts.
               </p>
-              <button className="cursor-pointer bg-white text-[#2090C4] px-10 py-4 rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg">
+              <button
+                onClick={() =>
+                  window.open(
+                    "https://erp.smatechgroup.com/appointly/appointments_public/book",
+                    "_blank",
+                  )
+                }
+                className="cursor-pointer bg-white text-[#2090C4] px-10 py-4 rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg"
+              >
                 Request a Demo
               </button>
             </div>
@@ -700,7 +708,15 @@ export default function Home() {
           </div>
 
           <div className="mt-12 text-center">
-            <button className="cursor-pointer bg-[#2090C4] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#2090C4]/80 transition-all duration-300 transform hover:scale-105 shadow-lg">
+            <button
+              onClick={() =>
+                window.open(
+                  "https://erp.smatechgroup.com/appointly/appointments_public/book",
+                  "_blank",
+                )
+              }
+              className="cursor-pointer bg-[#2090C4] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#2090C4]/80 transition-all duration-300 transform hover:scale-105 shadow-lg"
+            >
               Request a Demo
             </button>
           </div>
@@ -1227,7 +1243,10 @@ export default function Home() {
 
             <div className="relative inline-block">
               {/* Button with ripple effect on hover */}
-              <button className="cursor-pointer relative bg-white text-[#2090C4] px-10 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-xl overflow-hidden group">
+              <button
+                onClick={() => window.open('https://erp.smatechgroup.com/appointly/appointments_public/book', '_blank')}
+                className="cursor-pointer relative bg-white text-[#2090C4] px-10 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-xl overflow-hidden group"
+              >
                 <span className="relative z-10 flex items-center">
                   Request a Demo
                   <ArrowRightIcon className="w-5 h-5 ml-2 transition-transform duration-300 transform group-hover:translate-x-1" />

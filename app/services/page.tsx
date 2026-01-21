@@ -104,7 +104,9 @@ export default function Services() {
             <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
               <ScrollToFeaturesButton />
               <Link
-                href="/contact"
+                href="https://erp.smatechgroup.com/appointly/appointments_public/book"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="cursor-pointer border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-[#2090C4] transition-all duration-300 flex items-center"
               >
                 <PhoneIcon className="w-5 h-5 mr-2" />

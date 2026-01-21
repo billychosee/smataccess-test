@@ -328,12 +328,12 @@ export default function Pricing() {
           </div>
 
           {/* Software Modules Grid */}
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4 mb-16">
+          <div className="grid grid-cols-1 gap-8 mb-16 md:grid-cols-2 lg:grid-cols-4">
             {/* ANPR Module */}
             <div className="group relative bg-white p-8 rounded-3xl shadow-xl transition-all duration-500 hover:scale-105 border border-gray-100 hover:border-[#2090C4]/30">
               <div className="text-center">
                 <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-[#2090C4] to-[#1a7bb7] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
-                <div className="mb-6 pt-2">
+                <div className="pt-2 mb-6">
                   <div className="w-16 h-16 mx-auto bg-gradient-to-br from-[#2090C4] to-[#1a7bb7] rounded-full flex items-center justify-center">
                     <CurrencyDollarIcon className="w-8 h-8 text-white" />
                   </div>
@@ -343,9 +343,9 @@ export default function Pricing() {
                 </h3>
                 <div className="mb-4">
                   <span className="text-3xl font-extrabold text-[#2090C4]">$50</span>
-                  <span className="text-gray-600 ml-1">/ month</span>
+                  <span className="ml-1 text-gray-600">/ month</span>
                 </div>
-                <p className="text-gray-600 text-sm leading-relaxed">
+                <p className="text-sm leading-relaxed text-gray-600">
                   Automatically open gates for registered vehicles. Logs all vehicle entry/exits.
                 </p>
               </div>
@@ -355,7 +355,7 @@ export default function Pricing() {
             <div className="group relative bg-white p-8 rounded-3xl shadow-xl transition-all duration-500 hover:scale-105 border border-gray-100 hover:border-[#2090C4]/30">
               <div className="text-center">
                 <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-[#2090C4] to-[#1a7bb7] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
-                <div className="mb-6 pt-2">
+                <div className="pt-2 mb-6">
                   <div className="w-16 h-16 mx-auto bg-gradient-to-br from-[#2090C4] to-[#1a7bb7] rounded-full flex items-center justify-center">
                     <ShieldCheckIcon className="w-8 h-8 text-white" />
                   </div>
@@ -365,9 +365,9 @@ export default function Pricing() {
                 </h3>
                 <div className="mb-4">
                   <span className="text-3xl font-extrabold text-[#2090C4]">$50</span>
-                  <span className="text-gray-600 ml-1">/ month</span>
+                  <span className="ml-1 text-gray-600">/ month</span>
                 </div>
-                <p className="text-gray-600 text-sm leading-relaxed">
+                <p className="text-sm leading-relaxed text-gray-600">
                   Add high-security, touchless access for sensitive areas.
                 </p>
               </div>
@@ -377,7 +377,7 @@ export default function Pricing() {
             <div className="group relative bg-white p-8 rounded-3xl shadow-xl transition-all duration-500 hover:scale-105 border border-gray-100 hover:border-[#2090C4]/30">
               <div className="text-center">
                 <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-[#2090C4] to-[#1a7bb7] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
-                <div className="mb-6 pt-2">
+                <div className="pt-2 mb-6">
                   <div className="w-16 h-16 mx-auto bg-gradient-to-br from-[#2090C4] to-[#1a7bb7] rounded-full flex items-center justify-center">
                     <LightBulbIcon className="w-8 h-8 text-white" />
                   </div>
@@ -387,9 +387,9 @@ export default function Pricing() {
                 </h3>
                 <div className="mb-4">
                   <span className="text-3xl font-extrabold text-[#2090C4]">$20</span>
-                  <span className="text-gray-600 ml-1">/ month</span>
+                  <span className="ml-1 text-gray-600">/ month</span>
                 </div>
-                <p className="text-gray-600 text-sm leading-relaxed">
+                <p className="text-sm leading-relaxed text-gray-600">
                   Enables management of fingerprint/biometric data through the cloud dashboard.
                 </p>
               </div>
@@ -399,7 +399,7 @@ export default function Pricing() {
             <div className="group relative bg-white p-8 rounded-3xl shadow-xl transition-all duration-500 hover:scale-105 border border-gray-100 hover:border-[#2090C4]/30">
               <div className="text-center">
                 <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-[#2090C4] to-[#1a7bb7] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
-                <div className="mb-6 pt-2">
+                <div className="pt-2 mb-6">
                   <div className="w-16 h-16 mx-auto bg-gradient-to-br from-[#2090C4] to-[#1a7bb7] rounded-full flex items-center justify-center">
                     <PhoneIcon className="w-8 h-8 text-white" />
                   </div>
@@ -409,9 +409,9 @@ export default function Pricing() {
                 </h3>
                 <div className="mb-4">
                   <span className="text-3xl font-extrabold text-[#2090C4]">$2</span>
-                  <span className="text-gray-600 ml-1">per user / month</span>
+                  <span className="ml-1 text-gray-600">per user / month</span>
                 </div>
-                <p className="text-gray-600 text-sm leading-relaxed">
+                <p className="text-sm leading-relaxed text-gray-600">
                   Allows users to interact with the system, receive alerts, and manage visitors via WhatsApp.
                 </p>
               </div>
@@ -431,11 +431,11 @@ export default function Pricing() {
           {/* Support Plans Grid */}
           <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
             {/* Tier 1 */}
-            <div className="group relative bg-white p-8 rounded-3xl shadow-xl transition-all duration-500 hover:scale-105 border border-gray-100">
+            <div className="relative p-8 transition-all duration-500 bg-white border border-gray-100 shadow-xl group rounded-3xl hover:scale-105">
               <div className="text-center">
                 <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-green-500 to-emerald-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
-                <div className="mb-6 pt-2">
-                  <div className="w-16 h-16 mx-auto bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center">
+                <div className="pt-2 mb-6">
+                  <div className="flex items-center justify-center w-16 h-16 mx-auto rounded-full bg-gradient-to-br from-green-500 to-emerald-500">
                     <CheckIcon className="w-8 h-8 text-white" />
                   </div>
                 </div>
@@ -444,9 +444,9 @@ export default function Pricing() {
                 </h3>
                 <div className="mb-6">
                   <span className="text-3xl font-extrabold text-green-600">$0</span>
-                  <span className="text-gray-600 ml-2 text-sm">(Included with all plans)</span>
+                  <span className="ml-2 text-sm text-gray-600">(Included with all plans)</span>
                 </div>
-                <p className="text-gray-600 leading-relaxed">
+                <p className="leading-relaxed text-gray-600">
                   Access to our full knowledge base and email support.
                 </p>
               </div>
@@ -459,8 +459,8 @@ export default function Pricing() {
               </div>
               <div className="text-center">
                 <div className="absolute top-0 left-0 w-full h-0.5 bg-white/20 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
-                <div className="mb-6 pt-2">
-                  <div className="w-16 h-16 mx-auto bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm">
+                <div className="pt-2 mb-6">
+                  <div className="flex items-center justify-center w-16 h-16 mx-auto rounded-full bg-white/20 backdrop-blur-sm">
                     <PhoneIcon className="w-8 h-8 text-white" />
                   </div>
                 </div>
@@ -469,9 +469,9 @@ export default function Pricing() {
                 </h3>
                 <div className="mb-6">
                   <span className="text-3xl font-extrabold text-white">$200</span>
-                  <span className="text-blue-100 ml-2 text-sm">(Included with Enterprise Plans)</span>
+                  <span className="ml-2 text-sm text-blue-100">(Included with Enterprise Plans)</span>
                 </div>
-                <p className="text-blue-100 leading-relaxed">
+                <p className="leading-relaxed text-blue-100">
                   Access to our 24/7 phone and email support agents based in Harare
                 </p>
               </div>
@@ -481,7 +481,7 @@ export default function Pricing() {
             <div className="group relative bg-white p-8 rounded-3xl shadow-xl transition-all duration-500 hover:scale-105 border border-gray-100 hover:border-[#2090C4]/30">
               <div className="text-center">
                 <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-[#2090C4] to-[#1a7bb7] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
-                <div className="mb-6 pt-2">
+                <div className="pt-2 mb-6">
                   <div className="w-16 h-16 mx-auto bg-gradient-to-br from-[#2090C4] to-[#1a7bb7] rounded-full flex items-center justify-center">
                     <LightBulbIcon className="w-8 h-8 text-white" />
                   </div>
@@ -491,9 +491,9 @@ export default function Pricing() {
                 </h3>
                 <div className="mb-6">
                   <span className="text-3xl font-extrabold text-[#2090C4]">$20</span>
-                  <span className="text-gray-600 ml-1">/ month</span>
+                  <span className="ml-1 text-gray-600">/ month</span>
                 </div>
-                <p className="text-gray-600 leading-relaxed">
+                <p className="leading-relaxed text-gray-600">
                   A dedicated Account Manager for strategic accounts requiring bespoke support
                 </p>
               </div>
@@ -749,7 +749,9 @@ export default function Pricing() {
                 Request Formal Quote
               </Link>
               <Link
-                href="/contact"
+                href="https://erp.smatechgroup.com/appointly/appointments_public/book"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="cursor-pointer flex-1 border-2 border-[#2090C4] text-[#2090C4] px-6 py-3 rounded-full font-semibold hover:bg-[#2090C4] hover:text-white transition-colors"
               >
                 Book a Demo
@@ -873,4 +875,5 @@ export default function Pricing() {
     </div>
   );
 }
+
 

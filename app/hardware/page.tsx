@@ -35,7 +35,12 @@ const hardwareData: HardwareItem[] = [
       "Advanced face and fingerprint verification systems with AI-powered recognition.",
     specs: "99.9% accuracy, IP65 weather-resistant, anti-spoofing technology",
     image: "/biometric-scanners.png",
-    images: ["/biometric-scanners.png", "/biometric-scanners-view.png"],
+    images: [
+      "/biometric-scanners-front.png",
+      "/biometric-scanners-back.png",
+      "/biometric-scanners-side.png",
+      "/biometric-scanners-top-bottom.png",
+    ],
     features: [
       "Face Recognition",
       "Fingerprint Scanner",
@@ -51,7 +56,12 @@ const hardwareData: HardwareItem[] = [
       "High-speed contactless access with secure encryption and long-range reading.",
     specs: "Up to 10m range, AES-256 encryption, multi-frequency support",
     image: "/rfid-readers.png",
-    images: ["/rfid-readers.png", "/long-range-rfid.jpg"],
+    images: [
+      "/rfid-readers-long-range.png",
+      "/rfid-readers-white.png",
+      "/rfid-readers-black-front.png",
+      "/rfid-readers-black-back.png",
+    ],
     features: [
       "Long Range",
       "Secure Encryption",
@@ -67,8 +77,8 @@ const hardwareData: HardwareItem[] = [
       "Modern, durable gate solutions with anti-tailgating and high throughput design.",
     specs:
       "Anti-tailgating sensors, 30+ users/minute, stainless steel construction",
-    image: "/high-traffic.png",
-    images: ["/TR03-Tripod-Turnstile.png", "/TR04-Tripod-Turnstile.png"],
+    image: "/turnstile.png",
+    images: ["/turnstile-1.png", "/turnstile-2.png", "/turnstile-3.png"],
     features: [
       "Anti-tailgating",
       "High Throughput",
@@ -98,7 +108,7 @@ const hardwareData: HardwareItem[] = [
     description:
       "Handheld scanners and mobile ANPR cameras for field operations.",
     specs: "IP65 rated, 8-hour battery, offline capability",
-    image: "/device1-overview.png",
+    image: "/rugged-security.png",
     images: ["/device1-overview.png", "/rugged-security.png"],
     features: [
       "IP65 Rated",
@@ -144,7 +154,7 @@ const HardwareModal = ({ hardware, onClose }: { hardware: HardwareItem, onClose:
                     <div className="relative h-64 lg:h-full rounded-t-[2rem] lg:rounded-l-[2rem] lg:rounded-tr-none overflow-hidden bg-gray-100">
                         <div className="absolute inset-0 flex transition-transform duration-500 ease-in-out" style={{ transform: `translateX(-${currentImageIndex * 100}%)` }}>
                             {imagesToShow.map((imgSrc, index) => (
-                                <div key={index} className="flex-shrink-0 w-full h-full relative">
+                                <div key={index} className="relative flex-shrink-0 w-full h-full">
                                     <Image
                                         src={imgSrc}
                                         alt={`${hardware.name} ${index + 1}`}
@@ -160,19 +170,19 @@ const HardwareModal = ({ hardware, onClose }: { hardware: HardwareItem, onClose:
                             <>
                                 <button
                                     onClick={prevImage}
-                                    className="absolute top-1/2 left-4 z-10 p-2 bg-white/80 rounded-full hover:bg-white transform -translate-y-1/2"
+                                    className="absolute z-10 p-2 transform -translate-y-1/2 rounded-full top-1/2 left-4 bg-white/80 hover:bg-white"
                                     aria-label="Previous image"
                                 >
                                     <ChevronLeftIcon className="w-6 h-6" />
                                 </button>
                                 <button
                                     onClick={nextImage}
-                                    className="absolute top-1/2 right-4 z-10 p-2 bg-white/80 rounded-full hover:bg-white transform -translate-y-1/2"
+                                    className="absolute z-10 p-2 transform -translate-y-1/2 rounded-full top-1/2 right-4 bg-white/80 hover:bg-white"
                                     aria-label="Next image"
                                 >
                                     <ChevronRightIcon className="w-6 h-6" />
                                 </button>
-                                <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                                <div className="absolute flex space-x-2 transform -translate-x-1/2 bottom-4 left-1/2">
                                     {imagesToShow.map((_, index) => (
                                         <button
                                             key={index}
@@ -342,12 +352,12 @@ export default function Hardware() {
 
                   {/* Hardware Image */}
                   <div className="relative mb-6">
-                    <div className="w-full h-48 overflow-hidden transition-transform duration-300 bg-gray-100 rounded-2xl group-hover:scale-105">
+                    <div className="w-full overflow-hidden transition-transform duration-300 bg-gray-100 aspect-square rounded-2xl group-hover:scale-105">
                       <Image
                         src={hardware.image}
                         alt={hardware.name}
                         width={400}
-                        height={200}
+                        height={400}
                         className="object-cover w-full h-full"
                       />
                     </div>
@@ -416,12 +426,12 @@ export default function Hardware() {
 
                     {/* Hardware Image */}
                     <div className="relative mb-6">
-                      <div className="w-full h-48 overflow-hidden transition-transform duration-300 bg-gray-100 rounded-2xl group-hover:scale-105">
+                      <div className="w-full overflow-hidden transition-transform duration-300 bg-gray-100 aspect-square rounded-2xl group-hover:scale-105">
                         <Image
                           src={hardware.image}
                           alt={hardware.name}
                           width={400}
-                          height={200}
+                          height={400}
                           className="object-cover w-full h-full"
                         />
                       </div>

@@ -527,7 +527,10 @@ export default function About() {
           </div>
 
           <div className="text-center">
-            <button className="cursor-pointer bg-[#2090C4] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#1a7bb7] transition-colors">
+            <button
+              onClick={() => window.open('https://erp.smatechgroup.com/appointly/appointments_public/book', '_blank')}
+              className="cursor-pointer bg-[#2090C4] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#1a7bb7] transition-colors"
+            >
               Request a Demo
               <ArrowRightIcon className="inline-block w-5 h-5 ml-2" />
             </button>

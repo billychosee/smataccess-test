@@ -137,7 +137,10 @@ export default function Contact() {
                   </li>
                 </ul>
 
-                <button className="cursor-pointer w-full bg-linear-to-r from-[#2090C4] to-[#1a7bb7] text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center">
+                <button
+                  onClick={() => window.open('https://erp.smatechgroup.com/appointly/appointments_public/book', '_blank')}
+                  className="cursor-pointer w-full bg-linear-to-r from-[#2090C4] to-[#1a7bb7] text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
+                >
                   Book a Demo
                   <ArrowRightIcon className="w-5 h-5 ml-2" />
                 </button>
@@ -660,7 +663,10 @@ export default function Contact() {
           </p>
 
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <button className="cursor-pointer bg-white text-[#2090C4] px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center">
+            <button
+              onClick={() => window.open('https://erp.smatechgroup.com/appointly/appointments_public/book', '_blank')}
+              className="cursor-pointer bg-white text-[#2090C4] px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center"
+            >
               Request Demo
               <ArrowRightIcon className="w-5 h-5 ml-2" />
             </button>
